@@ -9,6 +9,10 @@ public class Movement : MonoBehaviour
     private float horizontalSpeed = 10;
     private float verticalSpeed = 5;
 
+    //these variables are for player input. they are bound to player 1 by default, but if you create a second player just change P1 to P2 in the inspector.
+    public string horizontalButton = "Horizontal_P1";
+    public string verticalButton = "Vertical_P1";
+
     private void Start()
     {
         //get the rigidbody
@@ -18,14 +22,14 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         //this is where the movement magic happens
-        if (Input.GetAxis("Horizontal") != 0) //left+right
+        if (Input.GetAxis(horizontalButton) != 0) //left+right
         {
-            rb.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, rb.velocity.y, rb.velocity.z);
+            rb.velocity = new Vector3(Input.GetAxis(horizontalButton) * horizontalSpeed, rb.velocity.y, rb.velocity.z);
         }
         
-        if (Input.GetAxis("Vertical") != 0) //forward+back
+        if (Input.GetAxis(verticalButton) != 0) //forward+back
         {
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Input.GetAxis("Vertical") * verticalSpeed);
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Input.GetAxis(verticalButton) * verticalSpeed);
         }
     }
 
