@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2451711605613100546}
   - component: {fileID: 2451711605613100549}
   - component: {fileID: 2451711605613100545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TestPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 707677029
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6447fd4e8cef5424da8bf796fa6f711f, type: 3}
@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2451711605613100548}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8b15356432622a84a9f5f739ef75e9fe, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -126,3 +126,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ee04ace53364346a24ffca4598703e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalButton: Horizontal_P1
+  verticalButton: Vertical_P1

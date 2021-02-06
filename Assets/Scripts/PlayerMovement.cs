@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float horizontalSpeed = 10f;
     private float verticalSpeed = 7.5f;
+    private bool facingRight = true;
 
     //these variables are for player input. they are bound to player 1 by default, but if you create a second player just change P1 to P2 in the inspector.
     public string horizontalButton = "Horizontal_P1";
@@ -30,6 +31,19 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis(verticalButton) != 0) //forward+back
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Input.GetAxis(verticalButton) * verticalSpeed);
+        }
+
+        //checking the player's movement direction, in case the sprite has to be flipped
+        float h = Input.GetAxis(horizontalButton); //get the value of the horizontal axis
+        if (h > 0 && !facingRight) //if it's positive and the player isn't facing right
+        {
+            GetComponent<SpriteRenderer>().flipX = true; //flip 'em
+            facingRight = true;
+        }
+        else if (h < 0 && facingRight) //if it's negative and the player is facing right
+        {
+            GetComponent<SpriteRenderer>().flipX = false; //flip 'em
+            facingRight = false;
         }
     }
 
