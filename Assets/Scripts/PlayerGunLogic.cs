@@ -9,7 +9,7 @@ public class PlayerGunLogic : MonoBehaviour
     private bool yellowGun = false;
     private bool redGun = false;
 
-    //the two variables we need in order to make the gun shoot in the shooting script.
+    //the two variables we need in order to make the gun shoot in the GunLogic script.
     public string fire1Button = "Fire1_P1";
     [HideInInspector]
     public bool fireShot = false;
@@ -21,9 +21,9 @@ public class PlayerGunLogic : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetAxis(fire1Button) != 0)
+        if (Input.GetAxis(fire1Button) != 0) //if the player pressed the button to fire
         {
-            fireShot = true;
+            fireShot = true; //then send the signal to the gun to fire
         }
     }
 
