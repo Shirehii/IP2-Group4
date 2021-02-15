@@ -8,19 +8,20 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float horizontalSpeed = 10f;
     private float verticalSpeed = 7.5f;
-    private bool facingRight = true;
+    [HideInInspector]
+    public bool facingRight = true;
 
     //these variables are for player input. they are bound to player 1 by default, but if you create a second player just change P1 to P2 in the inspector.
     public string horizontalButton = "Horizontal_P1";
     public string verticalButton = "Vertical_P1";
 
-    private void Start()
+    void Start()
     {
         //get the rigidbody
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    void Update()
     {
         //this is where the movement magic happens
         if (Input.GetAxis(horizontalButton) != 0) //left+right
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //FixedUpdate might be better to use than Update for physics related stuff
-    //private void FixedUpdate()
+    //void FixedUpdate()
     //{
     //    
     //}
