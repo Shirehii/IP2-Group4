@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunLogic : MonoBehaviour
+public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logic that applies to ALL guns, for gun properties specific to the players, use PlayerGunLogic
 {
     //to get some variables on the gun's state
     public PlayerGunLogic pGL;
@@ -28,6 +28,7 @@ public class GunLogic : MonoBehaviour
         if (pGL.fireShot == true && timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
         {
             FireShot(); //shoot
+            pGL.currentAmmo -= 1;
         }
         else if (timeBetweenShots > 0) //else if it's on cooldown
         {

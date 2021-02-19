@@ -1022,6 +1022,10 @@ PrefabInstance:
       propertyPath: fire1Button
       value: Fire1_P2
       objectReference: {fileID: 0}
+    - target: {fileID: 5633681785811974846, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
+      propertyPath: reloadButton
+      value: Reload_P2
+      objectReference: {fileID: 0}
     - target: {fileID: 8059132705478639623, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: fireRate
       value: 0.5

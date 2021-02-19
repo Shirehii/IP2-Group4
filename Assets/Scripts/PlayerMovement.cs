@@ -5,17 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //initialize some variables
-    private Rigidbody rb;
     private float horizontalSpeed = 10f;
     private float verticalSpeed = 7.5f;
     [HideInInspector]
+    public Rigidbody rb;
     public bool facingRight = true;
 
     //these variables are for player input. they are bound to player 1 by default, but if you create a second player just change P1 to P2 in the inspector.
     public string horizontalButton = "Horizontal_P1";
     public string verticalButton = "Vertical_P1";
 
-    void Start()
+    void Awake()
     {
         //get the rigidbody
         rb = GetComponent<Rigidbody>();
