@@ -7,8 +7,10 @@ public class PlayerGunLogic : MonoBehaviour
     private Rigidbody pMrb;
     private GunLogic gL;
 
-    //array to keep track of which gun is active. blue is default and will be on the players' hands when they start a level, may be changed in the future
+    //array to keep track of which gun is active
     private Sprite[] gunSprites;
+    [HideInInspector]
+    public string selectedGun;
 
     private SpriteRenderer gunRenderer; //the player's gun sprite renderer, used to change the sprite
     private SpriteRenderer otherGunRenderer; //the other player's gun sprite renderer, used to check what its sprite is
@@ -47,10 +49,12 @@ public class PlayerGunLogic : MonoBehaviour
         if (gameObject.tag == "Player1") //the other player's
         {
             otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
+            selectedGun = "blue";
         }
         else if (gameObject.tag == "Player2") //if this player is player 2, then immediatelly swap their gun to the red one, to avoid clashing colors
         {
             otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
+            selectedGun = "red";
 
             gunRenderer.sprite = gunSprites[1];
             gL.fireRate = 2;
@@ -86,6 +90,7 @@ public class PlayerGunLogic : MonoBehaviour
                 if (otherGunRenderer.sprite != gunSprites[0])
                 {
                     gunRenderer.sprite = gunSprites[0];
+                    selectedGun = "blue";
                     gL.fireRate = 1;
                     maxAmmo = 4;
                     gL.source.clip = audioClips[0];
@@ -95,6 +100,7 @@ public class PlayerGunLogic : MonoBehaviour
                 if (otherGunRenderer.sprite != gunSprites[1])
                 {
                     gunRenderer.sprite = gunSprites[1];
+                    selectedGun = "red";
                     gL.fireRate = 2;
                     maxAmmo = 5;
                     gL.source.clip = audioClips[1];
@@ -104,6 +110,7 @@ public class PlayerGunLogic : MonoBehaviour
                 if (otherGunRenderer.sprite != gunSprites[2])
                 {
                     gunRenderer.sprite = gunSprites[2];
+                    selectedGun = "yellow";
                     gL.fireRate = 3;
                     maxAmmo = 3;
                     gL.source.clip = audioClips[2];
