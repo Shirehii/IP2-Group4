@@ -1018,6 +1018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer2
       objectReference: {fileID: 0}
+    - target: {fileID: 2451711605613100548, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 5633681785811974846, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: fire1Button
       value: Fire1_P2
@@ -1239,6 +1243,10 @@ PrefabInstance:
     - target: {fileID: 2451711605613100548, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_Name
       value: TestPlayer1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451711605613100548, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 8059132705478639623, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: fireRate

@@ -10,7 +10,8 @@ public class PlayerGunLogic : MonoBehaviour
     //array to keep track of which gun is active. blue is default and will be on the players' hands when they start a level, may be changed in the future
     private Sprite[] gunSprites;
 
-    private SpriteRenderer gunRenderer;
+    private SpriteRenderer gunRenderer; //the player's gun sprite renderer, used to change the sprite
+    private SpriteRenderer otherGunRenderer; //the other player's gun sprite renderer, used to check what its sprite is
 
     private AudioClip[] audioClips;
 
@@ -33,8 +34,6 @@ public class PlayerGunLogic : MonoBehaviour
         gunSprites[1] = Resources.Load<Sprite>("red");
         gunSprites[2] = Resources.Load<Sprite>("yellow");
 
-        gunRenderer = gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
-
         gL = transform.GetChild(0).GetComponent<GunLogic>();
 
         //load the audio clips
@@ -42,6 +41,23 @@ public class PlayerGunLogic : MonoBehaviour
         audioClips[0] = Resources.Load<AudioClip>("slimeball");
         audioClips[1] = Resources.Load<AudioClip>("flaunch");
         audioClips[2] = Resources.Load<AudioClip>("rlaunch");
+
+        //get the two sprite renderers of the guns
+        gunRenderer = gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>(); //this player's
+        if (gameObject.tag == "Player1") //the other player's
+        {
+            otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
+        }
+        else if (gameObject.tag == "Player2") //if this player is player 2, then immediatelly swap their gun to the red one, to avoid clashing colors
+        {
+            otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
+
+            gunRenderer.sprite = gunSprites[1];
+            gL.fireRate = 2;
+            maxAmmo = 5;
+            currentAmmo = maxAmmo;
+            gL.source.clip = audioClips[1];
+        }
 
         //get the rigidbody from PlayerMovement
         pMrb = GetComponent<PlayerMovement>().rb;
@@ -56,7 +72,7 @@ public class PlayerGunLogic : MonoBehaviour
 
         if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo) //if the player pressed the reload button and they aren't topped off already
         {
-            StartCoroutine(ReloadCoroutine());
+            StartCoroutine(ReloadCoroutine()); //reload
         }
     }
 
@@ -66,22 +82,32 @@ public class PlayerGunLogic : MonoBehaviour
         switch (trigger.tag) //Switch statement for switching the gun's color
         {
             case "BlueGun":
-                gunRenderer.sprite = gunSprites[0];
-                gL.fireRate = 1;
-                maxAmmo = 4;
-                gL.source.clip = audioClips[0];
+                //if statements that stop players from picking the same colored gun
+                if (otherGunRenderer.sprite != gunSprites[0])
+                {
+                    gunRenderer.sprite = gunSprites[0];
+                    gL.fireRate = 1;
+                    maxAmmo = 4;
+                    gL.source.clip = audioClips[0];
+                }
                 break;
             case "RedGun":
-                gunRenderer.sprite = gunSprites[1];
-                gL.fireRate = 2;
-                maxAmmo = 5;
-                gL.source.clip = audioClips[1];
+                if (otherGunRenderer.sprite != gunSprites[1])
+                {
+                    gunRenderer.sprite = gunSprites[1];
+                    gL.fireRate = 2;
+                    maxAmmo = 5;
+                    gL.source.clip = audioClips[1];
+                }
                 break;
             case "YellowGun":
-                gunRenderer.sprite = gunSprites[2];
-                gL.fireRate = 3;
-                maxAmmo = 3;
-                gL.source.clip = audioClips[2];
+                if (otherGunRenderer.sprite != gunSprites[2])
+                {
+                    gunRenderer.sprite = gunSprites[2];
+                    gL.fireRate = 3;
+                    maxAmmo = 3;
+                    gL.source.clip = audioClips[2];
+                }
                 break;
         }
 
