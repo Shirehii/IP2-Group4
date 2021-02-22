@@ -8,8 +8,10 @@ TagManager:
   - RedGun
   - YellowGun
   - Bullet
-  - Player1
-  - Player2
+  - Enemy
+  - Item
+  - player1
+  - player2
   layers:
   - Default
   - TransparentFX
