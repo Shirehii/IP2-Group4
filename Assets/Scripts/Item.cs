@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
 {
   void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "player1" || collider.gameObject.tag == "player2")
+        if(collider.gameObject.tag == "Player1" || collider.gameObject.tag == "Player2")
         {
             print("Item picked up");
             ScoreText.scoreValue += 10;

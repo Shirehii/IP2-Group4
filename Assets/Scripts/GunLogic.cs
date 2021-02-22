@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunLogic : MonoBehaviour
+public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logic that applies to ALL guns, for gun properties specific to the players, use PlayerGunLogic
 {
     //to get some variables on the gun's state
     public PlayerGunLogic pGL;
@@ -12,14 +12,18 @@ public class GunLogic : MonoBehaviour
     public GameObject bullet;
 
     //time related variables for shooting
-    public float fireRate = 2; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
+    public float fireRate = 1; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
     private float timeBetweenShots; //the time the gun has passed since the last shot
+
+    public AudioSource source;
 
     void Start()
     {
         //get these components from the parent character
         pGL = GetComponentInParent<PlayerGunLogic>();
         pM = GetComponentInParent<PlayerMovement>();
+
+        source = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -28,6 +32,8 @@ public class GunLogic : MonoBehaviour
         if (pGL.fireShot == true && timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
         {
             FireShot(); //shoot
+            pGL.currentAmmo -= 1;
+            source.Play();
         }
         else if (timeBetweenShots > 0) //else if it's on cooldown
         {

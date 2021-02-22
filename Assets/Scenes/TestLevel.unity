@@ -1544,7 +1544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2451711605613100548, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_TagString
-      value: player2
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 5633681785811974846, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: fire1Button
@@ -1766,7 +1766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2451711605613100548, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_TagString
-      value: player1
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 8059132705478639623, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: fireRate
