@@ -52,11 +52,14 @@
     <UnityVersion>2020.1.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\GunLogic.cs" />
     <Compile Include="Assets\Scripts\QuitGame.cs" />
     <Compile Include="Assets\Graphics\Temporary\#README.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerGunLogic.cs" />
+    <Compile Include="Assets\Scripts\ScoreText.cs" />
     <Compile Include="Assets\Scripts\BulletLogic.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Resources\#README.cs" />
