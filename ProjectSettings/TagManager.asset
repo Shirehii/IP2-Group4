@@ -8,6 +8,7 @@ TagManager:
   - RedGun
   - YellowGun
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
