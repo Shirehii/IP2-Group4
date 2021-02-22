@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BlueGun
+  - RedGun
+  - YellowGun
+  - Bullet
+  - Enemy
+  - Item
+  - player1
+  - player2
   layers:
   - Default
   - TransparentFX
