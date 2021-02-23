@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\BulletLogic.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Resources\#README.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Audio\launches\info.txt" />
