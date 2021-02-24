@@ -17,6 +17,15 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
 
     public AudioSource source;
 
+    private bool gunDirection;
+    [HideInInspector]
+    public SpriteRenderer gunRenderer;
+
+    private void Awake()
+    {
+        gunRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Start()
     {
         //get these components from the parent character
@@ -45,12 +54,12 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         if (!pM.facingRight) //if character is facing left
         {
             //flip the sprite, then set it's position to the parent character's + 0.25f
-            GetComponent<SpriteRenderer>().flipX = true;
+            gunRenderer.flipX = true;
             gameObject.transform.position = gameObject.transform.parent.gameObject.transform.position + new Vector3(-0.25f, 0, 0);
         }
         else if (pM.facingRight) //similarly for facing right
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            gunRenderer.flipX = false;
             gameObject.transform.position = gameObject.transform.parent.gameObject.transform.position + new Vector3(0.25f, 0, 0);
         }
     }
@@ -58,8 +67,64 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     //method for shooting bullets
     void FireShot()
     {
-        Instantiate(bullet, gameObject.transform); //instantiate a bullet at the gun's position
         timeBetweenShots = fireRate; //put the gun on cooldown
         pGL.fireShot = false;
+
+        //this is where the shooting magic happens
+        gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
+
+        if (pGL.selectedGun == "blue" || pGL.selectedGun == "red")
+        {
+            GameObject spawnedBullet = Instantiate(bullet, gameObject.transform); //instantiate a bullet at the gun's position, and get it
+            if (gunDirection)
+            {
+                spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, 0, 0); //shoot left
+            }
+            else if (!gunDirection)
+            {
+                spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 0, 0); //shoot right
+            }
+        }
+        else if (pGL.selectedGun == "yellow")
+        {
+            for (int i = 0; i <= 2; i++)
+            {
+                GameObject spawnedBullet = Instantiate(bullet, gameObject.transform); //instantiate a bullet at the gun's position, and get it
+
+                switch (i)
+                {
+                    case 0:
+                        if (gunDirection)
+                        {
+                            spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, 100, 0);
+                        }
+                        else if (!gunDirection)
+                        {
+                            spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 100, 0);
+                        }
+                        break;
+                    case 1:
+                        if (gunDirection)
+                        {
+                            spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, 0, 0);
+                        }
+                        else if (!gunDirection)
+                        {
+                            spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 0, 0);
+                        }
+                        break;
+                    case 2:
+                        if (gunDirection)
+                        {
+                            spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, -100, 0);
+                        }
+                        else if (!gunDirection)
+                        {
+                            spawnedBullet.GetComponent<Rigidbody>().AddForce(500, -100, 0);
+                        }
+                        break;
+                }
+            }
+        }
     }
 }

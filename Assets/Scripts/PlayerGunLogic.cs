@@ -28,6 +28,7 @@ public class PlayerGunLogic : MonoBehaviour
     [HideInInspector]
     public int currentAmmo = 4;
 
+
     void Start()
     {
         //load the gun sprites
