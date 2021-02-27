@@ -8,8 +8,9 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     public PlayerGunLogic pGL;
     private PlayerMovement pM;
 
-    //the bullet prefab
+    //the projectile prefabs, need to be set in the inspector
     public GameObject bullet;
+    public GameObject puddle;
 
     //time related variables for shooting
     public float fireRate = 1; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
@@ -50,6 +51,13 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
             pGL.fireShot = false;
         }
 
+        //for ability use
+        if (pGL.fireAbility == true)
+        {
+            FireAbility();
+            pGL.fireAbility = false;
+        }
+
         //for flipping the gun around
         if (!pM.facingRight) //if character is facing left
         {
@@ -73,7 +81,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         //this is where the shooting magic happens
         gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
 
-        if (pGL.selectedGun == "blue" || pGL.selectedGun == "red")
+        if (pGL.selectedGun == "blue" || pGL.selectedGun == "red") //single bullet shots
         {
             GameObject spawnedBullet = Instantiate(bullet, gameObject.transform); //instantiate a bullet at the gun's position, and get it
             if (gunDirection)
@@ -85,9 +93,9 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
                 spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 0, 0); //shoot right
             }
         }
-        else if (pGL.selectedGun == "yellow")
+        else if (pGL.selectedGun == "yellow") //spread pattern shots
         {
-            for (int i = 0; i <= 2; i++)
+            for (int i = 0; i <= 2; i++) //loop 3 times
             {
                 GameObject spawnedBullet = Instantiate(bullet, gameObject.transform); //instantiate a bullet at the gun's position, and get it
 
@@ -126,5 +134,11 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
                 }
             }
         }
+    }
+
+    void FireAbility()
+    {
+        GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
+        spawnedPuddle.transform.position = new Vector3 (spawnedPuddle.transform.position.x + 3, 0.21f, spawnedPuddle.transform.position.z);
     }
 }
