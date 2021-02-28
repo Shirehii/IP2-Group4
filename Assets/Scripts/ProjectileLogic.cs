@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS projectiles, such as the normal bullets and the ability puddles
 {
-    private float lifespan; //time until the projectile disappears
+    private float lifespan = 3; //time until the projectile disappears
     private string projectileName;
 
     //used to tweak the projectile's sprite
@@ -18,7 +18,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
     {
         //initialize some variables
         gL = gameObject.transform.parent.gameObject.GetComponent<GunLogic>();
-        pGL = gameObject.transform.parent.gameObject.transform.parent.GetComponent<PlayerGunLogic>();
+        pGL = gL.pGL;
         projectileRenderer = GetComponent<SpriteRenderer>();
 
         //load the projectile sprites
@@ -32,15 +32,24 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         {
             case "blue":
                 projectileRenderer.sprite = projectileSprites[0];
-                lifespan = 2;
+                if (gameObject.name.Replace("(Clone)", "") == "Bullet") //also change the lifespan of the projectile if it is a bullet
+                {
+                    lifespan = 2;
+                }
                 break;
             case "red":
                 projectileRenderer.sprite = projectileSprites[1];
-                lifespan = 2;
+                if (gameObject.name.Replace("(Clone)", "") == "Bullet")
+                {
+                    lifespan = 2;
+                }
                 break;
             case "yellow":
                 projectileRenderer.sprite = projectileSprites[2];
-                lifespan = 0.5f;
+                if (gameObject.name.Replace("(Clone)", "") == "Bullet")
+                {
+                    lifespan = 0.5f;
+                }
                 break;
         }
 
@@ -52,6 +61,17 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
 
         transform.parent = null; //projectile MUST be unparented after getting the above values, or else its movement will follow the player
         Invoke("DestroyProjectile", lifespan); //after set amount of time, destroy the projectile
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //bomb should explode when touching the ground
+        if (gameObject.name.Replace("(Clone)", "") == "AbilityBomb" && other.gameObject.name == "GroundPlane") //if the projectile is a bomb, and it collides with the ground,
+        {
+            gameObject.GetComponent<BoxCollider>().size = new Vector3(3, 3, 3); //expand the collider to simulate the explosion
+            //in this line we could add an explosion effect but we don't have the assets :')
+            DestroyProjectile(); //destroy the bomb
+        }
     }
 
     void DestroyProjectile()

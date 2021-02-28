@@ -5,17 +5,20 @@ using UnityEngine;
 public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logic that applies to ALL guns, for gun properties specific to the players, use PlayerGunLogic
 {
     //to get some variables on the gun's state
-    public PlayerGunLogic pGL;
     private PlayerMovement pM;
+    [HideInInspector]
+    public PlayerGunLogic pGL;
 
     //the projectile prefabs, need to be set in the inspector
     public GameObject bullet;
     public GameObject puddle;
+    public GameObject bomb;
 
     //time related variables for shooting
     public float fireRate = 1; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
     private float timeBetweenShots; //the time the gun has passed since the last shot
 
+    [HideInInspector]
     public AudioSource source;
 
     private bool gunDirection;
@@ -139,14 +142,30 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
 
     void FireAbility()
     {
-        GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
-        if (gunDirection)
+        if (pGL.selectedGun == "blue") //blue gun ability is bomb
         {
-            spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, 0.21f, spawnedPuddle.transform.position.z);
+            GameObject spawnedBomb = Instantiate(bomb, gameObject.transform);
+            if (gunDirection)
+            {
+                spawnedBomb.GetComponent<Rigidbody>().AddForce(-200, 300, 0);
+            }
+            else
+            {
+                spawnedBomb.GetComponent<Rigidbody>().AddForce(200, 300, 0);
+            }
+
         }
-        else
+        if (pGL.selectedGun == "red" || pGL.selectedGun == "yellow") //red and yellow gun abilities are the aoe puddle
         {
-            spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, 0.21f, spawnedPuddle.transform.position.z);
+            GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
+            if (gunDirection)
+            {
+                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, 0.21f, spawnedPuddle.transform.position.z);
+            }
+            else
+            {
+                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, 0.21f, spawnedPuddle.transform.position.z);
+            }
         }
     }
 }
