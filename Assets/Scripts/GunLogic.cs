@@ -41,6 +41,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         //for shooting
         if (pGL.fireShot == true && timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
         {
+            gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
             FireShot(); //shoot
             pGL.currentAmmo -= 1;
             source.Play();
@@ -54,6 +55,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         //for ability use
         if (pGL.fireAbility == true)
         {
+            gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
             FireAbility();
             pGL.fireAbility = false;
         }
@@ -79,7 +81,6 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         pGL.fireShot = false;
 
         //this is where the shooting magic happens
-        gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
 
         if (pGL.selectedGun == "blue" || pGL.selectedGun == "red") //single bullet shots
         {
@@ -139,6 +140,13 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     void FireAbility()
     {
         GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
-        spawnedPuddle.transform.position = new Vector3 (spawnedPuddle.transform.position.x + 3, 0.21f, spawnedPuddle.transform.position.z);
+        if (gunDirection)
+        {
+            spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, 0.21f, spawnedPuddle.transform.position.z);
+        }
+        else
+        {
+            spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, 0.21f, spawnedPuddle.transform.position.z);
+        }
     }
 }
