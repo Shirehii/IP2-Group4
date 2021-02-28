@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "AbilityPuddle")
         {
             health--; //Enemy health -1 per hit
             Destroy(GameObject.FindWithTag("Bullet")); //Destroy the bullet once it enters the trigger of enemy

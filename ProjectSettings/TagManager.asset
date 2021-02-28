@@ -12,6 +12,7 @@ TagManager:
   - Item
   - Player1
   - Player2
+  - AbilityPuddle
   layers:
   - Default
   - TransparentFX
