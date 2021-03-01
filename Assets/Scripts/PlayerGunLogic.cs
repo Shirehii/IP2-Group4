@@ -23,10 +23,17 @@ public class PlayerGunLogic : MonoBehaviour
     [HideInInspector]
     public bool fireShot = false;
 
-    //some more varibales for reloading
+    //some more variables for reloading
     private int maxAmmo = 4;
     [HideInInspector]
     public int currentAmmo = 4;
+
+    //variables for abilities
+    public string ultimateButton = "Ability_P1";
+    private float abilityBar = 0;
+    [HideInInspector]
+    public bool fireAbility = false;
+
 
     void Start()
     {
@@ -45,15 +52,15 @@ public class PlayerGunLogic : MonoBehaviour
         audioClips[2] = Resources.Load<AudioClip>("rlaunch");
 
         //get the two sprite renderers of the guns
-        gunRenderer = gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>(); //this player's
+        gunRenderer = gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>(); //this player's
         if (gameObject.tag == "Player1") //the other player's
         {
-            otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
+            otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>();
             selectedGun = "blue";
         }
         else if (gameObject.tag == "Player2") //if this player is player 2, then immediatelly swap their gun to the red one, to avoid clashing colors
         {
-            otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("TestGun").GetComponent<SpriteRenderer>();
+            otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>();
             selectedGun = "red";
 
             gunRenderer.sprite = gunSprites[1];
@@ -77,6 +84,16 @@ public class PlayerGunLogic : MonoBehaviour
         if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo) //if the player pressed the reload button and they aren't topped off already
         {
             StartCoroutine(ReloadCoroutine()); //reload
+        }
+
+        if (Input.GetAxis(ultimateButton) != 0 && abilityBar >= 10)
+        {
+            fireAbility = true;
+            abilityBar = 0;
+        }
+        else if (abilityBar < 10)
+        {
+            abilityBar = abilityBar + Time.deltaTime;
         }
     }
 
