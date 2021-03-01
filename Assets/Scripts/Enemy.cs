@@ -6,8 +6,7 @@ public class Enemy : MonoBehaviour
 {
     //Declaring Variables
 
-    public Transform player1; //Transform reference for player 1
-    public Transform player2; //Transform reference for player 2
+    public Transform crystal;
     private Rigidbody rb; //Rigidbody of object
     public bool facingRight = false; //Set the local X scale for the objects renderer
     public float speed; //Set enemy speed
@@ -47,11 +46,11 @@ public class Enemy : MonoBehaviour
 
     private void Player1Enemy() //Chase Player 1 & Flip
     {
-        transform.position = Vector3.MoveTowards(transform.position, player1.position, speed * Time.deltaTime); //Move towards the player1 position
+        transform.position = Vector3.MoveTowards(transform.position, crystal.position, speed * Time.deltaTime); //Move towards the player1 position
 
-        if (player1.transform.position.x < gameObject.transform.position.x && facingRight)
+        if (crystal.transform.position.x < gameObject.transform.position.x && facingRight)
             Flip();
-        if (player1.transform.position.x > gameObject.transform.position.x && !facingRight)
+        if (crystal.transform.position.x > gameObject.transform.position.x && !facingRight)
             Flip();
     }
 
