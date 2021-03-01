@@ -13,6 +13,7 @@ TagManager:
   - Player1
   - Player2
   - AbilityPuddle
+  - Crystal
   layers:
   - Default
   - TransparentFX

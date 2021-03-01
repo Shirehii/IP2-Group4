@@ -16,24 +16,12 @@ public class Enemy : MonoBehaviour
     {
         health = 3;
         rb = this.GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
-
-        //distanceToPlayer1 = transform.position - player1.transform.position;
-        //distanceToPlayer2 = transform.position - player2.transform.position;
     }
 
     void FixedUpdate()
     {
         Player1Enemy(); //Calling code within private function "Player1Enemy"
         EnemyDie();
-
-        //if (distance < distance2)
-        //{
-        //    Player1Enemy();
-        //}
-        //if (distance2 < distance)
-        //{
-        //    Player2Enemy();
-        //}
     }
 
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
@@ -53,16 +41,6 @@ public class Enemy : MonoBehaviour
         if (crystal.transform.position.x > gameObject.transform.position.x && !facingRight)
             Flip();
     }
-
-    //private void Player2Enemy() //Chase Player 2 Instead
-    //{
-    //    transform.position = Vector3.MoveTowards(transform.position, player2.position, speed * Time.deltaTime); //Move towards the player1 position
-
-    //    if (player2.transform.position.x < gameObject.transform.position.x && facingRight)
-    //        Flip();
-    //    if (player2.transform.position.x > gameObject.transform.position.x && !facingRight)
-    //        Flip();
-    //}
 
     private void OnTriggerEnter(Collider other)
     {

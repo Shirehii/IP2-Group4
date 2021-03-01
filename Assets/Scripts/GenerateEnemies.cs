@@ -17,12 +17,12 @@ public class GenerateEnemies : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
-        while(enemyCount < 10)
+        while(enemyCount < 8)
         {
             xPos = Random.Range(-8, 8);
-            zPos = Random.Range(1, -11);
+            zPos = Random.Range(7, -5);
             Instantiate(theEnemy, new Vector3(xPos, 1, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2f);
             enemyCount += 1;
         }
     }
