@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
 
     private void EnemyMovement() //Move towards crystal & Flip
     {
-        transform.position = Vector3.MoveTowards(transform.position, crystal.position, speed * Time.deltaTime); //Move towards the player1 position
+        transform.position = Vector3.MoveTowards(transform.position, crystal.position, speed * Time.deltaTime); //Move towards the crystal's position
 
         if (crystal.transform.position.x < gameObject.transform.position.x && facingRight)
             Flip();
