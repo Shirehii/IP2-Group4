@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2451711605613100549}
   - component: {fileID: 2451711605613100545}
   - component: {fileID: 5633681785811974846}
+  - component: {fileID: 7542322936997160935}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -151,6 +152,25 @@ MonoBehaviour:
   currentAmmo: 4
   ultimateButton: Ability_P1
   fireAbility: 0
+--- !u!95 &7542322936997160935
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451711605613100548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cee3a27f7bb39964c9bcd589724478eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1985207424526932677
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class PlayerGunLogic : MonoBehaviour
 {
     private Rigidbody pMrb;
     private GunLogic gL;
+    private Animator animator;
 
     //array to keep track of which gun is active
     private Sprite[] gunSprites;
@@ -72,6 +73,8 @@ public class PlayerGunLogic : MonoBehaviour
 
         //get the rigidbody from PlayerMovement
         pMrb = GetComponent<PlayerMovement>().rb;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -145,8 +148,10 @@ public class PlayerGunLogic : MonoBehaviour
     IEnumerator ReloadCoroutine()
     {
         pMrb.isKinematic = true; //stop the character
+        animator.SetBool("isReloading", true); //reload animation
         yield return new WaitForSeconds((maxAmmo - currentAmmo)/2); //wait
         currentAmmo = maxAmmo; //reload
         pMrb.isKinematic = false; //and allow them to move again
+        animator.SetBool("isReloading", false); //stop reload animation
     }
 }
