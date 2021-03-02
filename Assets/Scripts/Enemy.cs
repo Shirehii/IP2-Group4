@@ -10,29 +10,27 @@ public class Enemy : MonoBehaviour
     private Rigidbody rb; //Rigidbody of object
     public bool facingRight = false; //Set the local X scale for the objects renderer
     public float speed; //Set enemy speed
-    public float health;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
-        health = 3;
-        rb = this.GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        crystal = GameObject.FindGameObjectWithTag("Crystal").transform;
+        rb = GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
     }
 
     void FixedUpdate()
     {
-        Player1Enemy(); //Calling code within private function "Player1Enemy"
-        EnemyDie();
+        EnemyMovement(); //Calling code within private function "Player1Enemy"
     }
 
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
     {
         facingRight = !facingRight;
-        Vector3 tmpScale = gameObject.transform.localScale;
-        tmpScale.x *= -1; //Minus the current enemy localScale on X
-        gameObject.transform.localScale = tmpScale;
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
-    private void Player1Enemy() //Chase Player 1 & Flip
+    private void EnemyMovement() //Move towards crystal & Flip
     {
         transform.position = Vector3.MoveTowards(transform.position, crystal.position, speed * Time.deltaTime); //Move towards the player1 position
 
@@ -46,16 +44,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "AbilityPuddle")
         {
-            health--; //Enemy health -1 per hit
-            Destroy(GameObject.FindWithTag("Bullet")); //Destroy the bullet once it enters the trigger of enemy
-        }
-    }
-
-    private void EnemyDie()
-    {
-        if (health <= 0)
-        {
-            Destroy(gameObject); //Enemy death as health <= 0
+            if (other.gameObject.tag == "Bullet") //destroy the bullet that hit it
+            {
+                Destroy(other.gameObject);
+            }
+            Destroy(gameObject); //Enemy death
         }
     }
 }
