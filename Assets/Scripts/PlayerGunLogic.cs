@@ -53,7 +53,7 @@ public class PlayerGunLogic : MonoBehaviour
         audioClips[2] = Resources.Load<AudioClip>("rlaunch");
 
         //get the two sprite renderers of the guns
-        gunRenderer = gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>(); //this player's
+        gunRenderer = gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>(); //this player's
         if (gameObject.tag == "Player1") //the other player's
         {
             otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>();

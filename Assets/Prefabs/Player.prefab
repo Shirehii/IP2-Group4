@@ -33,7 +33,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2027474442882694344}
+  - {fileID: 5467687980606715438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,7 +171,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &1985207424526932677
+--- !u!1001 &5498604728557080611
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -224,12 +224,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991487823028492389, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
       propertyPath: m_Name
-      value: HeldGun
+      value: GunBarrel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
---- !u!4 &2027474442882694344 stripped
+--- !u!4 &5467687980606715438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 553897545195185677, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
-  m_PrefabInstance: {fileID: 1985207424526932677}
+  m_PrefabInstance: {fileID: 5498604728557080611}
   m_PrefabAsset: {fileID: 0}
