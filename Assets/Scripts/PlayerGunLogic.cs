@@ -56,12 +56,12 @@ public class PlayerGunLogic : MonoBehaviour
         gunRenderer = gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>(); //this player's
         if (gameObject.tag == "Player1") //the other player's
         {
-            otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>();
+            otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>();
             selectedGun = "blue";
         }
         else if (gameObject.tag == "Player2") //if this player is player 2, then immediatelly swap their gun to the red one, to avoid clashing colors
         {
-            otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("HeldGun").GetComponent<SpriteRenderer>();
+            otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>();
             selectedGun = "red";
 
             gunRenderer.sprite = gunSprites[1];

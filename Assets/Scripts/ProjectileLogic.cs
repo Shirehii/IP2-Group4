@@ -74,7 +74,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         }
     }
 
-    void DestroyProjectile()
+    public void DestroyProjectile()
     {
         Destroy(gameObject);
     }
