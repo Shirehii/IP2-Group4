@@ -9,32 +9,41 @@ public class Enemy : MonoBehaviour
     public Transform crystal;
     private Rigidbody rb; //Rigidbody of object
     public bool facingRight = false; //Set the local X scale for the objects renderer
-    public float speed; //Set enemy speed
-    public float health;
+    public float speed = 2; //Set enemy speed
+    private Vector3 offset;
+    private Vector3 direction;
+    private SpriteRenderer spriteRenderer;
+    private Vector3 startingPosition;
+    public int isTouchingCrystal = 0; //0 if not touching, 1 if touching
 
     void Start()
     {
-        health = 3;
-        rb = this.GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
+        startingPosition = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        crystal = GameObject.FindGameObjectWithTag("Crystal").transform;
+        rb = GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
+        offset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
     }
 
     void FixedUpdate()
     {
-        Player1Enemy(); //Calling code within private function "Player1Enemy"
-        EnemyDie();
+        if (isTouchingCrystal == 0)
+        { 
+            EnemyMovement(); //Calling code within private function "Player1Enemy"
+        }
     }
 
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
     {
         facingRight = !facingRight;
-        Vector3 tmpScale = gameObject.transform.localScale;
-        tmpScale.x *= -1; //Minus the current enemy localScale on X
-        gameObject.transform.localScale = tmpScale;
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
-    private void Player1Enemy() //Chase Player 1 & Flip
+    private void EnemyMovement() //Move towards crystal & Flip
     {
-        transform.position = Vector3.MoveTowards(transform.position, crystal.position, speed * Time.deltaTime); //Move towards the player1 position
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(crystal.position.x, -1, crystal.position.z) + offset, speed * Time.deltaTime); //Move towards the crystal's position
+        //direction = (transform.position - crystal.position).normalized;
+        //transform.position -= direction * speed * Time.deltaTime;
 
         if (crystal.transform.position.x < gameObject.transform.position.x && facingRight)
             Flip();
@@ -46,16 +55,27 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "AbilityPuddle")
         {
-            health--; //Enemy health -1 per hit
-            Destroy(GameObject.FindWithTag("Bullet")); //Destroy the bullet once it enters the trigger of enemy
+            if (other.gameObject.tag == "Bullet") //destroy the bullet that hit it
+            {
+                Destroy(other.gameObject);
+            }
+            GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>().EnemyDied();
+            Destroy(gameObject); //Enemy death
+        }
+
+        //added this check because enemies would stop following crystal after collisions
+        if (other.gameObject.tag == "Crystal")
+        {
+            isTouchingCrystal = 1;
         }
     }
 
-    private void EnemyDie()
+    //added this check because enemies would stop following crystal after collisions
+    private void OnTriggerExit(Collider other)
     {
-        if (health <= 0)
+        if (other.gameObject.tag == "Crystal")
         {
-            Destroy(gameObject); //Enemy death as health <= 0
+            isTouchingCrystal = 0;
         }
     }
 }

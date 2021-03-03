@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2451711605613100549}
   - component: {fileID: 2451711605613100545}
   - component: {fileID: 5633681785811974846}
+  - component: {fileID: 7542322936997160935}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2027474442882694344}
+  - {fileID: 5467687980606715438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 707677029
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6447fd4e8cef5424da8bf796fa6f711f, type: 3}
+  m_Sprite: {fileID: -4710355012282067623, guid: 8c3c66a1f5a4b6d41beb98716ff5387f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,7 +152,26 @@ MonoBehaviour:
   currentAmmo: 4
   ultimateButton: Ability_P1
   fireAbility: 0
---- !u!1001 &1985207424526932677
+--- !u!95 &7542322936997160935
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451711605613100548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cee3a27f7bb39964c9bcd589724478eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &5498604728557080611
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -204,12 +224,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991487823028492389, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
       propertyPath: m_Name
-      value: HeldGun
+      value: GunBarrel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
---- !u!4 &2027474442882694344 stripped
+--- !u!4 &5467687980606715438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 553897545195185677, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
-  m_PrefabInstance: {fileID: 1985207424526932677}
+  m_PrefabInstance: {fileID: 5498604728557080611}
   m_PrefabAsset: {fileID: 0}

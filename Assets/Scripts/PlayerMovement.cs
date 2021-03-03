@@ -15,10 +15,15 @@ public class PlayerMovement : MonoBehaviour
     public string horizontalButton = "Horizontal_P1";
     public string verticalButton = "Vertical_P1";
 
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
     void Awake()
     {
-        //get the rigidbody
+        //get some components
         rb = GetComponent<Rigidbody>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,18 +39,24 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Input.GetAxis(verticalButton) * verticalSpeed);
         }
 
+        animator.SetFloat("speed", Mathf.Abs(rb.velocity.x + rb.velocity.z)); //running animation
+
         //checking the player's movement direction, in case the sprite has to be flipped
         float h = Input.GetAxis(horizontalButton); //get the value of the horizontal axis
         if (h > 0 && !facingRight) //if it's positive and the player isn't facing right
         {
-            GetComponent<SpriteRenderer>().flipX = true; //flip 'em
-            facingRight = true;
+            Flip();
         }
         else if (h < 0 && facingRight) //if it's negative and the player is facing right
         {
-            GetComponent<SpriteRenderer>().flipX = false; //flip 'em
-            facingRight = false;
+            Flip();
         }
+    }
+
+    void Flip()
+    {
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+        facingRight = !facingRight;
     }
 
     //FixedUpdate might be better to use than Update for physics related stuff
