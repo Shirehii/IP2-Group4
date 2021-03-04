@@ -12,6 +12,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
     private GunLogic gL; //for the direction
     private SpriteRenderer projectileRenderer;
 
+    BoxCollider boxCollider; //the box collider of the projectile, required if it's a bomb
+
     private Sprite[] projectileSprites;
 
     void Start()
@@ -32,21 +34,21 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         {
             case "blue":
                 projectileRenderer.sprite = projectileSprites[0];
-                if (gameObject.name.Replace("(Clone)", "") == "Bullet") //also change the lifespan of the projectile if it is a bullet
+                if (projectileName == "Bullet") //also change the lifespan of the projectile if it is a bullet
                 {
                     lifespan = 2;
                 }
                 break;
             case "red":
                 projectileRenderer.sprite = projectileSprites[1];
-                if (gameObject.name.Replace("(Clone)", "") == "Bullet")
+                if (projectileName == "Bullet")
                 {
                     lifespan = 2;
                 }
                 break;
             case "yellow":
                 projectileRenderer.sprite = projectileSprites[2];
-                if (gameObject.name.Replace("(Clone)", "") == "Bullet")
+                if (projectileName == "Bullet")
                 {
                     lifespan = 0.5f;
                 }
@@ -59,18 +61,28 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
             projectileRenderer.flipX = true;
         }
 
+        //if it's a bomb, get it's box collider and disable the trigger, will be reactivated when it touches the ground
+        if (projectileName == "AbilityBomb")
+        {
+            boxCollider = GetComponent<BoxCollider>();
+            boxCollider.isTrigger = false;
+        }
+
         transform.parent = null; //projectile MUST be unparented after getting the above values, or else its movement will follow the player
         Invoke("DestroyProjectile", lifespan); //after set amount of time, destroy the projectile
     }
 
-    private void OnTriggerEnter(Collider other)
+    //BOMB related stuff
+    private void OnCollisionEnter(Collision other)
     {
         //bomb should explode when touching the ground
-        if (gameObject.name.Replace("(Clone)", "") == "AbilityBomb" && other.gameObject.name == "GroundPlane") //if the projectile is a bomb, and it collides with the ground,
-        {
-            gameObject.GetComponent<BoxCollider>().size = new Vector3(3, 3, 3); //expand the collider to simulate the explosion
+        if (projectileName == "AbilityBomb" && other.gameObject.name == "GroundPlane") //if the projectile is a bomb, and it collides with the ground,
+        { 
+            boxCollider.isTrigger = true; //enable it's trigger collider
+            gameObject.tag = "AbilityBomb"; //change its tag so enemies recognise the explosion
+            boxCollider.size = new Vector3(3, 3, 3); //expand the collider to simulate the explosion
             //in this line we could add an explosion effect but we don't have the assets :')
-            DestroyProjectile(); //destroy the bomb
+            Invoke("DestroyProjectile", 1f); //destroy the bomb
         }
     }
 

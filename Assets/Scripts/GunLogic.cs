@@ -160,11 +160,11 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
             GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
             if (gunDirection)
             {
-                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, 0.21f, spawnedPuddle.transform.position.z);
+                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, gameObject.transform.position.y - 0.5f, spawnedPuddle.transform.position.z);
             }
             else
             {
-                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, 0.21f, spawnedPuddle.transform.position.z);
+                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, gameObject.transform.position.y - 0.5f, spawnedPuddle.transform.position.z);
             }
         }
     }

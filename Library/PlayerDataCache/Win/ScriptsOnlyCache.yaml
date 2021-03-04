@@ -1,18 +1,25 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - BulletLogic
     - Enemy
+    - GenerateEnemies
     - GunLogic
     - Item
     - LoadScene
     - PlayerGunLogic
     - PlayerMovement
+    - ProjectileLogic
     - QuitGame
     - ScoreText
     - Timer
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -51,21 +58,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 11948}
+      Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12270}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12406}
     - Class: 114
-      Script: {instanceID: 13386}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13772}
+      Script: {instanceID: 13834}
     - Class: 114
-      Script: {instanceID: 13790}
+      Script: {instanceID: 13852}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -107,11 +114,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -122,29 +135,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11906}
-    - Class: 114
       Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 11948}
+      Script: {instanceID: 11922}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12406}
     - Class: 114
-      Script: {instanceID: 12524}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12782}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 12870}
     - Class: 114
-      Script: {instanceID: 13386}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13424}
+      Script: {instanceID: 13068}
     - Class: 114
-      Script: {instanceID: 13772}
+      Script: {instanceID: 13438}
+    - Class: 114
+      Script: {instanceID: 13476}
+    - Class: 114
+      Script: {instanceID: 13834}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -178,7 +193,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 7024d2880b73fbfe003610363cef3d50
+      Hash: 5cce87c15a7cb068c2350f239a700bee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -250,7 +265,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 09171b70d446a0b0263e10e4ec7aa79d
+      Hash: c3ab828926c2590a5a3203d2af631da4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunLogic
@@ -400,7 +415,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 6bcd8f94ba060b607a0da5aa291eb821
+      Hash: a110ea28b7bc8c22a39785fc88aa39a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerGunLogic
@@ -460,10 +475,16 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 0de43343ac3c3ecbb1644844e73d25f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GenerateEnemies
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BulletLogic
+    className: ProjectileLogic
   - hash:
       serializedVersion: 2
       Hash: f7bb6096199e0cf058d5d69878184cf4
