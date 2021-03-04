@@ -2129,7 +2129,7 @@ PrefabInstance:
     - target: {fileID: 2451711605613100547, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4710355012282067623, guid: 8c3c66a1f5a4b6d41beb98716ff5387f, type: 3}
+      objectReference: {fileID: -4493731862880446721, guid: a7622aaf09c540c4d8b45837ed938f94, type: 3}
     - target: {fileID: 2451711605613100548, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_Name
       value: Player2
@@ -2150,6 +2150,10 @@ PrefabInstance:
       propertyPath: ultimateButton
       value: Ability_P2
       objectReference: {fileID: 0}
+    - target: {fileID: 7542322936997160935, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 391d5ee5809ad3444b7fbf1f85c79958, type: 2}
     - target: {fileID: 8059132705478639623, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: fireRate
       value: 0.5

@@ -15,6 +15,7 @@ TagManager:
   - AbilityPuddle
   - Crystal
   - EnemyGen
+  - AbilityBomb
   layers:
   - Default
   - TransparentFX
