@@ -11,8 +11,12 @@ public class GenerateEnemies : MonoBehaviour
     private int enemyCount = 0;
     private bool currentlySpawning;
 
+    private CrystalHP crystalHP;
+
     void Start()
     {
+        crystalHP = GameObject.FindGameObjectWithTag("Crystal").GetComponent<CrystalHP>();
+
         currentlySpawning = true;
         StartCoroutine(EnemyDrop());
     }
@@ -56,6 +60,7 @@ public class GenerateEnemies : MonoBehaviour
         if (enemyCount - 1 < maxEnemies && !currentlySpawning)
         {
             enemyCount -= 1;
+            crystalHP.attackingEnemies -= 1;
             currentlySpawning = true;
             StartCoroutine(EnemyDrop());
         }

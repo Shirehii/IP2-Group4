@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
     private Vector3 offset;
     private Vector3 direction;
     private Vector3 startingPosition;
-    public int isTouchingCrystal = 0; //0 if not touching, 1 if touching
 
     //sprite related stuff
     private Sprite[] enemySprites;
@@ -51,10 +50,7 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isTouchingCrystal == 0)
-        { 
-            EnemyMovement(); //Calling code within private function "Player1Enemy"
-        }
+        EnemyMovement(); //Calling code within private function "Player1Enemy"
     }
 
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
@@ -88,23 +84,9 @@ public class Enemy : MonoBehaviour
             if ((otherSpriteName.Replace(otherTag, "")) == spriteRenderer.sprite.name.Replace("Enemy", "")) //if the two sprites are the same color
             {
                 GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>().EnemyDied(); //trigger enemy death in GenerateEnemies.cs
+                ScoreText.scoreValue += 10;
                 Destroy(gameObject); //Enemy death
             }
-        }
-
-        //added this check because enemies would stop following crystal after collisions
-        if (otherTag == "Crystal")
-        {
-            isTouchingCrystal = 1;
-        }
-    }
-
-    //added this check because enemies would stop following crystal after collisions
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Crystal")
-        {
-            isTouchingCrystal = 0;
         }
     }
 }
