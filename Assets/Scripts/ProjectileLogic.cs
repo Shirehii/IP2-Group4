@@ -80,9 +80,9 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         { 
             boxCollider.isTrigger = true; //enable it's trigger collider
             gameObject.tag = "AbilityBomb"; //change its tag so enemies recognise the explosion
-            boxCollider.size = new Vector3(3, 3, 3); //expand the collider to simulate the explosion
+            boxCollider.size = new Vector3(3.5f, 3.5f, 3.5f); //expand the collider to simulate the explosion
             //in this line we could add an explosion effect but we don't have the assets :')
-            Invoke("DestroyProjectile", 1f); //destroy the bomb
+            Invoke("DestroyProjectile", 0.1f); //destroy the bomb
         }
     }
 
