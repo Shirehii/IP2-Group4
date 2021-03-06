@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     private Vector3 startingPosition;
 
     //sprite related stuff
+    public string enemyColor;
     private Sprite[] enemySprites;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -33,22 +34,27 @@ public class Enemy : MonoBehaviour
         enemySprites[0] = Resources.Load<Sprite>("blueEnemy");
         enemySprites[1] = Resources.Load<Sprite>("redEnemy");
         enemySprites[2] = Resources.Load<Sprite>("yellowEnemy");
+        animator = GetComponent<Animator>();
 
         //set the enemy color
         if (Random.value < 0.3f)
         {
+            enemyColor = "blue";
             spriteRenderer.sprite = enemySprites[0];
+            animator.SetInteger("EnemyColor", 0); //blue
         }
         else if (Random.value >= 0.3f && Random.value < 0.6f)
         {
+            enemyColor = "red";
             spriteRenderer.sprite = enemySprites[1];
+            animator.SetInteger("EnemyColor", 1); //red
         }
         else if (Random.value >= 0.6f)
         {
+            enemyColor = "yellow";
             spriteRenderer.sprite = enemySprites[2];
+            animator.SetInteger("EnemyColor", 2); //yellow
         }
-
-        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -84,7 +90,7 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-            if ((otherSpriteName.Replace(otherTag, "")) == spriteRenderer.sprite.name.Replace("Enemy", "")) //if the two sprites are the same color
+            if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color
             {
                 GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>().EnemyDied(); //trigger enemy death in GenerateEnemies.cs
                 ScoreText.scoreValue += 10;

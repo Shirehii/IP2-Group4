@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //initialize some variables
-    private float horizontalSpeed = 10f;
-    private float verticalSpeed = 7.5f;
+    private float horizontalSpeed = 5f;
+    private float verticalSpeed = 5f;
     [HideInInspector]
     public Rigidbody rb;
     public bool facingRight = true;
@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1; //unfreeze game, just in case
         //get some components
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();

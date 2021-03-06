@@ -41,7 +41,7 @@ public class CrystalHP : MonoBehaviour
         if (currentHP <= 0)
         {
             gameOverModal.SetActive(true);
-            SetTimeScale();
+            Time.timeScale = 0;
         }
     }
 
@@ -68,17 +68,5 @@ public class CrystalHP : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         losingHP = false;
-    }
-
-    public void SetTimeScale()
-    {
-        if (Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
-        }
-        else
-        {
-            Time.timeScale = 0;
-        }
     }
 }
