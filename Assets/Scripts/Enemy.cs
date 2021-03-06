@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
     {
         string otherTag = other.gameObject.tag;
         string otherSpriteName = other.gameObject.GetComponent<SpriteRenderer>().sprite.name;
-        if (otherTag == "Bullet" || otherTag == "AbilityPuddle" || otherTag == "AbilityBomb")
+        if (otherTag == "Bullet" || otherTag == "AbilityPuddle" || otherTag == "AbilityBomb" || otherTag == "AbilityPierce")
         {
             if (otherTag == "Bullet") //destroy the bullet that hit it
             {
