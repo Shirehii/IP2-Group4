@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: 06931b7efccb0ea4ea9a2f506a4d0ef6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -428253007764539945
+    second: IP2_rifle_reload_animation_spritesheet_yellow_0
+  - first:
+      213: 7860678263747656547
+    second: IP2_rifle_reload_animation_spritesheet_yellow_1
+  - first:
+      213: 2575249369775797072
+    second: IP2_rifle_reload_animation_spritesheet_yellow_2
+  - first:
+      213: -3152902159496245855
+    second: IP2_rifle_reload_animation_spritesheet_yellow_3
+  - first:
+      213: -662497507138057566
+    second: IP2_rifle_reload_animation_spritesheet_yellow_4
+  - first:
+      213: 556690059081067059
+    second: IP2_rifle_reload_animation_spritesheet_yellow_5
+  - first:
+      213: -2723416066367707118
+    second: IP2_rifle_reload_animation_spritesheet_yellow_6
+  - first:
+      213: 2640868226829575112
+    second: IP2_rifle_reload_animation_spritesheet_yellow_7
+  - first:
+      213: 8754498661588321410
+    second: IP2_rifle_reload_animation_spritesheet_yellow_8
+  - first:
+      213: -8181858855271528907
+    second: IP2_rifle_reload_animation_spritesheet_yellow_9
+  - first:
+      213: 8938671184741677375
+    second: IP2_rifle_reload_animation_spritesheet_yellow_10
+  - first:
+      213: 3042421079923580577
+    second: IP2_rifle_reload_animation_spritesheet_yellow_11
+  - first:
+      213: 6918603185248523140
+    second: IP2_rifle_reload_animation_spritesheet_yellow_12
+  - first:
+      213: -7980168894514617210
+    second: IP2_rifle_reload_animation_spritesheet_yellow_13
+  - first:
+      213: 1071827796628822486
+    second: IP2_rifle_reload_animation_spritesheet_yellow_14
+  - first:
+      213: -8320666025594966401
+    second: IP2_rifle_reload_animation_spritesheet_yellow_15
+  - first:
+      213: 606493387518294927
+    second: IP2_rifle_reload_animation_spritesheet_yellow_16
+  - first:
+      213: -7829949859371499152
+    second: IP2_rifle_reload_animation_spritesheet_yellow_17
+  - first:
+      213: -8073712932519814849
+    second: IP2_rifle_reload_animation_spritesheet_yellow_18
+  - first:
+      213: 2137989734315540358
+    second: IP2_rifle_reload_animation_spritesheet_yellow_19
+  - first:
+      213: 8887239929224109761
+    second: IP2_rifle_reload_animation_spritesheet_yellow_20
+  - first:
+      213: 4324312592678654855
+    second: IP2_rifle_reload_animation_spritesheet_yellow_21
+  - first:
+      213: -3197868207234404117
+    second: IP2_rifle_reload_animation_spritesheet_yellow_20
+  - first:
+      213: 5897565845265986048
+    second: IP2_rifle_reload_animation_spritesheet_yellow_18
+  - first:
+      213: 1162318476765606406
+    second: IP2_rifle_reload_animation_spritesheet_yellow_19
+  - first:
+      213: 8252120826224948632
+    second: IP2_rifle_reload_animation_spritesheet_yellow_21
+  - first:
+      213: 6731845470973661123
+    second: IP2_rifle_reload_animation_spritesheet_yellow_22
+  - first:
+      213: 7740649445871042822
+    second: IP2_rifle_reload_animation_spritesheet_yellow_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 828
+        width: 261
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5b33e882a8e0af0800000000000000
+      internalID: -428253007764539945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_1
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 835
+        width: 260
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b3054bb3db61d60800000000000000
+      internalID: 7860678263747656547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_2
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 836
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053f88558af1db320800000000000000
+      internalID: 2575249369775797072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_3
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 839
+        width: 260
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad0aa3d034ae34d0800000000000000
+      internalID: -3152902159496245855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_4
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 837
+        width: 260
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa447ef6065ec6f0800000000000000
+      internalID: -662497507138057566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_5
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 835
+        width: 260
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33aa485c8a2c9b700800000000000000
+      internalID: 556690059081067059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 581
+        width: 258
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218af84548b743ad0800000000000000
+      internalID: -2723416066367707118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_7
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 584
+        width: 261
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3eace09af36a420800000000000000
+      internalID: 2640868226829575112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_8
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 582
+        width: 261
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284ca9e362a3e7970800000000000000
+      internalID: 8754498661588321410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_9
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 580
+        width: 260
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536082178b2347e80800000000000000
+      internalID: -8181858855271528907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_10
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 550
+        width: 260
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f393c8a551a8c0c70800000000000000
+      internalID: 8938671184741677375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_11
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 551
+        width: 260
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae510e4ad9d83a20800000000000000
+      internalID: 3042421079923580577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 320
+        width: 261
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483df9ec0f0d30060800000000000000
+      internalID: 6918603185248523140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_13
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 319
+        width: 263
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684a5d2dbaeb04190800000000000000
+      internalID: -7980168894514617210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_14
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 321
+        width: 265
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d95376c3b5efde00800000000000000
+      internalID: 1071827796628822486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_15
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 320
+        width: 261
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e20c1a55e078c80800000000000000
+      internalID: -8320666025594966401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_16
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 319
+        width: 260
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bb6a9c582ba6800800000000000000
+      internalID: 606493387518294927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_17
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 321
+        width: 257
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071ca07761e665390800000000000000
+      internalID: -7829949859371499152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_20
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 63
+        width: 260
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0374dfec3ee93d0800000000000000
+      internalID: -3197868207234404117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 64
+        width: 260
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0023e8eb3ec58d150800000000000000
+      internalID: 5897565845265986048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_19
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 65
+        width: 260
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602bc731f72612010800000000000000
+      internalID: 1162318476765606406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_21
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 65
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895bdba7b2c658270800000000000000
+      internalID: 8252120826224948632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_22
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 63
+        width: 258
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf053cf9c15c6d50800000000000000
+      internalID: 6731845470973661123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_rifle_reload_animation_spritesheet_yellow_23
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 65
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601c7f7c8af4c6b60800000000000000
+      internalID: 7740649445871042822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ed8b3aaebd137034ab1bc3236255d125
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

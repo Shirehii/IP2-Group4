@@ -1,0 +1,607 @@
+fileFormatVersion: 2
+guid: b3e5588fc243f4f418c26eb3f82911bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8665865742030772344
+    second: IP2_shotgun_reload_animation_spritesheet_blue_0
+  - first:
+      213: -7304556049159219332
+    second: IP2_shotgun_reload_animation_spritesheet_blue_1
+  - first:
+      213: -2142369521330424913
+    second: IP2_shotgun_reload_animation_spritesheet_blue_2
+  - first:
+      213: -8639123670458702504
+    second: IP2_shotgun_reload_animation_spritesheet_blue_3
+  - first:
+      213: -439827848433770239
+    second: IP2_shotgun_reload_animation_spritesheet_blue_4
+  - first:
+      213: 904046682270648037
+    second: IP2_shotgun_reload_animation_spritesheet_blue_5
+  - first:
+      213: 7286547308429169852
+    second: IP2_shotgun_reload_animation_spritesheet_blue_6
+  - first:
+      213: 8558281968499104911
+    second: IP2_shotgun_reload_animation_spritesheet_blue_7
+  - first:
+      213: 4264007965514561771
+    second: IP2_shotgun_reload_animation_spritesheet_blue_8
+  - first:
+      213: -754036276993737430
+    second: IP2_shotgun_reload_animation_spritesheet_blue_9
+  - first:
+      213: 3957847908680583680
+    second: IP2_shotgun_reload_animation_spritesheet_blue_10
+  - first:
+      213: -942034936105360599
+    second: IP2_shotgun_reload_animation_spritesheet_blue_10
+  - first:
+      213: -517412565893258295
+    second: IP2_shotgun_reload_animation_spritesheet_blue_11
+  - first:
+      213: 5740529350642771784
+    second: IP2_shotgun_reload_animation_spritesheet_blue_13
+  - first:
+      213: -6493563361332961825
+    second: IP2_shotgun_reload_animation_spritesheet_blue_14
+  - first:
+      213: -231500976818786095
+    second: IP2_shotgun_reload_animation_spritesheet_blue_15
+  - first:
+      213: 7610842137606185297
+    second: IP2_shotgun_reload_animation_spritesheet_blue_12
+  - first:
+      213: -6759209688559999619
+    second: IP2_shotgun_reload_animation_spritesheet_blue_13
+  - first:
+      213: -7943421855645546970
+    second: IP2_shotgun_reload_animation_spritesheet_blue_18
+  - first:
+      213: -1497477215249894027
+    second: IP2_shotgun_reload_animation_spritesheet_blue_15
+  - first:
+      213: 3036738186344513815
+    second: IP2_shotgun_reload_animation_spritesheet_blue_16
+  - first:
+      213: 4729292376762341173
+    second: IP2_shotgun_reload_animation_spritesheet_blue_17
+  - first:
+      213: 4023827156365422954
+    second: IP2_shotgun_reload_animation_spritesheet_blue_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 170
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 814
+        width: 255
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87898f88af6534870800000000000000
+      internalID: 8665865742030772344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 816
+        width: 253
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c771fe779f001aa90800000000000000
+      internalID: -7304556049159219332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 815
+        width: 253
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3f9776546c442e0800000000000000
+      internalID: -2142369521330424913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_3
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 817
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855e3a33bcaab1880800000000000000
+      internalID: -8639123670458702504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_4
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 818
+        width: 252
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101e7c3f6ea65e9f0800000000000000
+      internalID: -439827848433770239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_5
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 814
+        width: 256
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6cc1deaa1db8c00800000000000000
+      internalID: 904046682270648037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 502
+        width: 254
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4dff5db240f1560800000000000000
+      internalID: 7286547308429169852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_7
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 506
+        width: 253
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c150c4b1025c670800000000000000
+      internalID: 8558281968499104911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_8
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 509
+        width: 251
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be87ee727accc2b30800000000000000
+      internalID: 4264007965514561771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 541
+        width: 244
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2db70a40002985f0800000000000000
+      internalID: -754036276993737430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_10
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 542
+        width: 253
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923ae6b77383de2f0800000000000000
+      internalID: -942034936105360599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_11
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 542
+        width: 252
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3eb9f3308c1d8f0800000000000000
+      internalID: -517412565893258295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_14
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 510
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddd149f68a32e5a0800000000000000
+      internalID: -6493563361332961825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 234
+        width: 253
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1516795a9942f9960800000000000000
+      internalID: 7610842137606185297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_13
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 235
+        width: 253
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75a00f99967232a0800000000000000
+      internalID: -6759209688559999619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_18
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 233
+        width: 255
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6264c2988eb43c190800000000000000
+      internalID: -7943421855645546970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_15
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 231
+        width: 255
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575f9cd1864e73be0800000000000000
+      internalID: -1497477215249894027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_16
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 231
+        width: 253
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711cde88a49a42a20800000000000000
+      internalID: 3036738186344513815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_17
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 232
+        width: 258
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537d1eb1c52d1a140800000000000000
+      internalID: 4729292376762341173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IP2_shotgun_reload_animation_spritesheet_blue_19
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 233
+        width: 255
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a613bb4ca7187d730800000000000000
+      internalID: 4023827156365422954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9d3748acb57cecf4ebdd5bb5dee3b62a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

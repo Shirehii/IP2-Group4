@@ -51,6 +51,8 @@ public class PlayerGunLogic : MonoBehaviour
         audioClips[0] = Resources.Load<AudioClip>("slimeball");
         audioClips[1] = Resources.Load<AudioClip>("flaunch");
         audioClips[2] = Resources.Load<AudioClip>("rlaunch");
+        
+        animator = GetComponent<Animator>();
 
         //get the two sprite renderers of the guns
         gunRenderer = gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>(); //this player's
@@ -63,6 +65,7 @@ public class PlayerGunLogic : MonoBehaviour
         {
             otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>();
             selectedGun = "red";
+            animator.SetInteger("gunColor", 1);
 
             gunRenderer.sprite = gunSprites[1];
             gL.fireRate = 2;
@@ -73,8 +76,6 @@ public class PlayerGunLogic : MonoBehaviour
 
         //get the rigidbody from PlayerMovement
         pMrb = GetComponent<PlayerMovement>().rb;
-
-        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -111,6 +112,7 @@ public class PlayerGunLogic : MonoBehaviour
                 {
                     gunRenderer.sprite = gunSprites[0];
                     selectedGun = "blue";
+                    animator.SetInteger("gunColor", 0);
                     gL.fireRate = 1;
                     maxAmmo = 4;
                     gL.source.clip = audioClips[0];
@@ -121,6 +123,7 @@ public class PlayerGunLogic : MonoBehaviour
                 {
                     gunRenderer.sprite = gunSprites[1];
                     selectedGun = "red";
+                    animator.SetInteger("gunColor", 1);
                     gL.fireRate = 2;
                     maxAmmo = 5;
                     gL.source.clip = audioClips[1];
@@ -131,6 +134,7 @@ public class PlayerGunLogic : MonoBehaviour
                 {
                     gunRenderer.sprite = gunSprites[2];
                     selectedGun = "yellow";
+                    animator.SetInteger("gunColor", 2);
                     gL.fireRate = 3;
                     maxAmmo = 3;
                     gL.source.clip = audioClips[2];
