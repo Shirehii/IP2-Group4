@@ -13,6 +13,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     public GameObject bullet;
     public GameObject puddle;
     public GameObject bomb;
+    public GameObject pierce;
 
     //time related variables for shooting
     public float fireRate = 1; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
@@ -140,9 +141,10 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         }
     }
 
+    //method for firing any of the abilities
     void FireAbility()
     {
-        if (pGL.selectedGun == "blue") //blue gun ability is bomb
+        if (pGL.selectedGun == "blue") //blue gun ability is the bomb
         {
             GameObject spawnedBomb = Instantiate(bomb, gameObject.transform);
             if (gunDirection)
@@ -155,7 +157,21 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
             }
 
         }
-        if (pGL.selectedGun == "red" || pGL.selectedGun == "yellow") //red and yellow gun abilities are the aoe puddle
+
+        if (pGL.selectedGun == "red") //red gun ability is the piercing bullet
+        {
+            GameObject spawnedPierce = Instantiate(pierce, gameObject.transform);
+            if (gunDirection)
+            {
+                spawnedPierce.GetComponent<Rigidbody>().AddForce(-500, 0, 0); //shoot left
+            }
+            else if (!gunDirection)
+            {
+                spawnedPierce.GetComponent<Rigidbody>().AddForce(500, 0, 0); //shoot right
+            }
+        }
+
+        if (pGL.selectedGun == "yellow") //yellow gun ability is the aoe puddle
         {
             GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
             if (gunDirection)

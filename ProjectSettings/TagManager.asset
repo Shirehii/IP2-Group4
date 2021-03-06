@@ -16,6 +16,7 @@ TagManager:
   - Crystal
   - EnemyGen
   - AbilityBomb
+  - AbilityPierce
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
 {
     private float lifespan = 3; //time until the projectile disappears
     private string projectileName;
+    public string projectileColor;
 
     //used to tweak the projectile's sprite
     private PlayerGunLogic pGL; //for the color
@@ -33,6 +34,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         switch (pGL.selectedGun) //Switch statement for switching the projectile's color
         {
             case "blue":
+                projectileColor = "blue";
                 projectileRenderer.sprite = projectileSprites[0];
                 if (projectileName == "Bullet") //also change the lifespan of the projectile if it is a bullet
                 {
@@ -40,6 +42,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 }
                 break;
             case "red":
+                projectileColor = "red";
                 projectileRenderer.sprite = projectileSprites[1];
                 if (projectileName == "Bullet")
                 {
@@ -47,6 +50,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 }
                 break;
             case "yellow":
+                projectileColor = "yellow";
                 projectileRenderer.sprite = projectileSprites[2];
                 if (projectileName == "Bullet")
                 {
