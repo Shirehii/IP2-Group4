@@ -18,10 +18,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -67,15 +65,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 12270}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 12406}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13836}
     - Class: 114
-      Script: {instanceID: 13852}
+      Script: {instanceID: 13854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -134,9 +132,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11702}
+    - Class: 114
       Script: {instanceID: 11722}
     - Class: 114
       Script: {instanceID: 11726}
+    - Class: 114
+      Script: {instanceID: 11838}
     - Class: 114
       Script: {instanceID: 11914}
     - Class: 114
@@ -144,27 +146,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 12406}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12454}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12784}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 12872}
     - Class: 114
-      Script: {instanceID: 13068}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 16520}
+      Script: {instanceID: 13836}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,7 +270,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: c3ab828926c2590a5a3203d2af631da4
+      Hash: 71bdb4fabaa12f715ff3bdc99f67a2fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunLogic
@@ -332,6 +334,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 9c1c9f18918f49da9bb5ac2b0b23bfbb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CrystalHP
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -674,12 +682,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 9c1c9f18918f49da9bb5ac2b0b23bfbb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CrystalHP
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
