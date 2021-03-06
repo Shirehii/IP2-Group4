@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     //sprite related stuff
     private Sprite[] enemySprites;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     void Start()
     {
@@ -46,6 +47,8 @@ public class Enemy : MonoBehaviour
         {
             spriteRenderer.sprite = enemySprites[2];
         }
+
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -87,6 +90,11 @@ public class Enemy : MonoBehaviour
                 ScoreText.scoreValue += 10;
                 Destroy(gameObject); //Enemy death
             }
+        }
+
+        if (otherTag == "Crystal")
+        {
+            animator.SetBool("isAttacking", true);
         }
     }
 }
