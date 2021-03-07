@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     public bool facingRight = false; //Set the local X scale for the objects renderer
     public float speed = 2; //Set enemy speed
+    private float xPos;
+    private float zPos;
     private Vector3 offset;
     private Vector3 direction;
     private Vector3 startingPosition;
@@ -27,7 +29,24 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         crystal = GameObject.FindGameObjectWithTag("Crystal").transform;
         rb = GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
-        offset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
+
+        //offset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
+        Random.InitState(System.DateTime.Now.Millisecond);
+        if (Random.value < 0.5f) //enemy left side of crystal attack
+        {
+            xPos = -1.25f;
+            zPos = Random.Range(-1f, 1f);
+        }
+        else if (Random.value >= 0.5f) //enemy right side of crystal attack
+        {
+            xPos = 1.25f;
+            zPos = Random.Range(-1f, 1f);
+        }
+        if (xPos != 1.25f && xPos != -1.25f)
+        {
+            xPos = -1.25f;
+        }
+        offset = new Vector3(xPos, 0, zPos);
 
         //get the enemy sprites
         enemySprites = new Sprite[3];
@@ -37,28 +56,16 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //set the enemy color
-        if (Random.value < 0.3f)
-        {
-            enemyColor = "blue";
-            spriteRenderer.sprite = enemySprites[0];
-            animator.SetInteger("EnemyColor", 0); //blue
-        }
-        else if (Random.value >= 0.3f && Random.value < 0.6f)
-        {
-            enemyColor = "red";
-            spriteRenderer.sprite = enemySprites[1];
-            animator.SetInteger("EnemyColor", 1); //red
-        }
-        else if (Random.value >= 0.6f)
-        {
-            enemyColor = "yellow";
-            spriteRenderer.sprite = enemySprites[2];
-            animator.SetInteger("EnemyColor", 2); //yellow
-        }
+        SetEnemyColor();
     }
 
     void FixedUpdate()
     {
+        if (enemyColor == null || enemyColor == "" || enemyColor == " ")
+        {
+            SetEnemyColor();
+        }
+
         EnemyMovement(); //Calling code within private function "Player1Enemy"
     }
 
@@ -101,6 +108,28 @@ public class Enemy : MonoBehaviour
         if (otherTag == "Crystal")
         {
             animator.SetBool("isAttacking", true);
+        }
+    }
+    
+    void SetEnemyColor()
+    {
+        if (Random.value < 0.3f)
+        {
+            spriteRenderer.sprite = enemySprites[0];
+            animator.SetInteger("EnemyColor", 0); //blue
+            enemyColor = "blue";
+        }
+        else if (Random.value >= 0.3f && Random.value < 0.6f)
+        {
+            spriteRenderer.sprite = enemySprites[1];
+            animator.SetInteger("EnemyColor", 1); //red
+            enemyColor = "red";
+        }
+        else if (Random.value >= 0.6f)
+        {
+            spriteRenderer.sprite = enemySprites[2];
+            animator.SetInteger("EnemyColor", 2); //yellow
+            enemyColor = "yellow";
         }
     }
 }

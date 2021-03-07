@@ -47,10 +47,12 @@ public class PlayerMovement : MonoBehaviour
         if (h > 0 && !facingRight) //if it's positive and the player isn't facing right
         {
             Flip();
+            animator.SetBool("facingRight", true);
         }
         else if (h < 0 && facingRight) //if it's negative and the player is facing right
         {
             Flip();
+            animator.SetBool("facingRight", false);
         }
     }
 

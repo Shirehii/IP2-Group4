@@ -22,15 +22,6 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     [HideInInspector]
     public AudioSource source;
 
-    private bool gunDirection;
-    [HideInInspector]
-    public SpriteRenderer gunRenderer;
-
-    private void Awake()
-    {
-        gunRenderer = GetComponent<SpriteRenderer>();
-    }
-
     void Start()
     {
         //get these components from the parent character
@@ -45,7 +36,6 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         //for shooting
         if (pGL.fireShot == true && timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
         {
-            gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
             FireShot(); //shoot
             pGL.currentAmmo -= 1;
             source.Play();
@@ -59,22 +49,8 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         //for ability use
         if (pGL.fireAbility == true)
         {
-            gunDirection = gunRenderer.flipX; //check if the sprite is flipped or not
             FireAbility();
             pGL.fireAbility = false;
-        }
-
-        //for flipping the gun around
-        if (!pM.facingRight) //if character is facing left
-        {
-            //flip the sprite, then set it's position to the parent character's + 0.25f
-            gunRenderer.flipX = true;
-            gameObject.transform.position = gameObject.transform.parent.gameObject.transform.position + new Vector3(-0.25f, 0, 0);
-        }
-        else if (pM.facingRight) //similarly for facing right
-        {
-            gunRenderer.flipX = false;
-            gameObject.transform.position = gameObject.transform.parent.gameObject.transform.position + new Vector3(0.25f, 0, 0);
         }
     }
 
@@ -89,11 +65,11 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         if (pGL.selectedGun == "blue" || pGL.selectedGun == "red") //single bullet shots
         {
             GameObject spawnedBullet = Instantiate(bullet, gameObject.transform); //instantiate a bullet at the gun's position, and get it
-            if (gunDirection)
+            if (!pM.facingRight)
             {
                 spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, 0, 0); //shoot left
             }
-            else if (!gunDirection)
+            else if (pM.facingRight)
             {
                 spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 0, 0); //shoot right
             }
@@ -107,31 +83,31 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
                 switch (i)
                 {
                     case 0:
-                        if (gunDirection)
+                        if (!pM.facingRight)
                         {
                             spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, 100, 0);
                         }
-                        else if (!gunDirection)
+                        else if (pM.facingRight)
                         {
                             spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 100, 0);
                         }
                         break;
                     case 1:
-                        if (gunDirection)
+                        if (!pM.facingRight)
                         {
                             spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, 0, 0);
                         }
-                        else if (!gunDirection)
+                        else if (pM.facingRight)
                         {
                             spawnedBullet.GetComponent<Rigidbody>().AddForce(500, 0, 0);
                         }
                         break;
                     case 2:
-                        if (gunDirection)
+                        if (!pM.facingRight)
                         {
                             spawnedBullet.GetComponent<Rigidbody>().AddForce(-500, -100, 0);
                         }
-                        else if (!gunDirection)
+                        else if (pM.facingRight)
                         {
                             spawnedBullet.GetComponent<Rigidbody>().AddForce(500, -100, 0);
                         }
@@ -147,7 +123,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         if (pGL.selectedGun == "blue") //blue gun ability is the bomb
         {
             GameObject spawnedBomb = Instantiate(bomb, gameObject.transform);
-            if (gunDirection)
+            if (!pM.facingRight)
             {
                 spawnedBomb.GetComponent<Rigidbody>().AddForce(-200, 300, 0);
             }
@@ -161,11 +137,11 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         if (pGL.selectedGun == "red") //red gun ability is the piercing bullet
         {
             GameObject spawnedPierce = Instantiate(pierce, gameObject.transform);
-            if (gunDirection)
+            if (!pM.facingRight)
             {
                 spawnedPierce.GetComponent<Rigidbody>().AddForce(-500, 0, 0); //shoot left
             }
-            else if (!gunDirection)
+            else if (pM.facingRight)
             {
                 spawnedPierce.GetComponent<Rigidbody>().AddForce(500, 0, 0); //shoot right
             }
@@ -174,7 +150,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         if (pGL.selectedGun == "yellow") //yellow gun ability is the aoe puddle
         {
             GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
-            if (gunDirection)
+            if (!pM.facingRight)
             {
                 spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, gameObject.transform.position.y - 0.5f, spawnedPuddle.transform.position.z);
             }
