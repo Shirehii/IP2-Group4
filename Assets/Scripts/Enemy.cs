@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     private Sprite[] enemySprites;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private bool isAttacking = false;
 
     void Start()
     {
@@ -67,8 +68,12 @@ public class Enemy : MonoBehaviour
         }
 
         EnemyMovement(); //Calling code within private function "Player1Enemy"
-    }
 
+        if (isAttacking)
+        {
+            StartCoroutine(EnemyAttack());
+        }
+    }
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
     {
         facingRight = !facingRight;
@@ -108,8 +113,18 @@ public class Enemy : MonoBehaviour
         if (otherTag == "Crystal")
         {
             animator.SetBool("isAttacking", true);
+            isAttacking = true;
         }
     }
+
+    IEnumerator EnemyAttack()
+    {
+        yield return new WaitForSeconds(4.4f);
+        GameObject.FindGameObjectWithTag("Crystal").GetComponent<CrystalHP>().LoseMoreHP();
+        yield return new WaitForSeconds(0.1f);
+        Destroy(gameObject);
+    }
+
     
     void SetEnemyColor()
     {

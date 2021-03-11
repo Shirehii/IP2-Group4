@@ -69,4 +69,9 @@ public class CrystalHP : MonoBehaviour
         }
         losingHP = false;
     }
+
+    public void LoseMoreHP() //when an enemy attacks 3 times, they get destroyed after making a 'big' attack that takes more HP off the crystal
+    {
+        currentHP -= 3;
+    }
 }
