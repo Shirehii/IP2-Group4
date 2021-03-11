@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrystalHP : MonoBehaviour
 {
     //HP variables
-    private float maxHP = 100;
+    private float maxHP = 500;
     private float currentHP;
 
     //variables for checking how many enemies are attacking
@@ -68,5 +68,10 @@ public class CrystalHP : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         losingHP = false;
+    }
+
+    public void LoseMoreHP() //when an enemy attacks 3 times, they get destroyed after making a 'big' attack that takes more HP off the crystal
+    {
+        currentHP -= 3;
     }
 }

@@ -8,13 +8,11 @@ public class PlayerGunLogic : MonoBehaviour
     private GunLogic gL;
     private Animator animator;
 
-    //array to keep track of which gun is active
-    private Sprite[] gunSprites;
     [HideInInspector]
     public string selectedGun;
 
     private SpriteRenderer gunRenderer; //the player's gun sprite renderer, used to change the sprite
-    private SpriteRenderer otherGunRenderer; //the other player's gun sprite renderer, used to check what its sprite is
+    private PlayerGunLogic otherpGL; //the other player's gun sprite renderer, used to check what its sprite is
 
     private AudioClip[] audioClips;
 
@@ -37,14 +35,7 @@ public class PlayerGunLogic : MonoBehaviour
 
 
     void Start()
-    {
-        //load the gun sprites
-        gunSprites = new Sprite[3];
-        gunSprites[0] = Resources.Load<Sprite>("blue");
-        gunSprites[1] = Resources.Load<Sprite>("red");
-        gunSprites[2] = Resources.Load<Sprite>("yellow");
-
-        gL = transform.GetChild(0).GetComponent<GunLogic>();
+    {   gL = transform.GetChild(0).GetComponent<GunLogic>();
 
         //load the audio clips
         audioClips = new AudioClip[3];
@@ -58,16 +49,15 @@ public class PlayerGunLogic : MonoBehaviour
         gunRenderer = gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>(); //this player's
         if (gameObject.tag == "Player1") //the other player's
         {
-            otherGunRenderer = GameObject.FindGameObjectWithTag("Player2").gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>();
+            otherpGL = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerGunLogic>();
             selectedGun = "blue";
         }
         else if (gameObject.tag == "Player2") //if this player is player 2, then immediatelly swap their gun to the red one, to avoid clashing colors
         {
-            otherGunRenderer = GameObject.FindGameObjectWithTag("Player1").gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>();
+            otherpGL = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerGunLogic>();
             selectedGun = "red";
             animator.SetInteger("gunColor", 1);
 
-            gunRenderer.sprite = gunSprites[1];
             gL.fireRate = 2;
             maxAmmo = 5;
             currentAmmo = maxAmmo;
@@ -108,9 +98,8 @@ public class PlayerGunLogic : MonoBehaviour
         {
             case "BlueGun":
                 //if statements that stop players from picking the same colored gun
-                if (otherGunRenderer.sprite != gunSprites[0])
+                if (otherpGL.selectedGun != "blue")
                 {
-                    gunRenderer.sprite = gunSprites[0];
                     selectedGun = "blue";
                     animator.SetInteger("gunColor", 0);
                     gL.fireRate = 1;
@@ -119,9 +108,8 @@ public class PlayerGunLogic : MonoBehaviour
                 }
                 break;
             case "RedGun":
-                if (otherGunRenderer.sprite != gunSprites[1])
+                if (otherpGL.selectedGun != "red")
                 {
-                    gunRenderer.sprite = gunSprites[1];
                     selectedGun = "red";
                     animator.SetInteger("gunColor", 1);
                     gL.fireRate = 2;
@@ -130,9 +118,8 @@ public class PlayerGunLogic : MonoBehaviour
                 }
                 break;
             case "YellowGun":
-                if (otherGunRenderer.sprite != gunSprites[2])
+                if (otherpGL.selectedGun != "yellow")
                 {
-                    gunRenderer.sprite = gunSprites[2];
                     selectedGun = "yellow";
                     animator.SetInteger("gunColor", 2);
                     gL.fireRate = 3;

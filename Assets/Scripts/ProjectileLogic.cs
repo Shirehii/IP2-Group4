@@ -10,7 +10,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
 
     //used to tweak the projectile's sprite
     private PlayerGunLogic pGL; //for the color
-    private GunLogic gL; //for the direction
+    private PlayerMovement pM; //for the direction
     private SpriteRenderer projectileRenderer;
 
     BoxCollider boxCollider; //the box collider of the projectile, required if it's a bomb
@@ -20,8 +20,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
     void Start()
     {
         //initialize some variables
-        gL = gameObject.transform.parent.gameObject.GetComponent<GunLogic>();
-        pGL = gL.pGL;
+        pM = gameObject.transform.parent.gameObject.transform.parent.GetComponent<PlayerMovement>();
+        pGL = gameObject.transform.parent.gameObject.GetComponent<GunLogic>().pGL;
         projectileRenderer = GetComponent<SpriteRenderer>();
 
         //load the projectile sprites
@@ -60,7 +60,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         }
 
         //for flipping the projectile sprite
-        if (gL.gunRenderer.flipX)
+        if (!pM.facingRight)
         {
             projectileRenderer.flipX = true;
         }

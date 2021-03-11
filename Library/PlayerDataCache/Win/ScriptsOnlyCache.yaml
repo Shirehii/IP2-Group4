@@ -270,7 +270,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 71bdb4fabaa12f715ff3bdc99f67a2fb
+      Hash: 046af0c2791465057093079aef215200
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunLogic
@@ -686,4 +686,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/TestLevel.unity
-  playerPath: D:/yeet/IP2 Group4/Builds/IP2 Group4.exe
+  playerPath: D:/yeet/IP2 Group4 - Build/IP2 Group4.exe

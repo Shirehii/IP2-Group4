@@ -23,6 +23,7 @@ public class GenerateEnemies : MonoBehaviour
 
     void Update()
     {
+        Random.InitState(System.DateTime.Now.Millisecond);
         if (GameObject.FindGameObjectsWithTag("Enemy").Length < maxEnemies)
         {
             enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
