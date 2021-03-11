@@ -48,12 +48,7 @@ public class Enemy : MonoBehaviour
             xPos = -1.25f;
         }
         offset = new Vector3(xPos, 0, zPos);
-
-        //get the enemy sprites
-        enemySprites = new Sprite[3];
-        enemySprites[0] = Resources.Load<Sprite>("blueEnemy");
-        enemySprites[1] = Resources.Load<Sprite>("redEnemy");
-        enemySprites[2] = Resources.Load<Sprite>("yellowEnemy");
+        
         animator = GetComponent<Animator>();
 
         //set the enemy color
@@ -102,11 +97,50 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-            if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color
+            if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color (blue, red, or yellow)
             {
                 GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>().EnemyDied(); //trigger enemy death in GenerateEnemies.cs
                 ScoreText.scoreValue += 10;
                 Destroy(gameObject); //Enemy death
+            }
+            else if (enemyColor == "green") //if the enemy is green
+            {
+                if (otherSpriteName.Replace(otherTag, "") == "blue") //and gets hit by a blue projectile
+                {
+                    enemyColor = "yellow"; //turn yellow
+                    animator.SetInteger("EnemyColor", 2);
+                }
+                else if (otherSpriteName.Replace(otherTag, "") == "yellow") //or gets hit by a yellow projectile
+                {
+                    enemyColor = "blue"; //turn blue
+                    animator.SetInteger("EnemyColor", 0);
+                }
+            }
+            else if (enemyColor == "orange") //if the enemy is orange
+            {
+                if (otherSpriteName.Replace(otherTag, "") == "red")
+                {
+                    enemyColor = "yellow";
+                    animator.SetInteger("EnemyColor", 2);
+                }
+                else if (otherSpriteName.Replace(otherTag, "") == "yellow")
+                {
+                    enemyColor = "red";
+                    animator.SetInteger("EnemyColor", 1);
+                }
+            }
+            else if (enemyColor == "purple") //if the enemy is purple
+            {
+                if (otherSpriteName.Replace(otherTag, "") == "blue")
+                {
+                    enemyColor = "red";
+                    animator.SetInteger("EnemyColor", 1);
+                }
+                else if (otherSpriteName.Replace(otherTag, "") == "red")
+                {
+                    enemyColor = "blue";
+                    animator.SetInteger("EnemyColor", 0);
+                }
             }
         }
 
@@ -128,23 +162,36 @@ public class Enemy : MonoBehaviour
     
     void SetEnemyColor()
     {
-        if (Random.value < 0.3f)
+        if (Random.value < 0.2f) //blue
         {
-            spriteRenderer.sprite = enemySprites[0];
-            animator.SetInteger("EnemyColor", 0); //blue
+            animator.SetInteger("EnemyColor", 0);
             enemyColor = "blue";
         }
-        else if (Random.value >= 0.3f && Random.value < 0.6f)
+        else if (Random.value >= 0.2f && Random.value < 0.4f) //red
         {
-            spriteRenderer.sprite = enemySprites[1];
-            animator.SetInteger("EnemyColor", 1); //red
+            animator.SetInteger("EnemyColor", 1);
             enemyColor = "red";
         }
-        else if (Random.value >= 0.6f)
+        else if (Random.value >= 0.4f && Random.value < 0.7f) //yellow
         {
-            spriteRenderer.sprite = enemySprites[2];
-            animator.SetInteger("EnemyColor", 2); //yellow
+            animator.SetInteger("EnemyColor", 2);
             enemyColor = "yellow";
         }
+        else if (Random.value >= 0.7f && Random.value < 0.8f) //green
+        {
+            animator.SetInteger("EnemyColor", 3);
+            enemyColor = "green";
+        }
+        else if (Random.value >= 0.8f && Random.value < 0.9f) //orange
+        {
+            animator.SetInteger("EnemyColor", 4);
+            enemyColor = "orange";
+        }
+        else if (Random.value >= 0.9f) //purple
+        {
+            animator.SetInteger("EnemyColor", 5);
+            enemyColor = "purple";
+        }
+        print(enemyColor);
     }
 }
