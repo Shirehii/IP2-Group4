@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //initialize some variables
-    private float horizontalSpeed = 5f;
-    private float verticalSpeed = 5f;
+    public float horizontalSpeed = 5f;
+    public float verticalSpeed = 5f;
     [HideInInspector]
     public Rigidbody rb;
     public bool facingRight = true;
