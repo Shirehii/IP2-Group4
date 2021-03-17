@@ -17,15 +17,18 @@ public class Enemy : MonoBehaviour
     private Vector3 direction;
     private Vector3 startingPosition;
 
-    //sprite related stuff
+    //color related stuff
     public string enemyColor;
-    private Sprite[] enemySprites;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+
     private bool isAttacking = false;
+    private GenerateEnemies enemyGen;
 
     void Start()
     {
+        enemyGen = GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>();
+
         startingPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         crystal = GameObject.FindGameObjectWithTag("Crystal").transform;
@@ -90,17 +93,19 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string otherTag = other.gameObject.tag;
-        string otherSpriteName = other.gameObject.GetComponent<SpriteRenderer>().sprite.name;
         if (otherTag == "Bullet" || otherTag == "AbilityPuddle" || otherTag == "AbilityBomb" || otherTag == "AbilityPierce")
         {
+            float scoreMultiplier = other.gameObject.GetComponent<ProjectileLogic>().scoreMultiplier;
+
+            string otherSpriteName = other.gameObject.GetComponent<SpriteRenderer>().sprite.name;
             if (otherTag == "Bullet") //destroy the bullet that hit it
             {
                 Destroy(other.gameObject);
             }
             if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color (blue, red, or yellow)
             {
-                GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>().EnemyDied(); //trigger enemy death in GenerateEnemies.cs
-                ScoreText.scoreValue += 10;
+                enemyGen.EnemyDied(); //trigger enemy death in GenerateEnemies.cs
+                ScoreText.scoreValue += 10 * scoreMultiplier;
                 Destroy(gameObject); //Enemy death
             }
             else if (enemyColor == "green") //if the enemy is green

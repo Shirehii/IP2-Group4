@@ -17,6 +17,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
 
     private Sprite[] projectileSprites;
 
+    public float scoreMultiplier = 1; //used in Enemy.cs
+
     void Start()
     {
         //initialize some variables
@@ -71,6 +73,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
             boxCollider = GetComponent<BoxCollider>();
             boxCollider.isTrigger = false;
         }
+
+        scoreMultiplier = pGL.scoreMultiplier;
 
         transform.parent = null; //projectile MUST be unparented after getting the above values, or else its movement will follow the player
         Invoke("DestroyProjectile", lifespan); //after set amount of time, destroy the projectile

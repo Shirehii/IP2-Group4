@@ -33,6 +33,7 @@ public class PlayerGunLogic : MonoBehaviour
     [HideInInspector]
     public bool fireAbility = false;
 
+    public float scoreMultiplier = 1; //used in projectilelogic
 
     void Start()
     {
