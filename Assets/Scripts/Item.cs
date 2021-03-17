@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour //script for pickup items. for items that are attached to the players themselves see PlayerItem.cs
 {
     private PlayerMovement pM;
     private BoxCollider boxCol;

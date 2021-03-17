@@ -17,8 +17,8 @@ public class PlayerGunLogic : MonoBehaviour
     private AudioClip[] audioClips;
 
     //the variables we need in order to make the gun shoot and reload in the GunLogic script.
-    public string fire1Button = "Fire1_P1";
-    public string reloadButton = "Reload_P1";
+    private string fire1Button = "Fire1_P1";
+    private string reloadButton = "Reload_P1";
     [HideInInspector]
     public bool fireShot = false;
 
@@ -28,14 +28,22 @@ public class PlayerGunLogic : MonoBehaviour
     public int currentAmmo = 4;
 
     //variables for abilities
-    public string ultimateButton = "Ability_P1";
+    private string abilityButton = "Ability_P1";
     private float abilityBar = 0;
     [HideInInspector]
     public bool fireAbility = false;
 
 
     void Start()
-    {   gL = transform.GetChild(0).GetComponent<GunLogic>();
+    {
+        if (gameObject.tag == "Player2") //if the player is not player 1, change the input axis
+        {
+            fire1Button = "Fire1_P2";
+            reloadButton = "Reload_P2";
+            abilityButton = "Ability_P2";
+        }
+
+        gL = transform.GetChild(0).GetComponent<GunLogic>();
 
         //load the audio clips
         audioClips = new AudioClip[3];
@@ -80,7 +88,7 @@ public class PlayerGunLogic : MonoBehaviour
             StartCoroutine(ReloadCoroutine()); //reload
         }
 
-        if (Input.GetAxis(ultimateButton) != 0 && abilityBar >= 10)
+        if (Input.GetAxis(abilityButton) != 0 && abilityBar >= 10)
         {
             fireAbility = true;
             abilityBar = 0;
