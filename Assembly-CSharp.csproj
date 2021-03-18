@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Resources\#README.cs" />
     <Compile Include="Assets\Scripts\PlayerItem.cs" />
+    <Compile Include="Assets\Scripts\ManageEvents.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Audio\launches\info.txt" />
