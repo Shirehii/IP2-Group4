@@ -22,15 +22,17 @@ public class PlayerGunLogic : MonoBehaviour
     [HideInInspector]
     public bool fireShot = false;
 
+    private bool reloading = false;
+
     //some more variables for reloading
-    private int maxAmmo = 4;
     [HideInInspector]
+    public int maxAmmo = 4;
     public int currentAmmo = 4;
 
     //variables for abilities
     private string abilityButton = "Ability_P1";
-    private float abilityBar = 0;
     [HideInInspector]
+    public float abilityBar = 0;
     public bool fireAbility = false;
 
     public float scoreMultiplier = 1; //used in projectilelogic
@@ -84,8 +86,9 @@ public class PlayerGunLogic : MonoBehaviour
             fireShot = true; //then send the signal to the gun to fire
         }
 
-        if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo) //if the player pressed the reload button and they aren't topped off already
+        if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo && !reloading) //if the player pressed the reload button and they aren't topped off already
         {
+            reloading = true;
             StartCoroutine(ReloadCoroutine()); //reload
         }
 
@@ -149,9 +152,13 @@ public class PlayerGunLogic : MonoBehaviour
     {
         pMrb.isKinematic = true; //stop the character
         animator.SetBool("isReloading", true); //reload animation
-        yield return new WaitForSeconds((maxAmmo - currentAmmo)/2); //wait
-        currentAmmo = maxAmmo; //reload
+        for (int i = currentAmmo; i != maxAmmo; i++) //reload
+        {
+            yield return new WaitForSeconds(1f);
+            currentAmmo += 1;
+        }
         pMrb.isKinematic = false; //and allow them to move again
         animator.SetBool("isReloading", false); //stop reload animation
+        reloading = false;
     }
 }

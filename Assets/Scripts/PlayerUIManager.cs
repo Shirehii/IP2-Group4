@@ -1,0 +1,169 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerUIManager : MonoBehaviour
+{
+    private Image selectedGunColor;
+    private Transform abilityBar;
+
+    private PlayerGunLogic pGL;
+    
+    private Sprite[] selectedGunSprites;
+    private Sprite[] ammoSprites;
+    private GameObject[] ammoObjects;
+    private Image[] ammoObjectsImage;
+
+    void Start()
+    {
+        //get the player scripts to check their values
+        ammoObjects = new GameObject[6];
+        ammoObjectsImage = new Image[6];
+        if (gameObject.name.Contains("1"))
+        {
+            pGL = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerGunLogic>();
+            
+            //get the individual UI components
+            selectedGunColor = GameObject.Find("SelectedGunColor1").GetComponent<Image>();
+
+            abilityBar = GameObject.Find("AbilityBar1").transform;
+            
+            for (int i = 0; i != 6; i++)
+            {
+                ammoObjects[i] = GameObject.Find("Ammo1 (" + i + ")");
+                ammoObjectsImage[i] = ammoObjects[i].GetComponent<Image>();
+            }
+        }
+        else if (gameObject.name.Contains("2"))
+        {
+            pGL = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerGunLogic>();
+            
+            //get the individual UI components
+            selectedGunColor = GameObject.Find("SelectedGunColor2").GetComponent<Image>();
+
+            abilityBar = GameObject.Find("AbilityBar2").transform;
+            
+            for (int i = 0; i != 6; i++)
+            {
+                ammoObjects[i] = GameObject.Find("Ammo2 (" + i + ")");
+                ammoObjectsImage[i] = ammoObjects[i].GetComponent<Image>();
+            }
+        }
+
+        selectedGunSprites = new Sprite[3];
+        selectedGunSprites[0] = Resources.Load<Sprite>("blueGunSelected");
+        selectedGunSprites[1] = Resources.Load<Sprite>("redGunSelected");
+        selectedGunSprites[2] = Resources.Load<Sprite>("yellowGunSelected");
+
+        ammoSprites = new Sprite[3];
+        ammoSprites[0] = Resources.Load<Sprite>("blueAmmo");
+        ammoSprites[1] = Resources.Load<Sprite>("redAmmo");
+        ammoSprites[2] = Resources.Load<Sprite>("yellowAmmo");
+    }
+    
+    void Update()
+    {
+        //change the selected gun UI && ammo UI color if they don't match the selected gun's color
+        if (pGL.selectedGun == "blue" && selectedGunColor != selectedGunSprites[0])
+        {
+            selectedGunColor.sprite = selectedGunSprites[0];
+            for (int i = 0; i != 6; i++)
+            {
+                ammoObjectsImage[i].sprite = ammoSprites[0];
+            }
+        }
+        else if (pGL.selectedGun == "red" && selectedGunColor != selectedGunSprites[1])
+        {
+            selectedGunColor.sprite = selectedGunSprites[1];
+            for (int i = 0; i != 6; i++)
+            {
+                ammoObjectsImage[i].sprite = ammoSprites[1];
+            }
+        }
+        else if (pGL.selectedGun == "yellow" && selectedGunColor != selectedGunSprites[2])
+        {
+            selectedGunColor.sprite = selectedGunSprites[2];
+            for (int i = 0; i != 6; i++)
+            {
+                ammoObjectsImage[i].sprite = ammoSprites[2];
+            }
+        }
+
+        //change the scale of the ability bar based on its cooldown from pGL
+        if (pGL.abilityBar < 10)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = pGL.abilityBar / 10;
+            abilityBar.localScale = temp;
+
+            //abilityBar.localScale.x = pGL.abilityBar / 10;
+            //i wanted to just write the line above but transform.localScale can't be set so i had to use a temporary variable
+        }
+        else if (pGL.abilityBar >= 10)
+        {
+            abilityBar.localScale = new Vector3(1, 1, 1);
+        }
+
+        //switch statement for adjusting the quantity of the ammo ui
+        switch (pGL.currentAmmo)
+        {
+            case (0):
+                ammoObjects[0].SetActive(false);
+                ammoObjects[1].SetActive(false);
+                ammoObjects[2].SetActive(false);
+                ammoObjects[3].SetActive(false);
+                ammoObjects[4].SetActive(false);
+                ammoObjects[5].SetActive(false);
+                break;
+            case (1):
+                ammoObjects[0].SetActive(true);
+                ammoObjects[1].SetActive(false);
+                ammoObjects[2].SetActive(false);
+                ammoObjects[3].SetActive(false);
+                ammoObjects[4].SetActive(false);
+                ammoObjects[5].SetActive(false);
+                break;
+            case (2):
+                ammoObjects[0].SetActive(true);
+                ammoObjects[1].SetActive(true);
+                ammoObjects[2].SetActive(false);
+                ammoObjects[3].SetActive(false);
+                ammoObjects[4].SetActive(false);
+                ammoObjects[5].SetActive(false);
+                break;
+            case (3):
+                ammoObjects[0].SetActive(true);
+                ammoObjects[1].SetActive(true);
+                ammoObjects[2].SetActive(true);
+                ammoObjects[3].SetActive(false);
+                ammoObjects[4].SetActive(false);
+                ammoObjects[5].SetActive(false);
+                break;
+            case (4):
+                ammoObjects[0].SetActive(true);
+                ammoObjects[1].SetActive(true);
+                ammoObjects[2].SetActive(true);
+                ammoObjects[3].SetActive(true);
+                ammoObjects[4].SetActive(false);
+                ammoObjects[5].SetActive(false);
+                break;
+            case (5):
+                ammoObjects[0].SetActive(true);
+                ammoObjects[1].SetActive(true);
+                ammoObjects[2].SetActive(true);
+                ammoObjects[3].SetActive(true);
+                ammoObjects[4].SetActive(true);
+                ammoObjects[5].SetActive(false);
+                break;
+            case (6):
+                ammoObjects[0].SetActive(true);
+                ammoObjects[1].SetActive(true);
+                ammoObjects[2].SetActive(true);
+                ammoObjects[3].SetActive(true);
+                ammoObjects[4].SetActive(true);
+                ammoObjects[5].SetActive(true);
+                break;
+        }
+    }
+}

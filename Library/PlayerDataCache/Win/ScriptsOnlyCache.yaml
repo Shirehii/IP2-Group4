@@ -5,10 +5,12 @@ ScriptsOnlyBuild:
     - Enemy
     - GenerateEnemies
     - GunLogic
-    - Item
     - LoadScene
+    - ManageEvents
     - PlayerGunLogic
+    - PlayerItem
     - PlayerMovement
+    - PlayerUIManager
     - ProjectileLogic
     - QuitGame
     - ScoreText
@@ -69,11 +71,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 13838}
     - Class: 114
-      Script: {instanceID: 13854}
+      Script: {instanceID: 13856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -150,23 +152,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12456}
-    - Class: 114
       Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12874}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 13480}
+    - Class: 114
+      Script: {instanceID: 13838}
+    - Class: 114
+      Script: {instanceID: 13924}
+    - Class: 114
+      Script: {instanceID: 18072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -426,7 +432,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: a110ea28b7bc8c22a39785fc88aa39a2
+      Hash: 965d6c74699ad540ffe305323902d683
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerGunLogic
@@ -442,6 +448,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManageEvents
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -492,7 +504,7 @@ ScriptsOnlyBuild:
     className: GenerateEnemies
   - hash:
       serializedVersion: 2
-      Hash: f9556020ca4083540eb06652f7910503
+      Hash: aa1cea01991a46e0284f25208d1db520
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProjectileLogic
@@ -570,7 +582,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 0f59030363441f3be5e62350c745acdc
+      Hash: 31d3131a3271864655b4c37d822b1f8e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -678,10 +690,22 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: d53e9003c295a2826a775c2bea93b388
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerItem
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerUIManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
