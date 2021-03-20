@@ -17,6 +17,7 @@ TagManager:
   - EnemyGen
   - AbilityBomb
   - AbilityPierce
+  - Tut1
   layers:
   - Default
   - TransparentFX
