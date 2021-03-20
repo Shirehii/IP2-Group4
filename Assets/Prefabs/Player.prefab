@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2451711605613100549}
   - component: {fileID: 2451711605613100545}
   - component: {fileID: 5633681785811974846}
+  - component: {fileID: -7941846350657136904}
   - component: {fileID: 7542322936997160935}
   m_Layer: 8
   m_Name: Player
@@ -129,10 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ee04ace53364346a24ffca4598703e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalSpeed: 5
+  verticalSpeed: 5
   rb: {fileID: 0}
   facingRight: 1
-  horizontalButton: Horizontal_P1
-  verticalButton: Vertical_P1
 --- !u!114 &5633681785811974846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,12 +147,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedGun: 
-  fire1Button: Fire1_P1
-  reloadButton: Reload_P1
   fireShot: 0
   currentAmmo: 4
-  ultimateButton: Ability_P1
   fireAbility: 0
+--- !u!114 &-7941846350657136904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451711605613100548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6d82ff717520b41a774af19af7f9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7542322936997160935
 Animator:
   serializedVersion: 3

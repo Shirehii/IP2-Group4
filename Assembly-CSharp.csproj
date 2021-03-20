@@ -55,17 +55,21 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\GunLogic.cs" />
+    <Compile Include="Assets\Scripts\PlayerUIManager.cs" />
+    <Compile Include="Assets\Scripts\CrystalHP.cs" />
+    <Compile Include="Assets\Scripts\CrystalFollow.cs" />
     <Compile Include="Assets\Scripts\QuitGame.cs" />
-    <Compile Include="Assets\Graphics\Temporary\#README.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerGunLogic.cs" />
+    <Compile Include="Assets\Scripts\ManageEvents.cs" />
+    <Compile Include="Assets\cameraFollow.cs" />
     <Compile Include="Assets\Scripts\ScoreText.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\GenerateEnemies.cs" />
     <Compile Include="Assets\Scripts\ProjectileLogic.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Resources\#README.cs" />
-    <Compile Include="Assets\Scripts\CrystalHP.cs" />
+    <Compile Include="Assets\Scripts\PlayerItem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Audio\launches\info.txt" />

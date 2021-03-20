@@ -17,25 +17,36 @@ public class PlayerGunLogic : MonoBehaviour
     private AudioClip[] audioClips;
 
     //the variables we need in order to make the gun shoot and reload in the GunLogic script.
-    public string fire1Button = "Fire1_P1";
-    public string reloadButton = "Reload_P1";
+    private string fire1Button = "Fire1_P1";
+    private string reloadButton = "Reload_P1";
     [HideInInspector]
     public bool fireShot = false;
 
+    private bool reloading = false;
+
     //some more variables for reloading
-    private int maxAmmo = 4;
     [HideInInspector]
+    public int maxAmmo = 4;
     public int currentAmmo = 4;
 
     //variables for abilities
-    public string ultimateButton = "Ability_P1";
-    private float abilityBar = 0;
+    private string abilityButton = "Ability_P1";
     [HideInInspector]
+    public float abilityBar = 0;
     public bool fireAbility = false;
 
+    public float scoreMultiplier = 1; //used in projectilelogic
 
     void Start()
-    {   gL = transform.GetChild(0).GetComponent<GunLogic>();
+    {
+        if (gameObject.tag == "Player2") //if the player is not player 1, change the input axis
+        {
+            fire1Button = "Fire1_P2";
+            reloadButton = "Reload_P2";
+            abilityButton = "Ability_P2";
+        }
+
+        gL = transform.GetChild(0).GetComponent<GunLogic>();
 
         //load the audio clips
         audioClips = new AudioClip[3];
@@ -75,12 +86,13 @@ public class PlayerGunLogic : MonoBehaviour
             fireShot = true; //then send the signal to the gun to fire
         }
 
-        if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo) //if the player pressed the reload button and they aren't topped off already
+        if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo && !reloading) //if the player pressed the reload button and they aren't topped off already
         {
+            reloading = true;
             StartCoroutine(ReloadCoroutine()); //reload
         }
 
-        if (Input.GetAxis(ultimateButton) != 0 && abilityBar >= 10)
+        if (Input.GetAxis(abilityButton) != 0 && abilityBar >= 10)
         {
             fireAbility = true;
             abilityBar = 0;
@@ -140,9 +152,13 @@ public class PlayerGunLogic : MonoBehaviour
     {
         pMrb.isKinematic = true; //stop the character
         animator.SetBool("isReloading", true); //reload animation
-        yield return new WaitForSeconds((maxAmmo - currentAmmo)/2); //wait
-        currentAmmo = maxAmmo; //reload
+        for (int i = currentAmmo; i != maxAmmo; i++) //reload
+        {
+            yield return new WaitForSeconds(1f);
+            currentAmmo += 1;
+        }
         pMrb.isKinematic = false; //and allow them to move again
         animator.SetBool("isReloading", false); //stop reload animation
+        reloading = false;
     }
 }

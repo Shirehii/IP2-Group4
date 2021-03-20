@@ -5,15 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //initialize some variables
-    private float horizontalSpeed = 5f;
-    private float verticalSpeed = 5f;
+    public float horizontalSpeed = 5f;
+    public float verticalSpeed = 5f;
     [HideInInspector]
     public Rigidbody rb;
     public bool facingRight = true;
 
     //these variables are for player input. they are bound to player 1 by default, but if you create a second player just change P1 to P2 in the inspector.
-    public string horizontalButton = "Horizontal_P1";
-    public string verticalButton = "Vertical_P1";
+    private string horizontalButton = "Horizontal_P1";
+    private string verticalButton = "Vertical_P1";
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -25,6 +25,12 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        if (gameObject.tag == "Player2") //if the player is not player 1, change the input axis
+        {
+            horizontalButton = "Horizontal_P2";
+            verticalButton = "Vertical_P2";
+        }
     }
 
     void Update()

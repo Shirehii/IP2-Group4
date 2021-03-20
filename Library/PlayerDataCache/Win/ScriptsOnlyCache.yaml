@@ -1,18 +1,23 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CrystalFollow
     - CrystalHP
     - Enemy
     - GenerateEnemies
     - GunLogic
     - Item
     - LoadScene
+    - ManageEvents
     - PlayerGunLogic
+    - PlayerItem
     - PlayerMovement
+    - PlayerUIManager
     - ProjectileLogic
     - QuitGame
     - ScoreText
     - Timer
+    - cameraFollow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -35,62 +40,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/Scenes/MainMenu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11702}
-    - Class: 114
-      Script: {instanceID: 11838}
-    - Class: 114
-      Script: {instanceID: 11914}
-    - Class: 114
-      Script: {instanceID: 11956}
-    - Class: 114
-      Script: {instanceID: 12272}
-    - Class: 114
-      Script: {instanceID: 12408}
-    - Class: 114
-      Script: {instanceID: 13440}
-    - Class: 114
-      Script: {instanceID: 13836}
-    - Class: 114
-      Script: {instanceID: 13854}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/TestLevel.unity:
+    Assets/Scenes/ArenaLevel.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -146,27 +96,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 12408}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13060}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13076}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 13484}
+    - Class: 114
+      Script: {instanceID: 13842}
+    - Class: 114
+      Script: {instanceID: 13928}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -188,6 +142,166 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11702}
+    - Class: 114
+      Script: {instanceID: 11838}
+    - Class: 114
+      Script: {instanceID: 11914}
+    - Class: 114
+      Script: {instanceID: 11956}
+    - Class: 114
+      Script: {instanceID: 12276}
+    - Class: 114
+      Script: {instanceID: 12410}
+    - Class: 114
+      Script: {instanceID: 13446}
+    - Class: 114
+      Script: {instanceID: 13842}
+    - Class: 114
+      Script: {instanceID: 13860}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/ScrollerLevel.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11702}
+    - Class: 114
+      Script: {instanceID: 11722}
+    - Class: 114
+      Script: {instanceID: 11726}
+    - Class: 114
+      Script: {instanceID: 11838}
+    - Class: 114
+      Script: {instanceID: 11914}
+    - Class: 114
+      Script: {instanceID: 11922}
+    - Class: 114
+      Script: {instanceID: 11956}
+    - Class: 114
+      Script: {instanceID: 12010}
+    - Class: 114
+      Script: {instanceID: 12102}
+    - Class: 114
+      Script: {instanceID: 12222}
+    - Class: 114
+      Script: {instanceID: 12410}
+    - Class: 114
+      Script: {instanceID: 12458}
+    - Class: 114
+      Script: {instanceID: 12550}
+    - Class: 114
+      Script: {instanceID: 12754}
+    - Class: 114
+      Script: {instanceID: 12790}
+    - Class: 114
+      Script: {instanceID: 12878}
+    - Class: 114
+      Script: {instanceID: 13060}
+    - Class: 114
+      Script: {instanceID: 13076}
+    - Class: 114
+      Script: {instanceID: 13446}
+    - Class: 114
+      Script: {instanceID: 13484}
+    - Class: 114
+      Script: {instanceID: 13842}
+    - Class: 114
+      Script: {instanceID: 13928}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -306,6 +420,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerUIManager
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -364,6 +484,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CrystalFollow
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -426,7 +552,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: a110ea28b7bc8c22a39785fc88aa39a2
+      Hash: 965d6c74699ad540ffe305323902d683
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerGunLogic
@@ -445,9 +571,21 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManageEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 7c4d61ba679beaa5d71821c8c9d31078
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cameraFollow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -492,7 +630,7 @@ ScriptsOnlyBuild:
     className: GenerateEnemies
   - hash:
       serializedVersion: 2
-      Hash: f9556020ca4083540eb06652f7910503
+      Hash: aa1cea01991a46e0284f25208d1db520
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProjectileLogic
@@ -570,7 +708,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 0f59030363441f3be5e62350c745acdc
+      Hash: 31d3131a3271864655b4c37d822b1f8e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -678,6 +816,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: d53e9003c295a2826a775c2bea93b388
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerItem
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -685,5 +829,6 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
-  - Assets/Scenes/TestLevel.unity
+  - Assets/Scenes/ArenaLevel.unity
+  - Assets/Scenes/ScrollerLevel.unity
   playerPath: D:/yeet/IP2 Group4 - Build/IP2 Group4.exe
