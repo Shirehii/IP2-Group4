@@ -148,8 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedGun: 
   fireShot: 0
+  maxAmmo: 4
   currentAmmo: 4
+  abilityBar: 0
   fireAbility: 0
+  scoreMultiplier: 1
 --- !u!114 &-7941846350657136904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6d82ff717520b41a774af19af7f9d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: MovementBuff
+  cooldown: 20
 --- !u!95 &7542322936997160935
 Animator:
   serializedVersion: 3
@@ -234,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991487823028492389, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}
       propertyPath: m_Name
-      value: GunBarrel
+      value: GunBarrel1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4cbbaea1fac7454f880cdb21dcd63be, type: 3}

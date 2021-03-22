@@ -57,14 +57,15 @@ public class PlayerGunLogic : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //get the two sprite renderers of the guns
-        gunRenderer = gameObject.transform.Find("GunBarrel").GetComponent<SpriteRenderer>(); //this player's
-        if (gameObject.tag == "Player1") //the other player's
+        if (gameObject.tag == "Player1") //player 1's
         {
+            gunRenderer = gameObject.transform.Find("GunBarrel1").GetComponent<SpriteRenderer>();
             otherpGL = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerGunLogic>();
             selectedGun = "blue";
         }
         else if (gameObject.tag == "Player2") //if this player is player 2, then immediatelly swap their gun to the red one, to avoid clashing colors
         {
+            gunRenderer = gameObject.transform.Find("GunBarrel2").GetComponent<SpriteRenderer>();
             otherpGL = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerGunLogic>();
             selectedGun = "red";
             animator.SetInteger("gunColor", 1);
@@ -109,7 +110,7 @@ public class PlayerGunLogic : MonoBehaviour
         switch (trigger.tag) //Switch statement for switching the gun's color
         {
             case "BlueGun":
-                //if statements that stop players from picking the same colored gun
+                //the if statements stop players from picking the same colored gun
                 if (otherpGL.selectedGun != "blue")
                 {
                     selectedGun = "blue";

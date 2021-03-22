@@ -1042,7 +1042,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977703080}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 69a528ba2d94ff5488d91ba335b53ef1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -1591,6 +1591,10 @@ PrefabInstance:
       propertyPath: verticalButton
       value: Vertical_P2
       objectReference: {fileID: 0}
+    - target: {fileID: 2451711605613100546, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69a528ba2d94ff5488d91ba335b53ef1, type: 2}
     - target: {fileID: 2451711605613100547, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1618,6 +1622,10 @@ PrefabInstance:
     - target: {fileID: 5633681785811974846, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: ultimateButton
       value: Ability_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335958026877175878, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
+      propertyPath: m_Name
+      value: GunBarrel2
       objectReference: {fileID: 0}
     - target: {fileID: 7542322936997160935, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_Controller
@@ -2138,6 +2146,10 @@ PrefabInstance:
     - target: {fileID: 3911720359029426967, guid: a086e897290dffd45ab08e5b8cd8845f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086587994799798122, guid: a086e897290dffd45ab08e5b8cd8845f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a086e897290dffd45ab08e5b8cd8845f, type: 3}
