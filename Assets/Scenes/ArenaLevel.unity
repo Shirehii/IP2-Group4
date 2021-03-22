@@ -1541,7 +1541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2451711605613100544, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2451711605613100544, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1800,7 +1800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2451711605613100544, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2451711605613100544, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2205,6 +2205,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5151912794913419590, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
+      propertyPath: m_Name
+      value: HeadIcon2
+      objectReference: {fileID: 0}
     - target: {fileID: 6087338538414777144, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

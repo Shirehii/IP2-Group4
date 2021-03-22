@@ -28,16 +28,16 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
 
         //load the projectile sprites
         projectileName = gameObject.name.Replace("(Clone)", "");
-        projectileSprites = new Sprite[3];
-        projectileSprites[0] = Resources.Load<Sprite>("blue" + projectileName);
-        projectileSprites[1] = Resources.Load<Sprite>("red" + projectileName);
-        projectileSprites[2] = Resources.Load<Sprite>("yellow" + projectileName);
+        //projectileSprites = new Sprite[3];
+        //projectileSprites[0] = Resources.Load<Sprite>("blue" + projectileName);
+        //projectileSprites[1] = Resources.Load<Sprite>("red" + projectileName);
+        //projectileSprites[2] = Resources.Load<Sprite>("yellow" + projectileName);
 
         switch (pGL.selectedGun) //Switch statement for switching the projectile's color
         {
             case "blue":
                 projectileColor = "blue";
-                projectileRenderer.sprite = projectileSprites[0];
+                projectileRenderer.sprite = Resources.Load<Sprite>("blue" + projectileName);
                 if (projectileName == "Bullet") //also change the lifespan of the projectile if it is a bullet
                 {
                     lifespan = 2;
@@ -45,7 +45,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 break;
             case "red":
                 projectileColor = "red";
-                projectileRenderer.sprite = projectileSprites[1];
+                projectileRenderer.sprite = Resources.Load<Sprite>("red" + projectileName);
                 if (projectileName == "Bullet")
                 {
                     lifespan = 2;
@@ -53,7 +53,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 break;
             case "yellow":
                 projectileColor = "yellow";
-                projectileRenderer.sprite = projectileSprites[2];
+                projectileRenderer.sprite = Resources.Load<Sprite>("yellow" + projectileName);
                 if (projectileName == "Bullet")
                 {
                     lifespan = 0.5f;
