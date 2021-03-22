@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour //timer script. also takes care of game pausi
     string minutes;
     string seconds;
 
+    private GenerateEnemies enemyGen;
+
     //variables below this comment are not directly linked to the timer, but are for pausing the game
     private GameObject PauseModal;
 
@@ -25,6 +27,8 @@ public class Timer : MonoBehaviour //timer script. also takes care of game pausi
         //get the pausing-unpausing related variables
         PauseModal = GameObject.Find("PauseModal");
         PauseModal.SetActive(false);
+
+        enemyGen = GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>();
     }
 
     void Update()
@@ -51,5 +55,36 @@ public class Timer : MonoBehaviour //timer script. also takes care of game pausi
                 PauseModal.SetActive(false);
             }
         }
+
+        if (t >= 30 && t < 60)
+        {
+            enemyGen.spawnRate = 4f;
+        }
+        else if (t >= 60 && t < 80)
+        {
+            enemyGen.spawnRate = 3.5f;
+        }
+        else if (t >= 80 && t < 100)
+        {
+            enemyGen.spawnRate = 3f;
+            enemyGen.syntheticsEnabled = true;
+        }
+        else if (t >= 100 && t < 120)
+        {
+            enemyGen.spawnRate = 2.5f;
+        }
+        else if (t >= 120 && t < 140)
+        {
+            enemyGen.spawnRate = 2f;
+        }
+        else if (t >= 140 && t < 160)
+        {
+            enemyGen.spawnRate = 1.5f;
+        }
+        else if (t >= 160)
+        {
+            enemyGen.spawnRate = 1f;
+        }
+
     }
 }

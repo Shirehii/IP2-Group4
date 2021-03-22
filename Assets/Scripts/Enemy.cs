@@ -182,17 +182,17 @@ public class Enemy : MonoBehaviour
             animator.SetInteger("EnemyColor", 2);
             enemyColor = "yellow";
         }
-        else if (Random.value >= 0.7f && Random.value < 0.8f) //green
+        else if (Random.value >= 0.7f && Random.value < 0.8f && enemyGen.syntheticsEnabled) //green
         {
             animator.SetInteger("EnemyColor", 3);
             enemyColor = "green";
         }
-        else if (Random.value >= 0.8f && Random.value < 0.9f) //orange
+        else if (Random.value >= 0.8f && Random.value < 0.9f && enemyGen.syntheticsEnabled) //orange
         {
             animator.SetInteger("EnemyColor", 4);
             enemyColor = "orange";
         }
-        else if (Random.value >= 0.9f) //purple
+        else if (Random.value >= 0.9f && enemyGen.syntheticsEnabled) //purple
         {
             animator.SetInteger("EnemyColor", 5);
             enemyColor = "purple";
