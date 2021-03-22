@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrystalHP : MonoBehaviour
 {
     //HP variables
-    private float maxHP = 1000;
+    public float maxHP = 1000;
     private float currentHP;
 
     //variables for checking how many enemies are attacking
