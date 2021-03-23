@@ -1591,10 +1591,6 @@ PrefabInstance:
       propertyPath: verticalButton
       value: Vertical_P2
       objectReference: {fileID: 0}
-    - target: {fileID: 2451711605613100546, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 69a528ba2d94ff5488d91ba335b53ef1, type: 2}
     - target: {fileID: 2451711605613100547, guid: 54fcc26e6de2ba04ab09825fd644fb7a, type: 3}
       propertyPath: m_Sprite
       value: 
