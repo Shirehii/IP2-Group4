@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DEBUGLEVEL.unity
     guid: fff6e5b0a2502a942a0df1300a42fc50
+  - enabled: 1
+    path: Assets/Scenes/ArenaLevel2.unity
+    guid: 83b24d9829e8cb34b88b715400cfca65
   m_configObjects: {}

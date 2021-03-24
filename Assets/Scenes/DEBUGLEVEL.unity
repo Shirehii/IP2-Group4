@@ -2229,6 +2229,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1921990857}
+    - target: {fileID: 6087338538414777144, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: DEBUGLEVEL
+      objectReference: {fileID: 0}
     - target: {fileID: 6087338539538557648, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2321,6 +2325,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1921990857}
+    - target: {fileID: 6087338539801674585, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: DEBUGLEVEL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
 --- !u!1001 &7184754226888711027

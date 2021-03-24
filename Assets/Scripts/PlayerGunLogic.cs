@@ -82,7 +82,7 @@ public class PlayerGunLogic : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis(fire1Button) != 0 && currentAmmo > 0) //if the player pressed the button to fire and they have ammo
+        if (Input.GetAxis(fire1Button) != 0 && currentAmmo > 0 && !reloading) //if the player pressed the button to fire and they have ammo
         {
             fireShot = true; //then send the signal to the gun to fire
         }
@@ -152,14 +152,18 @@ public class PlayerGunLogic : MonoBehaviour
     IEnumerator ReloadCoroutine()
     {
         pMrb.isKinematic = true; //stop the character
-        animator.SetBool("isReloading", true); //reload animation
+        animator.SetBool("shouldReload", true); //reload animation, needs two bools or else it doesn't animate properly
+        animator.SetBool("isReloading", false); 
         for (int i = currentAmmo; i != maxAmmo; i++) //reload
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.1f);
+            animator.SetBool("isReloading", true);
+            yield return new WaitForSeconds(0.9f);
             currentAmmo += 1;
         }
         pMrb.isKinematic = false; //and allow them to move again
-        animator.SetBool("isReloading", false); //stop reload animation
+        animator.SetBool("shouldReload", false); //stop reload animation
+        animator.SetBool("isReloading", false); 
         reloading = false;
     }
 }
