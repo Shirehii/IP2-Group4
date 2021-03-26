@@ -14,7 +14,7 @@ public class PlayerGunLogic : MonoBehaviour
     private SpriteRenderer gunRenderer; //the player's gun sprite renderer, used to change the sprite
     private PlayerGunLogic otherpGL; //the other player's gun sprite renderer, used to check what its sprite is
 
-    private AudioClip[] audioClips;
+    //private AudioClip[] audioClips;
 
     //the variables we need in order to make the gun shoot and reload in the GunLogic script.
     private string fire1Button = "Fire1_P1";
@@ -37,6 +37,8 @@ public class PlayerGunLogic : MonoBehaviour
 
     public float scoreMultiplier = 1; //used in projectilelogic
 
+    private AudioSource source;
+
     void Start()
     {
         if (gameObject.tag == "Player2") //if the player is not player 1, change the input axis
@@ -48,11 +50,12 @@ public class PlayerGunLogic : MonoBehaviour
 
         gL = transform.GetChild(0).GetComponent<GunLogic>();
 
+        source = GetComponent<AudioSource>();
         //load the audio clips
-        audioClips = new AudioClip[3];
-        audioClips[0] = Resources.Load<AudioClip>("slimeball");
-        audioClips[1] = Resources.Load<AudioClip>("flaunch");
-        audioClips[2] = Resources.Load<AudioClip>("rlaunch");
+        //audioClips = new AudioClip[3];
+        //audioClips[0] = Resources.Load<AudioClip>("slimeball");
+        //audioClips[1] = Resources.Load<AudioClip>("flaunch");
+        //audioClips[2] = Resources.Load<AudioClip>("rlaunch");
         
         animator = GetComponent<Animator>();
 
@@ -73,7 +76,7 @@ public class PlayerGunLogic : MonoBehaviour
             gL.fireRate = 2;
             maxAmmo = 5;
             currentAmmo = maxAmmo;
-            gL.source.clip = audioClips[1];
+            //gL.source.clip = audioClips[1];
         }
 
         //get the rigidbody from PlayerMovement
@@ -117,7 +120,8 @@ public class PlayerGunLogic : MonoBehaviour
                     animator.SetInteger("gunColor", 0);
                     gL.fireRate = 1;
                     maxAmmo = 4;
-                    gL.source.clip = audioClips[0];
+                    source.Play();
+                    //gL.source.clip = audioClips[0];
                 }
                 break;
             case "RedGun":
@@ -127,7 +131,8 @@ public class PlayerGunLogic : MonoBehaviour
                     animator.SetInteger("gunColor", 1);
                     gL.fireRate = 2;
                     maxAmmo = 5;
-                    gL.source.clip = audioClips[1];
+                    source.Play();
+                    //gL.source.clip = audioClips[1];
                 }
                 break;
             case "YellowGun":
@@ -137,7 +142,8 @@ public class PlayerGunLogic : MonoBehaviour
                     animator.SetInteger("gunColor", 2);
                     gL.fireRate = 3;
                     maxAmmo = 3;
-                    gL.source.clip = audioClips[2];
+                    source.Play();
+                    //gL.source.clip = audioClips[2];
                 }
                 break;
         }

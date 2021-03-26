@@ -23,10 +23,16 @@ public class Enemy : MonoBehaviour
     private Animator animator;
 
     private bool isAttacking = false;
+    private CrystalHP crystalHP;
     private GenerateEnemies enemyGen;
+
+    private AudioSource source;
+    private AudioClip attackCrystalSound;
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
+
         enemyGen = GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>();
 
         startingPosition = transform.position;
@@ -53,9 +59,18 @@ public class Enemy : MonoBehaviour
         offset = new Vector3(xPos, 0, zPos);
         
         animator = GetComponent<Animator>();
+        crystalHP = GameObject.FindGameObjectWithTag("Crystal").GetComponent<CrystalHP>();
 
         //set the enemy color
         SetEnemyColor();
+    }
+
+    private void Update()
+    {
+        if (isAttacking)
+        {
+            StartCoroutine(EnemyAttack());
+        }
     }
 
     void FixedUpdate()
@@ -66,11 +81,6 @@ public class Enemy : MonoBehaviour
         }
 
         EnemyMovement(); //Calling code within private function "Player1Enemy"
-
-        if (isAttacking)
-        {
-            StartCoroutine(EnemyAttack());
-        }
     }
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
     {
@@ -92,18 +102,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        string otherTag = other.gameObject.tag;
+        GameObject otherObject = other.gameObject;
+        string otherTag = otherObject.tag;
         if (otherTag == "Bullet" || otherTag == "AbilityPuddle" || otherTag == "AbilityBomb" || otherTag == "AbilityPierce")
         {
-            float scoreMultiplier = other.gameObject.GetComponent<ProjectileLogic>().scoreMultiplier;
-
-            string otherSpriteName = other.gameObject.GetComponent<SpriteRenderer>().sprite.name;
-            if (otherTag == "Bullet") //destroy the bullet that hit it
-            {
-                Destroy(other.gameObject);
-            }
+            ProjectileLogic otherPL = otherObject.GetComponent<ProjectileLogic>();
+            float scoreMultiplier = otherPL.scoreMultiplier;
+            string otherSpriteName = otherObject.GetComponent<SpriteRenderer>().sprite.name;
+            
             if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color (blue, red, or yellow)
             {
+                otherPL.EnemyDeath();
                 enemyGen.EnemyDied(); //trigger enemy death in GenerateEnemies.cs
                 ScoreText.scoreValue += 10 * scoreMultiplier;
                 Destroy(gameObject); //Enemy death
@@ -158,12 +167,19 @@ public class Enemy : MonoBehaviour
 
     IEnumerator EnemyAttack()
     {
-        yield return new WaitForSeconds(4.4f);
-        GameObject.FindGameObjectWithTag("Crystal").GetComponent<CrystalHP>().LoseMoreHP();
+        isAttacking = false;
+        for (int i = 0; i < 3; i++)
+        {
+            yield return new WaitForSeconds(1f);
+            source.Play();
+            crystalHP.currentHP -= 1;
+        }
+        yield return new WaitForSeconds(1f);
+        source.Play();
+        crystalHP.currentHP -= 3;
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
-
     
     void SetEnemyColor()
     {

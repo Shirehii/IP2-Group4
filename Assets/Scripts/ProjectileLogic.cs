@@ -18,6 +18,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
     private Sprite[] projectileSprites;
 
     public float scoreMultiplier = 1; //used in Enemy.cs
+    
+    private AudioSource source;
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         pM = gameObject.transform.parent.gameObject.transform.parent.GetComponent<PlayerMovement>();
         pGL = gameObject.transform.parent.gameObject.GetComponent<GunLogic>().pGL;
         projectileRenderer = GetComponent<SpriteRenderer>();
+
+        source = GetComponent<AudioSource>();
 
         //load the projectile sprites
         projectileName = gameObject.name.Replace("(Clone)", "");
@@ -92,6 +96,12 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
             //in this line we could add an explosion effect but we don't have the assets :')
             Invoke("DestroyProjectile", 0.1f); //destroy the bomb
         }
+    }
+
+    public void EnemyDeath()
+    {
+        source.Play();
+        Invoke("DestroyProjectile", 0.01f);
     }
 
     public void DestroyProjectile()

@@ -23,6 +23,8 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
 
     [HideInInspector]
     public AudioSource source;
+    private AudioClip fireSound;
+    private AudioClip abilitySound;
 
     void Start()
     {
@@ -31,28 +33,36 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         pM = GetComponentInParent<PlayerMovement>();
 
         source = GetComponent<AudioSource>();
+        fireSound = Resources.Load<AudioClip>("fire");
+        abilitySound = Resources.Load<AudioClip>("explosion");
     }
     
     void Update()
     {
         //for shooting
-        if (pGL.fireShot == true && timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
+        if (pGL.fireShot == true)
         {
-            FireShot(); //shoot
-            pGL.currentAmmo -= 1;
-            source.Play();
-        }
-        else if (timeBetweenShots > 0) //else if it's on cooldown
-        {
-            timeBetweenShots -= Time.deltaTime; //decrease cooldown and reject the player's input to fire
             pGL.fireShot = false;
+            if (timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
+            {
+                FireShot(); //shoot
+                pGL.currentAmmo -= 1;
+                source.clip = fireSound;
+                source.Play();
+            }
+            else if (timeBetweenShots > 0) //else if it's on cooldown
+            {
+                timeBetweenShots -= Time.deltaTime; //decrease cooldown and reject the player's input to fire
+            }
         }
 
         //for ability use
         if (pGL.fireAbility == true)
         {
-            FireAbility();
             pGL.fireAbility = false;
+            FireAbility();
+            source.clip = abilitySound;
+            source.Play();
         }
         
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitInfo, 5f))
@@ -69,7 +79,6 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     void FireShot()
     {
         timeBetweenShots = fireRate; //put the gun on cooldown
-        pGL.fireShot = false;
 
         //this is where the shooting magic happens
 
