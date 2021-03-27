@@ -29,6 +29,8 @@ public class Enemy : MonoBehaviour
     private AudioSource source;
     private AudioClip attackCrystalSound;
 
+    public SpriteRenderer highlight;
+
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -62,7 +64,9 @@ public class Enemy : MonoBehaviour
         crystalHP = GameObject.FindGameObjectWithTag("Crystal").GetComponent<CrystalHP>();
 
         //set the enemy color
+        highlight = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         SetEnemyColor();
+        highlight.enabled = false;
     }
 
     private void Update()
@@ -213,6 +217,7 @@ public class Enemy : MonoBehaviour
             animator.SetInteger("EnemyColor", 5);
             enemyColor = "purple";
         }
-        print(enemyColor);
+        highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
+        print(enemyColor + " enemy spawned");
     }
 }

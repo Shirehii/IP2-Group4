@@ -20,6 +20,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     private float timeBetweenShots; //the time the gun has passed since the last shot
 
     private RaycastHit hitInfo;
+    private Collider enemyCollider = null;
 
     [HideInInspector]
     public AudioSource source;
@@ -64,13 +65,20 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
             source.clip = abilitySound;
             source.Play();
         }
-        
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitInfo, 5f))
+
+        //Raycast for highlighting targeted enemies
+        if (pM.facingRight)
         {
-            if (hitInfo.collider.tag == "Enemy")
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitInfo, 5f))
             {
-                print("I hit a " + hitInfo.collider.gameObject.GetComponent<Enemy>().enemyColor + " enemy");
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.green);
+                CheckHighlight();
+            }
+        }
+        else
+        {
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitInfo, 5f))
+            {
+                CheckHighlight();
             }
         }
     }
@@ -178,6 +186,21 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
             {
                 spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, gameObject.transform.position.y - 0.5f, spawnedPuddle.transform.position.z);
             }
+        }
+    }
+    
+    void CheckHighlight()
+    {
+        if ((enemyCollider != null && hitInfo.collider != enemyCollider) || hitInfo.collider == null) //if the collider being hit isn't the same as the previous enemy's collider OR if nothing is being hit...
+        {
+            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = false; //...disable the enemy's highlight
+        }
+        if (hitInfo.collider.tag == "Enemy")
+        {
+            enemyCollider = hitInfo.collider;
+            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = true;
+            //print("Raycast targeted a " + hitInfo.collider.gameObject.GetComponent<Enemy>().enemyColor + " enemy");
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.green);
         }
     }
 }
