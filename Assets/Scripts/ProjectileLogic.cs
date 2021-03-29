@@ -101,7 +101,10 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
     public void EnemyDeath()
     {
         source.Play();
-        Invoke("DestroyProjectile", 0.01f);
+        if (!gameObject.tag.Contains("Ability"))
+        {
+            Invoke("DestroyProjectile", 0.01f);
+        }
     }
 
     public void DestroyProjectile()
