@@ -5,8 +5,9 @@ using UnityEngine;
 public class CrystalHP : MonoBehaviour
 {
     //HP variables
-    private float maxHP = 500;
-    private float currentHP;
+    public float maxHP = 1000;
+    [HideInInspector]
+    public float currentHP;
 
     //variables for checking how many enemies are attacking
     private CapsuleCollider capsuleCol;
@@ -55,7 +56,7 @@ public class CrystalHP : MonoBehaviour
         if (!losingHP)
         {
             losingHP = true;
-            StartCoroutine(LoseHP());
+            //StartCoroutine(LoseHP());
         }
     }
 

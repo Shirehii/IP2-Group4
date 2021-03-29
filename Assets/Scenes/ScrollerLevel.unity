@@ -1357,6 +1357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 6181974406328663039, guid: 26ec0f6f3b88f424194c439d9bbee66f, type: 3}
   maxEnemies: 8
+  spawnRate: 5
+  syntheticsEnabled: 0
 --- !u!4 &145034200
 Transform:
   m_ObjectHideFlags: 0
@@ -2365,6 +2367,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6087338538414777144, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: ScrollerLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 6087338539538557648, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2452,6 +2458,10 @@ PrefabInstance:
     - target: {fileID: 6087338539538557652, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
       propertyPath: m_Name
       value: GameUICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087338539801674585, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: ScrollerLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6da167ae5a3c34ca382f63266ddfdb, type: 3}
@@ -3457,7 +3467,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d07ff9334df18c49b51a37c3d314794, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dcce3814f890d524f8d432412aec7ef0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1

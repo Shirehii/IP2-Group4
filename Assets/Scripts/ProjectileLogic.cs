@@ -18,6 +18,8 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
     private Sprite[] projectileSprites;
 
     public float scoreMultiplier = 1; //used in Enemy.cs
+    
+    private AudioSource source;
 
     void Start()
     {
@@ -26,18 +28,20 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         pGL = gameObject.transform.parent.gameObject.GetComponent<GunLogic>().pGL;
         projectileRenderer = GetComponent<SpriteRenderer>();
 
+        source = GetComponent<AudioSource>();
+
         //load the projectile sprites
         projectileName = gameObject.name.Replace("(Clone)", "");
-        projectileSprites = new Sprite[3];
-        projectileSprites[0] = Resources.Load<Sprite>("blue" + projectileName);
-        projectileSprites[1] = Resources.Load<Sprite>("red" + projectileName);
-        projectileSprites[2] = Resources.Load<Sprite>("yellow" + projectileName);
+        //projectileSprites = new Sprite[3];
+        //projectileSprites[0] = Resources.Load<Sprite>("blue" + projectileName);
+        //projectileSprites[1] = Resources.Load<Sprite>("red" + projectileName);
+        //projectileSprites[2] = Resources.Load<Sprite>("yellow" + projectileName);
 
         switch (pGL.selectedGun) //Switch statement for switching the projectile's color
         {
             case "blue":
                 projectileColor = "blue";
-                projectileRenderer.sprite = projectileSprites[0];
+                projectileRenderer.sprite = Resources.Load<Sprite>("blue" + projectileName);
                 if (projectileName == "Bullet") //also change the lifespan of the projectile if it is a bullet
                 {
                     lifespan = 2;
@@ -45,7 +49,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 break;
             case "red":
                 projectileColor = "red";
-                projectileRenderer.sprite = projectileSprites[1];
+                projectileRenderer.sprite = Resources.Load<Sprite>("red" + projectileName);
                 if (projectileName == "Bullet")
                 {
                     lifespan = 2;
@@ -53,7 +57,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 break;
             case "yellow":
                 projectileColor = "yellow";
-                projectileRenderer.sprite = projectileSprites[2];
+                projectileRenderer.sprite = Resources.Load<Sprite>("yellow" + projectileName);
                 if (projectileName == "Bullet")
                 {
                     lifespan = 0.5f;
@@ -91,6 +95,15 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
             boxCollider.size = new Vector3(3.5f, 3.5f, 3.5f); //expand the collider to simulate the explosion
             //in this line we could add an explosion effect but we don't have the assets :')
             Invoke("DestroyProjectile", 0.1f); //destroy the bomb
+        }
+    }
+
+    public void EnemyDeath()
+    {
+        source.Play();
+        if (!gameObject.tag.Contains("Ability"))
+        {
+            Invoke("DestroyProjectile", 0.01f);
         }
     }
 

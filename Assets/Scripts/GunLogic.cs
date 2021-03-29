@@ -19,8 +19,13 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     public float fireRate = 1; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
     private float timeBetweenShots; //the time the gun has passed since the last shot
 
+    private RaycastHit hitInfo;
+    private Collider enemyCollider = null;
+
     [HideInInspector]
     public AudioSource source;
+    private AudioClip fireSound;
+    private AudioClip abilitySound;
 
     void Start()
     {
@@ -29,28 +34,52 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         pM = GetComponentInParent<PlayerMovement>();
 
         source = GetComponent<AudioSource>();
+        fireSound = Resources.Load<AudioClip>("fire");
+        abilitySound = Resources.Load<AudioClip>("explosion");
     }
     
     void Update()
     {
         //for shooting
-        if (pGL.fireShot == true && timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
+        if (pGL.fireShot == true)
         {
-            FireShot(); //shoot
-            pGL.currentAmmo -= 1;
-            source.Play();
-        }
-        else if (timeBetweenShots > 0) //else if it's on cooldown
-        {
-            timeBetweenShots -= Time.deltaTime; //decrease cooldown and reject the player's input to fire
             pGL.fireShot = false;
+            if (timeBetweenShots <= 0) //if player wants to shoot and gun is off cooldown
+            {
+                FireShot(); //shoot
+                pGL.currentAmmo -= 1;
+                source.clip = fireSound;
+                source.Play();
+            }
+            else if (timeBetweenShots > 0) //else if it's on cooldown
+            {
+                timeBetweenShots -= Time.deltaTime; //decrease cooldown and reject the player's input to fire
+            }
         }
 
         //for ability use
         if (pGL.fireAbility == true)
         {
-            FireAbility();
             pGL.fireAbility = false;
+            FireAbility();
+            source.clip = abilitySound;
+            source.Play();
+        }
+
+        //Raycast for highlighting targeted enemies
+        if (pM.facingRight)
+        {
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitInfo, 5f))
+            {
+                CheckHighlight();
+            }
+        }
+        else
+        {
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitInfo, 5f))
+            {
+                CheckHighlight();
+            }
         }
     }
 
@@ -58,7 +87,6 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     void FireShot()
     {
         timeBetweenShots = fireRate; //put the gun on cooldown
-        pGL.fireShot = false;
 
         //this is where the shooting magic happens
 
@@ -152,12 +180,27 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
             GameObject spawnedPuddle = Instantiate(puddle, gameObject.transform);
             if (!pM.facingRight)
             {
-                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, gameObject.transform.position.y - 0.5f, spawnedPuddle.transform.position.z);
+                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x - 3, gameObject.transform.position.y - 0.1f, spawnedPuddle.transform.position.z);
             }
             else
             {
-                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, gameObject.transform.position.y - 0.5f, spawnedPuddle.transform.position.z);
+                spawnedPuddle.transform.position = new Vector3(spawnedPuddle.transform.position.x + 3, gameObject.transform.position.y - 0.1f, spawnedPuddle.transform.position.z);
             }
+        }
+    }
+    
+    void CheckHighlight()
+    {
+        if ((enemyCollider != null && hitInfo.collider != enemyCollider) || hitInfo.collider == null) //if the collider being hit isn't the same as the previous enemy's collider OR if nothing is being hit...
+        {
+            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = false; //...disable the enemy's highlight
+        }
+        if (hitInfo.collider.tag == "Enemy")
+        {
+            enemyCollider = hitInfo.collider;
+            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = true;
+            //print("Raycast targeted a " + hitInfo.collider.gameObject.GetComponent<Enemy>().enemyColor + " enemy");
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.green);
         }
     }
 }

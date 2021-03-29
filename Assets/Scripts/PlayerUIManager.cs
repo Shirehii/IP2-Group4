@@ -10,7 +10,7 @@ public class PlayerUIManager : MonoBehaviour
 
     private PlayerGunLogic pGL;
     
-    private Sprite[] selectedGunSprites;
+    private Sprite[] headIconSprites;
     private Sprite[] ammoSprites;
     private GameObject[] ammoObjects;
     private Image[] ammoObjectsImage;
@@ -20,12 +20,17 @@ public class PlayerUIManager : MonoBehaviour
         //get the player scripts to check their values
         ammoObjects = new GameObject[6];
         ammoObjectsImage = new Image[6];
+        headIconSprites = new Sprite[3];
         if (gameObject.name.Contains("1"))
         {
             pGL = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerGunLogic>();
-            
+
+            headIconSprites[0] = Resources.Load<Sprite>("Player1Blue");
+            headIconSprites[1] = Resources.Load<Sprite>("Player1Red");
+            headIconSprites[2] = Resources.Load<Sprite>("Player1Yellow");
+
             //get the individual UI components
-            selectedGunColor = GameObject.Find("SelectedGunColor1").GetComponent<Image>();
+            selectedGunColor = GameObject.Find("HeadIcon1").GetComponent<Image>();
 
             abilityBar = GameObject.Find("AbilityBar1").transform;
             
@@ -38,9 +43,13 @@ public class PlayerUIManager : MonoBehaviour
         else if (gameObject.name.Contains("2"))
         {
             pGL = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerGunLogic>();
-            
+
+            headIconSprites[0] = Resources.Load<Sprite>("Player2Blue");
+            headIconSprites[1] = Resources.Load<Sprite>("Player2Red");
+            headIconSprites[2] = Resources.Load<Sprite>("Player2Yellow");
+
             //get the individual UI components
-            selectedGunColor = GameObject.Find("SelectedGunColor2").GetComponent<Image>();
+            selectedGunColor = GameObject.Find("HeadIcon2").GetComponent<Image>();
 
             abilityBar = GameObject.Find("AbilityBar2").transform;
             
@@ -51,11 +60,6 @@ public class PlayerUIManager : MonoBehaviour
             }
         }
 
-        selectedGunSprites = new Sprite[3];
-        selectedGunSprites[0] = Resources.Load<Sprite>("blueGunSelected");
-        selectedGunSprites[1] = Resources.Load<Sprite>("redGunSelected");
-        selectedGunSprites[2] = Resources.Load<Sprite>("yellowGunSelected");
-
         ammoSprites = new Sprite[3];
         ammoSprites[0] = Resources.Load<Sprite>("blueAmmo");
         ammoSprites[1] = Resources.Load<Sprite>("redAmmo");
@@ -65,25 +69,25 @@ public class PlayerUIManager : MonoBehaviour
     void Update()
     {
         //change the selected gun UI && ammo UI color if they don't match the selected gun's color
-        if (pGL.selectedGun == "blue" && selectedGunColor != selectedGunSprites[0])
+        if (pGL.selectedGun == "blue" && selectedGunColor != headIconSprites[0])
         {
-            selectedGunColor.sprite = selectedGunSprites[0];
+            selectedGunColor.sprite = headIconSprites[0];
             for (int i = 0; i != 6; i++)
             {
                 ammoObjectsImage[i].sprite = ammoSprites[0];
             }
         }
-        else if (pGL.selectedGun == "red" && selectedGunColor != selectedGunSprites[1])
+        else if (pGL.selectedGun == "red" && selectedGunColor != headIconSprites[1])
         {
-            selectedGunColor.sprite = selectedGunSprites[1];
+            selectedGunColor.sprite = headIconSprites[1];
             for (int i = 0; i != 6; i++)
             {
                 ammoObjectsImage[i].sprite = ammoSprites[1];
             }
         }
-        else if (pGL.selectedGun == "yellow" && selectedGunColor != selectedGunSprites[2])
+        else if (pGL.selectedGun == "yellow" && selectedGunColor != headIconSprites[2])
         {
-            selectedGunColor.sprite = selectedGunSprites[2];
+            selectedGunColor.sprite = headIconSprites[2];
             for (int i = 0; i != 6; i++)
             {
                 ammoObjectsImage[i].sprite = ammoSprites[2];

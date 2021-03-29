@@ -10,6 +10,9 @@ public class GenerateEnemies : MonoBehaviour
     public int maxEnemies = 8;
     private int enemyCount = 0;
     private bool currentlySpawning;
+    [HideInInspector]
+    public float spawnRate = 5;
+    public bool syntheticsEnabled = false;
 
     private CrystalHP crystalHP;
 
@@ -51,7 +54,7 @@ public class GenerateEnemies : MonoBehaviour
                 zPos = -2.5f;
             }
             Instantiate(theEnemy, new Vector3(xPos, -1, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(spawnRate);
         }
         currentlySpawning = false;
     }

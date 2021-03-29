@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9801ad47236efbc4bab2b08d8592963f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  semiSlip: {fileID: 13400000, guid: 8b15356432622a84a9f5f739ef75e9fe, type: 2}
+  verySlip: {fileID: 13400000, guid: 69a528ba2d94ff5488d91ba335b53ef1, type: 2}
