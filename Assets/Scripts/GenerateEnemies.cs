@@ -64,7 +64,6 @@ public class GenerateEnemies : MonoBehaviour
         if (enemyCount - 1 < maxEnemies && !currentlySpawning)
         {
             enemyCount -= 1;
-            crystalHP.attackingEnemies -= 1; //this line assumes that enemies only die when they're already touching the crystal and may falsely lower the attackingEnemies count. will have to fix this later
             currentlySpawning = true;
             StartCoroutine(EnemyDrop());
         }

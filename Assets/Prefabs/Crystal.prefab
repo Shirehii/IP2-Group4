@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f5ccb6eb81c237d488aba75bbf46e20c, type: 3}
+  m_Sprite: {fileID: 4775630859605534401, guid: 8ef8bd148c03e31408a6d20dc1847d99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f8ffc28021dc94f8813b4251ac402b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 1000
+  currentHP: 0
   attackingEnemies: 0
 --- !u!65 &2778221084470636294
 BoxCollider:
