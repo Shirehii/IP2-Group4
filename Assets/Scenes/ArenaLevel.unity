@@ -1863,6 +1863,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174093079550223522, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
+      propertyPath: m_Size.x
+      value: 21.942856
+      objectReference: {fileID: 0}
+    - target: {fileID: 174093079550223522, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
+      propertyPath: m_Size.y
+      value: 12.342856
+      objectReference: {fileID: 0}
+    - target: {fileID: 174093079550223522, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2872034301858646153, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
       propertyPath: m_Name
       value: EventManager
@@ -1877,15 +1889,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6792343496582657134, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6792343496582657134, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 6792343496582657134, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.31
       objectReference: {fileID: 0}
     - target: {fileID: 6792343496582657134, guid: 10847f133c83b1b4781d9da8360aa599, type: 3}
       propertyPath: m_LocalRotation.x

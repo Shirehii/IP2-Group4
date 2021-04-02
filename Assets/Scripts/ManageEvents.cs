@@ -14,6 +14,7 @@ public class ManageEvents : MonoBehaviour
     public PhysicMaterial semiSlip;
     public PhysicMaterial verySlip;
 
+    private Animator animator;
     public string whichEvent; //string that shows in the inspector which event is currently active, for debug purposes
 
     private bool running = false;
@@ -26,6 +27,8 @@ public class ManageEvents : MonoBehaviour
         gL2 = GameObject.Find("GunBarrel2").GetComponent<GunLogic>();
         box1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<BoxCollider>();
         box2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<BoxCollider>();
+
+        animator = GetComponent<Animator>();
         
         PickEvent();
     }
@@ -61,11 +64,13 @@ public class ManageEvents : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         whichEvent = "rain";
+        animator.SetBool("isRaining", true);
         pM1.horizontalSpeed /= 2;
         pM1.verticalSpeed /= 2;
         pM2.horizontalSpeed /= 2;
         pM2.verticalSpeed /= 2;
         yield return new WaitForSeconds(10f);
+        animator.SetBool("isRaining", false);
         pM1.horizontalSpeed *= 2;
         pM1.verticalSpeed *= 2;
         pM2.horizontalSpeed *= 2;
@@ -79,9 +84,11 @@ public class ManageEvents : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         whichEvent = "snow";
+        animator.SetBool("isSnowing", true);
         gL1.fireRate *= 2;
         gL2.fireRate *= 2;
         yield return new WaitForSeconds(10f);
+        animator.SetBool("isSnowing", true);
         gL1.fireRate /= 2;
         gL2.fireRate /= 2;
         whichEvent = "none";

@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private bool isAttacking = false;
+    private bool shouldAttack = false;
     private CrystalHP crystalHP;
     private GenerateEnemies enemyGen;
 
@@ -69,23 +69,17 @@ public class Enemy : MonoBehaviour
         highlight.enabled = false;
     }
 
-    private void Update()
-    {
-        if (isAttacking)
-        {
-            StartCoroutine(EnemyAttack());
-        }
-    }
-
     void FixedUpdate()
     {
         if (enemyColor == null || enemyColor == "" || enemyColor == " ")
         {
             SetEnemyColor();
         }
-
+        
+        if (!shouldAttack && !animator.GetBool("isDying"))
         EnemyMovement(); //Calling code within private function "Player1Enemy"
     }
+
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
     {
         facingRight = !facingRight;
@@ -165,28 +159,35 @@ public class Enemy : MonoBehaviour
         if (otherTag == "Crystal")
         {
             animator.SetBool("isAttacking", true);
-            isAttacking = true;
+            shouldAttack = true;
+            StartCoroutine(EnemyAttack());
         }
     }
 
     IEnumerator EnemyAttack()
     {
-        isAttacking = false;
         for (int i = 0; i < 3; i++)
         {
             yield return new WaitForSeconds(1f);
-            source.Play();
-            crystalHP.currentHP -= 1;
+            if (shouldAttack)
+            {
+                source.Play();
+                crystalHP.currentHP -= 1;
+            }
         }
         yield return new WaitForSeconds(1f);
-        source.Play();
-        crystalHP.currentHP -= 3;
+        if (shouldAttack)
+        {
+            source.Play();
+            crystalHP.currentHP -= 3;
+        }
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
 
     IEnumerator EnemyDeath()
     {
+        shouldAttack = false;
         animator.SetBool("isDying", true);
         yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);
