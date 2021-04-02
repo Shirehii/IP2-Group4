@@ -116,10 +116,10 @@ public class Enemy : MonoBehaviour
             
             if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color (blue, red, or yellow)
             {
-                otherPL.EnemyDeath();
+                otherPL.EnemyKilled();
                 enemyGen.EnemyDied(); //trigger enemy death in GenerateEnemies.cs
                 ScoreText.scoreValue += 10 * scoreMultiplier;
-                Destroy(gameObject); //Enemy death
+                StartCoroutine(EnemyDeath()); //Enemy death
             }
             else if (enemyColor == "green") //if the enemy is green
             {
@@ -184,7 +184,15 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
-    
+
+    IEnumerator EnemyDeath()
+    {
+        animator.SetBool("isDying", true);
+        yield return new WaitForSeconds(0.8f);
+        Destroy(gameObject);
+    }
+
+
     void SetEnemyColor()
     {
         if (Random.value < 0.2f) //blue

@@ -98,7 +98,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         }
     }
 
-    public void EnemyDeath()
+    public void EnemyKilled()
     {
         source.Play();
         if (!gameObject.tag.Contains("Ability"))

@@ -13,7 +13,7 @@ public class CrystalHP : MonoBehaviour
     private GameObject gameOverModal;
 
     private Sprite[] crystalSprites;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRen;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class CrystalHP : MonoBehaviour
 
         crystalSprites = new Sprite[3];
         crystalSprites = Resources.LoadAll<Sprite>("Crystals");
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRen = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -32,15 +32,15 @@ public class CrystalHP : MonoBehaviour
         //Sprite changes & Game Over stuff
         if (currentHP > maxHP * 0.7)
         {
-            renderer.sprite = crystalSprites[0];
+            spriteRen.sprite = crystalSprites[0];
         }
         else if (currentHP <= maxHP * 0.7 && currentHP > maxHP * 0.3)
         {
-            renderer.sprite = crystalSprites[1];
+            spriteRen.sprite = crystalSprites[1];
         }
         else if (currentHP <= maxHP * 0.3 && currentHP > 0)
         {
-            renderer.sprite = crystalSprites[2];
+            spriteRen.sprite = crystalSprites[2];
         }
         else if (currentHP <= 0)
         {
