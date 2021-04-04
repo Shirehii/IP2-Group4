@@ -46,15 +46,16 @@ public class ManageEvents : MonoBehaviour
 
     void PickEvent()
     {
-        if (Random.value < 0.5f)
+        int value = Random.Range(0, 2);
+        if (value == 0)
         {
             StartCoroutine(RainEvent());
         }
-        else if (Random.value >= 0.5f)
+        else if (value == 1)
         {
             StartCoroutine(SnowEvent());
         }
-        //else if (Random.value >= 0.6f)
+        //else if (value == 2)
         //{
         //    StartCoroutine(HailEvent());
         //}
@@ -88,7 +89,7 @@ public class ManageEvents : MonoBehaviour
         gL1.fireRate *= 2;
         gL2.fireRate *= 2;
         yield return new WaitForSeconds(10f);
-        animator.SetBool("isSnowing", true);
+        animator.SetBool("isSnowing", false);
         gL1.fireRate /= 2;
         gL2.fireRate /= 2;
         whichEvent = "none";

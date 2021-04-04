@@ -46,7 +46,15 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Input.GetAxis(verticalButton) * verticalSpeed);
         }
 
-        animator.SetFloat("speed", Mathf.Abs(rb.velocity.x + rb.velocity.z)); //running animation
+        //running animation
+        if (Mathf.Abs(rb.velocity.x + rb.velocity.z) > 0)
+        {
+            animator.SetFloat("speed", Mathf.Abs(rb.velocity.x + rb.velocity.z));
+        }
+        if (Mathf.Abs(rb.velocity.x + rb.velocity.z) == 0)
+        {
+            animator.SetFloat("speed", Mathf.Abs(rb.velocity.x - rb.velocity.z));
+        }
 
         //checking the player's movement direction, in case the sprite has to be flipped
         float h = Input.GetAxis(horizontalButton); //get the value of the horizontal axis

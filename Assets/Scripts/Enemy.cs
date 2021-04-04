@@ -43,20 +43,16 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
 
         //offset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
-        Random.InitState(System.DateTime.Now.Millisecond);
-        if (Random.value < 0.5f) //enemy left side of crystal attack
+        int value = Random.Range(0, 2);
+        if (value == 0) //enemy left side of crystal attack
         {
             xPos = -1.25f;
             zPos = Random.Range(-1f, 1f);
         }
-        else if (Random.value >= 0.5f) //enemy right side of crystal attack
+        else if (value == 1) //enemy right side of crystal attack
         {
             xPos = 1.25f;
             zPos = Random.Range(-1f, 1f);
-        }
-        if (xPos != 1.25f && xPos != -1.25f)
-        {
-            xPos = -1.25f;
         }
         offset = new Vector3(xPos, 0, zPos);
         
@@ -70,14 +66,13 @@ public class Enemy : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        if (enemyColor == null || enemyColor == "" || enemyColor == " ")
-        {
-            SetEnemyColor();
-        }
-        
+    {        
         if (!shouldAttack && !animator.GetBool("isDying"))
-        EnemyMovement(); //Calling code within private function "Player1Enemy"
+        {
+            EnemyMovement(); //Calling code within private function "Player1Enemy"
+        }
+
+        highlight.enabled = false; //disable the highlight sprite every frame
     }
 
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
@@ -196,32 +191,32 @@ public class Enemy : MonoBehaviour
 
     void SetEnemyColor()
     {
-        if (Random.value < 0.2f) //blue
+        if (enemyGen.enemyColor == "blue") //blue
         {
             animator.SetInteger("EnemyColor", 0);
             enemyColor = "blue";
         }
-        else if (Random.value >= 0.2f && Random.value < 0.4f) //red
+        else if (enemyGen.enemyColor == "red") //red
         {
             animator.SetInteger("EnemyColor", 1);
             enemyColor = "red";
         }
-        else if (Random.value >= 0.4f && Random.value < 0.7f) //yellow
+        else if (enemyGen.enemyColor == "yellow") //yellow
         {
             animator.SetInteger("EnemyColor", 2);
             enemyColor = "yellow";
         }
-        else if (Random.value >= 0.7f && Random.value < 0.8f && enemyGen.syntheticsEnabled) //green
+        else if (enemyGen.enemyColor == "green") //green
         {
             animator.SetInteger("EnemyColor", 3);
             enemyColor = "green";
         }
-        else if (Random.value >= 0.8f && Random.value < 0.9f && enemyGen.syntheticsEnabled) //orange
+        else if (enemyGen.enemyColor == "orange") //orange
         {
             animator.SetInteger("EnemyColor", 4);
             enemyColor = "orange";
         }
-        else if (Random.value >= 0.9f && enemyGen.syntheticsEnabled) //purple
+        else if (enemyGen.enemyColor == "purple") //purple
         {
             animator.SetInteger("EnemyColor", 5);
             enemyColor = "purple";
