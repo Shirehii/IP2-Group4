@@ -86,12 +86,12 @@ public class ManageEvents : MonoBehaviour
         yield return new WaitForSeconds(10f);
         whichEvent = "snow";
         animator.SetBool("isSnowing", true);
-        gL1.fireRate *= 2;
-        gL2.fireRate *= 2;
+        gL1.fireRate *= 1.5f;
+        gL2.fireRate *= 1.5f;
         yield return new WaitForSeconds(10f);
         animator.SetBool("isSnowing", false);
-        gL1.fireRate /= 2;
-        gL2.fireRate /= 2;
+        gL1.fireRate /= 1.5f;
+        gL2.fireRate /= 1.5f;
         whichEvent = "none";
 
         running = false;

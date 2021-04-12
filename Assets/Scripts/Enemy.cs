@@ -115,11 +115,13 @@ public class Enemy : MonoBehaviour
                 if (otherSpriteName.Replace(otherTag, "") == "blue") //and gets hit by a blue projectile
                 {
                     enemyColor = "yellow"; //turn yellow
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 2);
                 }
                 else if (otherSpriteName.Replace(otherTag, "") == "yellow") //or gets hit by a yellow projectile
                 {
                     enemyColor = "blue"; //turn blue
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 0);
                 }
             }
@@ -128,11 +130,13 @@ public class Enemy : MonoBehaviour
                 if (otherSpriteName.Replace(otherTag, "") == "red")
                 {
                     enemyColor = "yellow";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 2);
                 }
                 else if (otherSpriteName.Replace(otherTag, "") == "yellow")
                 {
                     enemyColor = "red";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 1);
                 }
             }
@@ -141,11 +145,13 @@ public class Enemy : MonoBehaviour
                 if (otherSpriteName.Replace(otherTag, "") == "blue")
                 {
                     enemyColor = "red";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 1);
                 }
                 else if (otherSpriteName.Replace(otherTag, "") == "red")
                 {
                     enemyColor = "blue";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 0);
                 }
             }
