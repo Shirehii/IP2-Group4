@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 6181974406328663039, guid: 26ec0f6f3b88f424194c439d9bbee66f, type: 3}
+  arrow: {fileID: 3453507890346974788, guid: 9fd13c8f26e9e3e4088fda9d86138f1e, type: 3}
   maxEnemies: 8
+  spawnRate: 5
+  syntheticsEnabled: 0
+  enemyColor: 

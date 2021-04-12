@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: fffb73b71ff739945859c38a47c21b8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1364767477736390750
+    second: Red_Death_Spritesheet_0
+  - first:
+      213: 2620305305850085181
+    second: Red_Death_Spritesheet_1
+  - first:
+      213: 4850780458556466153
+    second: Red_Death_Spritesheet_2
+  - first:
+      213: -2396245931591932744
+    second: Red_Death_Spritesheet_3
+  - first:
+      213: -2859789668614951830
+    second: Red_Death_Spritesheet_4
+  - first:
+      213: 1584367364040037092
+    second: Red_Death_Spritesheet_5
+  - first:
+      213: -3385273778827310300
+    second: Red_Death_Spritesheet_6
+  - first:
+      213: 2589390067380410175
+    second: Red_Death_Spritesheet_7
+  - first:
+      213: 5939596602646236713
+    second: Red_Death_Spritesheet_8
+  - first:
+      213: -4147777330408363629
+    second: Red_Death_Spritesheet_9
+  - first:
+      213: 7540413870499324748
+    second: Red_Death_Spritesheet_10
+  - first:
+      213: -3188737812575924783
+    second: Red_Death_Spritesheet_11
+  - first:
+      213: -8598686312664053914
+    second: Red_Death_Spritesheet_12
+  - first:
+      213: 37834318516388815
+    second: Red_Death_Spritesheet_13
+  - first:
+      213: 6065304195353772544
+    second: Red_Death_Spritesheet_14
+  - first:
+      213: 6992446384590283677
+    second: Red_Death_Spritesheet_15
+  - first:
+      213: -5736136633890221369
+    second: Red_Death_Spritesheet_16
+  - first:
+      213: 5502407884609722711
+    second: Red_Death_Spritesheet_17
+  - first:
+      213: 5009717159728980834
+    second: Red_Death_Spritesheet_18
+  - first:
+      213: 7074927927320401323
+    second: Red_Death_Spritesheet_8
+  - first:
+      213: -8154403483679012143
+    second: Red_Death_Spritesheet_9
+  - first:
+      213: -4714714153796281998
+    second: Red_Death_Spritesheet_10
+  - first:
+      213: 2756779997751467428
+    second: Red_Death_Spritesheet_22
+  - first:
+      213: -4157702338815050449
+    second: Red_Death_Spritesheet_23
+  - first:
+      213: 773245131695546267
+    second: Red_Death_Spritesheet_24
+  - first:
+      213: -4751021069225169525
+    second: Red_Death_Spritesheet_25
+  - first:
+      213: -2273695343090893716
+    second: Red_Death_Spritesheet_26
+  - first:
+      213: -3867397033805512233
+    second: Red_Death_Spritesheet_11
+  - first:
+      213: 3624959311745493351
+    second: Red_Death_Spritesheet_12
+  - first:
+      213: -6851918035417021075
+    second: Red_Death_Spritesheet_29
+  - first:
+      213: -7499916146194110612
+    second: Red_Death_Spritesheet_30
+  - first:
+      213: 5390549492270667476
+    second: Red_Death_Spritesheet_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 900
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1851
+        width: 1248
+        height: 1735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50cb774ac0a0f210800000000000000
+      internalID: 1364767477736390750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1793
+        width: 1639
+        height: 1735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ff34eeac13d5420800000000000000
+      internalID: 2620305305850085181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 1796
+        width: 1639
+        height: 1713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e32aa3602f615340800000000000000
+      internalID: 4850780458556466153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 1796
+        width: 1639
+        height: 1708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4ecf46503debed0800000000000000
+      internalID: -2396245931591932744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 6191
+        y: 1796
+        width: 1634
+        height: 1661
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cafddb27cff48d0800000000000000
+      internalID: -2859789668614951830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 227
+        width: 1735
+        height: 1580
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba55c6f17713f2260800000000000000
+      internalID: 7074927927320401323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 3463
+        y: 228
+        width: 1749
+        height: 1560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daca184c3db5de80800000000000000
+      internalID: -8154403483679012143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 5201
+        y: 223
+        width: 1749
+        height: 1570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279577de478f19eb0800000000000000
+      internalID: -4714714153796281998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6974
+        y: 228
+        width: 1753
+        height: 1565
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d18f9a53ee345ac0800000000000000
+      internalID: -3867397033805512233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 8716
+        y: 228
+        width: 1750
+        height: 1565
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769a5d5c9417e4230800000000000000
+      internalID: 3624959311745493351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 7828
+        y: 1793
+        width: 1690
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2145729bdccf510800000000000000
+      internalID: 1584367364040037092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 9523
+        y: 1797
+        width: 1724
+        height: 1639
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bcd812f671501d0800000000000000
+      internalID: -3385273778827310300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Death_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 229
+        width: 1719
+        height: 1583
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37522f0c8c5fe320800000000000000
+      internalID: 2589390067380410175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -191,14 +191,12 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     
     void CheckHighlight()
     {
-        if ((enemyCollider != null && hitInfo.collider != enemyCollider) || hitInfo.collider == null) //if the collider being hit isn't the same as the previous enemy's collider OR if nothing is being hit...
+        if (hitInfo.collider.tag == "Enemy") //if the raycast hits a gameobject tagged as "Enemy"
         {
-            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = false; //...disable the enemy's highlight
-        }
-        if (hitInfo.collider.tag == "Enemy")
-        {
-            enemyCollider = hitInfo.collider;
-            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = true;
+            enemyCollider = hitInfo.collider; //save the enemy's collider
+            enemyCollider.gameObject.GetComponent<Enemy>().highlight.enabled = true; //enable its highlight sprite
+
+            //debug stuff below
             //print("Raycast targeted a " + hitInfo.collider.gameObject.GetComponent<Enemy>().enemyColor + " enemy");
             //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.green);
         }

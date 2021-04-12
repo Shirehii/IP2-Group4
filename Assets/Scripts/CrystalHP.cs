@@ -9,70 +9,43 @@ public class CrystalHP : MonoBehaviour
     [HideInInspector]
     public float currentHP;
 
-    //variables for checking how many enemies are attacking
-    private CapsuleCollider capsuleCol;
-    [HideInInspector]
-    public int attackingEnemies;
-
-    //misc variables to make sure everything works properly
-    private bool losingHP = false;
-    private GenerateEnemies genEnemies;
-
     //game over UI
     private GameObject gameOverModal;
+
+    private Sprite[] crystalSprites;
+    private SpriteRenderer spriteRen;
 
     void Start()
     {
         //Initialize stuff
-        genEnemies = GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>();
         currentHP = maxHP;
-        capsuleCol = GetComponent<CapsuleCollider>();
         gameOverModal = GameObject.Find("GameOverModal");
         gameOverModal.SetActive(false); //set the game over ui as inactive at the start
+
+        crystalSprites = new Sprite[3];
+        crystalSprites = Resources.LoadAll<Sprite>("Crystals");
+        spriteRen = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        if (attackingEnemies > genEnemies.maxEnemies) //if for whatever reason the script bugs out and thinks there are more enemies attacking than there ever could be
+        //Sprite changes & Game Over stuff
+        if (currentHP > maxHP * 0.7)
         {
-            attackingEnemies = genEnemies.maxEnemies; //set it to the maximum possible enemies
+            spriteRen.sprite = crystalSprites[0];
         }
-
-        //Game Over stuff
-        if (currentHP <= 0)
+        else if (currentHP <= maxHP * 0.7 && currentHP > maxHP * 0.3)
+        {
+            spriteRen.sprite = crystalSprites[1];
+        }
+        else if (currentHP <= maxHP * 0.3 && currentHP > 0)
+        {
+            spriteRen.sprite = crystalSprites[2];
+        }
+        else if (currentHP <= 0)
         {
             gameOverModal.SetActive(true);
             Time.timeScale = 0;
         }
-    }
-
-    //method for counting how many enemies are attacking, and to trigger LoseHP()
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Enemy")
-        {
-            attackingEnemies += 1;
-        }
-        if (!losingHP)
-        {
-            losingHP = true;
-            //StartCoroutine(LoseHP());
-        }
-    }
-
-    //method for losing HP
-    IEnumerator LoseHP()
-    {
-        while (attackingEnemies > 0)
-        {
-            currentHP -= attackingEnemies;
-            yield return new WaitForSeconds(1f);
-        }
-        losingHP = false;
-    }
-
-    public void LoseMoreHP() //when an enemy attacks 3 times, they get destroyed after making a 'big' attack that takes more HP off the crystal
-    {
-        currentHP -= 3;
     }
 }

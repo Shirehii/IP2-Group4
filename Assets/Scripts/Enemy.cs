@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private bool isAttacking = false;
+    private bool shouldAttack = false;
     private CrystalHP crystalHP;
     private GenerateEnemies enemyGen;
 
@@ -43,20 +43,16 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>(); //Get this objects Rigidbody Component
 
         //offset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
-        Random.InitState(System.DateTime.Now.Millisecond);
-        if (Random.value < 0.5f) //enemy left side of crystal attack
+        int value = Random.Range(0, 2);
+        if (value == 0) //enemy left side of crystal attack
         {
             xPos = -1.25f;
             zPos = Random.Range(-1f, 1f);
         }
-        else if (Random.value >= 0.5f) //enemy right side of crystal attack
+        else if (value == 1) //enemy right side of crystal attack
         {
             xPos = 1.25f;
             zPos = Random.Range(-1f, 1f);
-        }
-        if (xPos != 1.25f && xPos != -1.25f)
-        {
-            xPos = -1.25f;
         }
         offset = new Vector3(xPos, 0, zPos);
         
@@ -69,23 +65,16 @@ public class Enemy : MonoBehaviour
         highlight.enabled = false;
     }
 
-    private void Update()
-    {
-        if (isAttacking)
-        {
-            StartCoroutine(EnemyAttack());
-        }
-    }
-
     void FixedUpdate()
-    {
-        if (enemyColor == null || enemyColor == "" || enemyColor == " ")
+    {        
+        if (!shouldAttack && !animator.GetBool("isDying"))
         {
-            SetEnemyColor();
+            EnemyMovement(); //Calling code within private function "Player1Enemy"
         }
 
-        EnemyMovement(); //Calling code within private function "Player1Enemy"
+        highlight.enabled = false; //disable the highlight sprite every frame
     }
+
     private void Flip() //Controls the "Flip" of the eney based on the characters position on X
     {
         facingRight = !facingRight;
@@ -116,21 +105,23 @@ public class Enemy : MonoBehaviour
             
             if (other.gameObject.GetComponent<ProjectileLogic>().projectileColor == enemyColor) //if the two sprites are the same color (blue, red, or yellow)
             {
-                otherPL.EnemyDeath();
+                otherPL.EnemyKilled();
                 enemyGen.EnemyDied(); //trigger enemy death in GenerateEnemies.cs
                 ScoreText.scoreValue += 10 * scoreMultiplier;
-                Destroy(gameObject); //Enemy death
+                StartCoroutine(EnemyDeath()); //Enemy death
             }
             else if (enemyColor == "green") //if the enemy is green
             {
                 if (otherSpriteName.Replace(otherTag, "") == "blue") //and gets hit by a blue projectile
                 {
                     enemyColor = "yellow"; //turn yellow
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 2);
                 }
                 else if (otherSpriteName.Replace(otherTag, "") == "yellow") //or gets hit by a yellow projectile
                 {
                     enemyColor = "blue"; //turn blue
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 0);
                 }
             }
@@ -139,11 +130,13 @@ public class Enemy : MonoBehaviour
                 if (otherSpriteName.Replace(otherTag, "") == "red")
                 {
                     enemyColor = "yellow";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 2);
                 }
                 else if (otherSpriteName.Replace(otherTag, "") == "yellow")
                 {
                     enemyColor = "red";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 1);
                 }
             }
@@ -152,11 +145,13 @@ public class Enemy : MonoBehaviour
                 if (otherSpriteName.Replace(otherTag, "") == "blue")
                 {
                     enemyColor = "red";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 1);
                 }
                 else if (otherSpriteName.Replace(otherTag, "") == "red")
                 {
                     enemyColor = "blue";
+                    highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
                     animator.SetInteger("EnemyColor", 0);
                 }
             }
@@ -165,54 +160,69 @@ public class Enemy : MonoBehaviour
         if (otherTag == "Crystal")
         {
             animator.SetBool("isAttacking", true);
-            isAttacking = true;
+            shouldAttack = true;
+            StartCoroutine(EnemyAttack());
         }
     }
 
     IEnumerator EnemyAttack()
     {
-        isAttacking = false;
         for (int i = 0; i < 3; i++)
         {
             yield return new WaitForSeconds(1f);
-            source.Play();
-            crystalHP.currentHP -= 1;
+            if (shouldAttack)
+            {
+                source.Play();
+                crystalHP.currentHP -= 1;
+            }
         }
         yield return new WaitForSeconds(1f);
-        source.Play();
-        crystalHP.currentHP -= 3;
+        if (shouldAttack)
+        {
+            source.Play();
+            crystalHP.currentHP -= 3;
+        }
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
-    
+
+    IEnumerator EnemyDeath()
+    {
+        shouldAttack = false;
+        animator.SetBool("isDying", true);
+        yield return new WaitForSeconds(0.8f);
+        Destroy(gameObject);
+    }
+
+
     void SetEnemyColor()
     {
-        if (Random.value < 0.2f) //blue
+        if (enemyGen.enemyColor == "blue") //blue
         {
             animator.SetInteger("EnemyColor", 0);
             enemyColor = "blue";
         }
-        else if (Random.value >= 0.2f && Random.value < 0.4f) //red
+        else if (enemyGen.enemyColor == "red") //red
         {
             animator.SetInteger("EnemyColor", 1);
             enemyColor = "red";
         }
-        else if (Random.value >= 0.4f && Random.value < 0.7f) //yellow
+        else if (enemyGen.enemyColor == "yellow") //yellow
         {
             animator.SetInteger("EnemyColor", 2);
             enemyColor = "yellow";
         }
-        else if (Random.value >= 0.7f && Random.value < 0.8f && enemyGen.syntheticsEnabled) //green
+        else if (enemyGen.enemyColor == "green") //green
         {
             animator.SetInteger("EnemyColor", 3);
             enemyColor = "green";
         }
-        else if (Random.value >= 0.8f && Random.value < 0.9f && enemyGen.syntheticsEnabled) //orange
+        else if (enemyGen.enemyColor == "orange") //orange
         {
             animator.SetInteger("EnemyColor", 4);
             enemyColor = "orange";
         }
-        else if (Random.value >= 0.9f && enemyGen.syntheticsEnabled) //purple
+        else if (enemyGen.enemyColor == "purple") //purple
         {
             animator.SetInteger("EnemyColor", 5);
             enemyColor = "purple";

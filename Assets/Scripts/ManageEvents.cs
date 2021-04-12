@@ -14,6 +14,7 @@ public class ManageEvents : MonoBehaviour
     public PhysicMaterial semiSlip;
     public PhysicMaterial verySlip;
 
+    private Animator animator;
     public string whichEvent; //string that shows in the inspector which event is currently active, for debug purposes
 
     private bool running = false;
@@ -26,6 +27,8 @@ public class ManageEvents : MonoBehaviour
         gL2 = GameObject.Find("GunBarrel2").GetComponent<GunLogic>();
         box1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<BoxCollider>();
         box2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<BoxCollider>();
+
+        animator = GetComponent<Animator>();
         
         PickEvent();
     }
@@ -43,15 +46,16 @@ public class ManageEvents : MonoBehaviour
 
     void PickEvent()
     {
-        if (Random.value < 0.5f)
+        int value = Random.Range(0, 2);
+        if (value == 0)
         {
             StartCoroutine(RainEvent());
         }
-        else if (Random.value >= 0.5f)
+        else if (value == 1)
         {
             StartCoroutine(SnowEvent());
         }
-        //else if (Random.value >= 0.6f)
+        //else if (value == 2)
         //{
         //    StartCoroutine(HailEvent());
         //}
@@ -61,11 +65,13 @@ public class ManageEvents : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         whichEvent = "rain";
+        animator.SetBool("isRaining", true);
         pM1.horizontalSpeed /= 2;
         pM1.verticalSpeed /= 2;
         pM2.horizontalSpeed /= 2;
         pM2.verticalSpeed /= 2;
         yield return new WaitForSeconds(10f);
+        animator.SetBool("isRaining", false);
         pM1.horizontalSpeed *= 2;
         pM1.verticalSpeed *= 2;
         pM2.horizontalSpeed *= 2;
@@ -79,11 +85,13 @@ public class ManageEvents : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         whichEvent = "snow";
-        gL1.fireRate *= 2;
-        gL2.fireRate *= 2;
+        animator.SetBool("isSnowing", true);
+        gL1.fireRate *= 1.5f;
+        gL2.fireRate *= 1.5f;
         yield return new WaitForSeconds(10f);
-        gL1.fireRate /= 2;
-        gL2.fireRate /= 2;
+        animator.SetBool("isSnowing", false);
+        gL1.fireRate /= 1.5f;
+        gL2.fireRate /= 1.5f;
         whichEvent = "none";
 
         running = false;

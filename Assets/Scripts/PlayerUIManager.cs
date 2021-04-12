@@ -99,6 +99,7 @@ public class PlayerUIManager : MonoBehaviour
         {
             Vector3 temp = transform.localScale;
             temp.x = pGL.abilityBar / 10;
+            temp.y = 2;
             abilityBar.localScale = temp;
 
             //abilityBar.localScale.x = pGL.abilityBar / 10;
@@ -106,10 +107,16 @@ public class PlayerUIManager : MonoBehaviour
         }
         else if (pGL.abilityBar >= 10)
         {
-            abilityBar.localScale = new Vector3(1, 1, 1);
+            abilityBar.localScale = new Vector3(1, 2, 1);
         }
 
         //switch statement for adjusting the quantity of the ammo ui
+        
+        //a for statement may be more efficient, willl work on this later
+        //for (int i = 0; i < pGL.currentAmmo; i++)
+        //{
+        //    ammoObjects[i].SetActive
+        //}
         switch (pGL.currentAmmo)
         {
             case (0):
