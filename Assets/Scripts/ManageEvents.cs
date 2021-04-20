@@ -17,7 +17,7 @@ public class ManageEvents : MonoBehaviour
     private Animator animator;
     public string whichEvent; //string that shows in the inspector which event is currently active, for debug purposes
 
-    private bool running = false;
+    private bool eventRunning = false;
 
     void Start()
     {
@@ -37,9 +37,9 @@ public class ManageEvents : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
 
-        if (!running)
+        if (!eventRunning)
         {
-            running = true;
+            eventRunning = true;
             PickEvent();
         }
     }
@@ -78,7 +78,7 @@ public class ManageEvents : MonoBehaviour
         pM2.verticalSpeed *= 2;
         whichEvent = "none";
 
-        running = false;
+        eventRunning = false;
     }
 
     IEnumerator SnowEvent() //snow event slows the guns' fire rate for a few seconds
@@ -94,7 +94,7 @@ public class ManageEvents : MonoBehaviour
         gL2.fireRate /= 1.5f;
         whichEvent = "none";
 
-        running = false;
+        eventRunning = false;
     }
 
     IEnumerator HailEvent() //hail event makes the ground slippery for a few seconds, had trouble adding this one in, might try again some other time
@@ -104,6 +104,6 @@ public class ManageEvents : MonoBehaviour
         yield return new WaitForSeconds(10f);
         whichEvent = "none";
 
-        running = false;
+        eventRunning = false;
     }
 }

@@ -23,12 +23,17 @@ public class GenerateEnemies : MonoBehaviour
 
     private CrystalHP crystalHP;
 
+    public bool tutorialSpawn = false;
+
     void Start()
     {
         crystalHP = GameObject.FindGameObjectWithTag("Crystal").GetComponent<CrystalHP>();
 
-        currentlySpawning = true;
-        StartCoroutine(EnemyDrop());
+        if (GameObject.Find("TutorialManager") == null) //if there isn't a tutorial manager in the scene, start spawning immediately.
+        {
+            currentlySpawning = true;
+            StartCoroutine(EnemyDrop());
+        }
     }
 
     void Update()
@@ -38,6 +43,13 @@ public class GenerateEnemies : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Enemy").Length < maxEnemies)
         {
             enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        }
+
+        if (tutorialSpawn == true)
+        {
+            tutorialSpawn = false;
+            currentlySpawning = true;
+            StartCoroutine(EnemyDrop());
         }
     }
 
@@ -123,7 +135,7 @@ public class GenerateEnemies : MonoBehaviour
 
     public void EnemyDied() //method that gets triggered from Enemy.cs
     {
-        if (enemyCount - 1 < maxEnemies && !currentlySpawning)
+        if (enemyCount - 1 < maxEnemies && !currentlySpawning && GameObject.Find("TutorialManager") == null)
         {
             enemyCount -= 1;
             currentlySpawning = true;
