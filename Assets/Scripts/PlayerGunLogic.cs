@@ -14,7 +14,7 @@ public class PlayerGunLogic : MonoBehaviour
     private SpriteRenderer gunRenderer; //the player's gun sprite renderer, used to change the sprite
     private PlayerGunLogic otherpGL; //the other player's gun sprite renderer, used to check what its sprite is
 
-    //private AudioClip[] audioClips;
+    private AudioClip[] audioClips;
 
     //the variables we need in order to make the gun shoot and reload in the GunLogic script.
     private string fire1Button = "Fire1_P1";
@@ -38,6 +38,9 @@ public class PlayerGunLogic : MonoBehaviour
     public float scoreMultiplier = 1; //used in projectilelogic
 
     private AudioSource source;
+    private AudioClip weaponSwapSFX;
+    private AudioClip abilityBarFullSFX;
+    private AudioClip reloadSFX;
 
     void Start()
     {
@@ -52,11 +55,14 @@ public class PlayerGunLogic : MonoBehaviour
 
         source = GetComponent<AudioSource>();
         //load the audio clips
-        //audioClips = new AudioClip[3];
-        //audioClips[0] = Resources.Load<AudioClip>("slimeball");
-        //audioClips[1] = Resources.Load<AudioClip>("flaunch");
-        //audioClips[2] = Resources.Load<AudioClip>("rlaunch");
-        
+        audioClips = new AudioClip[3];
+        audioClips[0] = Resources.Load<AudioClip>("handgunSFX");
+        audioClips[1] = Resources.Load<AudioClip>("sniperSFX");
+        audioClips[2] = Resources.Load<AudioClip>("shotgunSFX");
+        weaponSwapSFX = Resources.Load<AudioClip>("weaponSwap");
+        abilityBarFullSFX = Resources.Load<AudioClip>("ultimateReady");
+        reloadSFX = Resources.Load<AudioClip>("reloadSFX");
+
         animator = GetComponent<Animator>();
 
         //get the two sprite renderers of the guns
@@ -76,7 +82,7 @@ public class PlayerGunLogic : MonoBehaviour
             gL.fireRate = 2;
             maxAmmo = 5;
             currentAmmo = maxAmmo;
-            //gL.source.clip = audioClips[1];
+            gL.fireSound = audioClips[1];
         }
 
         //get the rigidbody from PlayerMovement
@@ -104,12 +110,18 @@ public class PlayerGunLogic : MonoBehaviour
         else if (abilityBar < 10)
         {
             abilityBar = abilityBar + Time.deltaTime;
+            if (abilityBar >= 10)
+            {
+                source.clip = abilityBarFullSFX;
+                source.Play();
+            }
         }
     }
 
     //method that checks if the thing we hit is one of the 3 guns, and if it is, enable that gun
     void OnTriggerEnter(Collider trigger)
     {
+        source.clip = weaponSwapSFX;
         switch (trigger.tag) //Switch statement for switching the gun's color
         {
             case "BlueGun":
@@ -121,7 +133,7 @@ public class PlayerGunLogic : MonoBehaviour
                     gL.fireRate = 1;
                     maxAmmo = 4;
                     source.Play();
-                    //gL.source.clip = audioClips[0];
+                    gL.fireSound = audioClips[0];
                 }
                 break;
             case "RedGun":
@@ -132,7 +144,7 @@ public class PlayerGunLogic : MonoBehaviour
                     gL.fireRate = 2;
                     maxAmmo = 5;
                     source.Play();
-                    //gL.source.clip = audioClips[1];
+                    gL.fireSound = audioClips[1];
                 }
                 break;
             case "YellowGun":
@@ -143,7 +155,7 @@ public class PlayerGunLogic : MonoBehaviour
                     gL.fireRate = 3;
                     maxAmmo = 3;
                     source.Play();
-                    //gL.source.clip = audioClips[2];
+                    gL.fireSound = audioClips[2];
                 }
                 break;
         }
@@ -159,12 +171,14 @@ public class PlayerGunLogic : MonoBehaviour
     {
         pMrb.isKinematic = true; //stop the character
         animator.SetBool("shouldReload", true); //reload animation, needs two bools or else it doesn't animate properly
-        animator.SetBool("isReloading", false); 
+        animator.SetBool("isReloading", false);
+        source.clip = reloadSFX;
         for (int i = currentAmmo; i != maxAmmo; i++) //reload
         {
             yield return new WaitForSeconds(0.1f);
             animator.SetBool("isReloading", true);
             yield return new WaitForSeconds(0.9f);
+            source.Play();
             currentAmmo += 1;
         }
         pMrb.isKinematic = false; //and allow them to move again

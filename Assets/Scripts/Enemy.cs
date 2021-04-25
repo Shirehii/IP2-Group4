@@ -27,13 +27,18 @@ public class Enemy : MonoBehaviour
     private GenerateEnemies enemyGen;
 
     private AudioSource source;
-    private AudioClip attackCrystalSound;
+    private AudioClip smallAttack;
+    private AudioClip bigAttack;
+    private AudioClip deathSFX;
 
     public SpriteRenderer highlight;
 
     void Start()
     {
         source = GetComponent<AudioSource>();
+        smallAttack = Resources.Load<AudioClip>("crystalHit");
+        bigAttack = Resources.Load<AudioClip>("crystalHit2");
+        deathSFX = Resources.Load<AudioClip>("enemyDeath");
 
         enemyGen = GameObject.FindGameObjectWithTag("EnemyGen").GetComponent<GenerateEnemies>();
 
@@ -172,6 +177,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(1f);
             if (shouldAttack)
             {
+                source.clip = smallAttack;
                 source.Play();
                 crystalHP.currentHP -= 1;
             }
@@ -179,6 +185,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (shouldAttack)
         {
+            source.clip = bigAttack;
             source.Play();
             crystalHP.currentHP -= 3;
         }
@@ -190,6 +197,8 @@ public class Enemy : MonoBehaviour
     {
         shouldAttack = false;
         animator.SetBool("isDying", true);
+        source.clip = deathSFX;
+        source.Play();
         yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);
     }

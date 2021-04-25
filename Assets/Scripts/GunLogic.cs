@@ -24,7 +24,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
 
     [HideInInspector]
     public AudioSource source;
-    private AudioClip fireSound;
+    public AudioClip fireSound;
     private AudioClip abilitySound;
 
     void Start()
@@ -34,7 +34,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
         pM = GetComponentInParent<PlayerMovement>();
 
         source = GetComponent<AudioSource>();
-        fireSound = Resources.Load<AudioClip>("fire");
+        fireSound = Resources.Load<AudioClip>("handgunSFX");
         abilitySound = Resources.Load<AudioClip>("explosion");
     }
     

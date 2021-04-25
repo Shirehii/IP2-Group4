@@ -112,7 +112,7 @@ public class PlayerUIManager : MonoBehaviour
 
         //switch statement for adjusting the quantity of the ammo ui
         
-        //a for statement may be more efficient, willl work on this later
+        //a for statement may be more efficient, will work on this later
         //for (int i = 0; i < pGL.currentAmmo; i++)
         //{
         //    ammoObjects[i].SetActive

@@ -15,7 +15,7 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
 
     BoxCollider boxCollider; //the box collider of the projectile, required if it's a bomb
 
-    private Sprite[] projectileSprites;
+    //private Sprite[] projectileSprites;
 
     public float scoreMultiplier = 1; //used in Enemy.cs
     
@@ -41,7 +41,6 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
         {
             case "blue":
                 projectileColor = "blue";
-                projectileRenderer.sprite = Resources.Load<Sprite>("blue" + projectileName);
                 if (projectileName == "Bullet") //also change the lifespan of the projectile if it is a bullet
                 {
                     lifespan = 2;
@@ -49,7 +48,6 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 break;
             case "red":
                 projectileColor = "red";
-                projectileRenderer.sprite = Resources.Load<Sprite>("red" + projectileName);
                 if (projectileName == "Bullet")
                 {
                     lifespan = 2;
@@ -57,13 +55,13 @@ public class ProjectileLogic : MonoBehaviour //this script is used for VARIOUS p
                 break;
             case "yellow":
                 projectileColor = "yellow";
-                projectileRenderer.sprite = Resources.Load<Sprite>("yellow" + projectileName);
                 if (projectileName == "Bullet")
                 {
                     lifespan = 0.5f;
                 }
                 break;
         }
+        projectileRenderer.sprite = Resources.Load<Sprite>(projectileColor + projectileName);
 
         //for flipping the projectile sprite
         if (!pM.facingRight)
