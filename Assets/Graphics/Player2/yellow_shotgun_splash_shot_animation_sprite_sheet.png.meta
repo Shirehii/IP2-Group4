@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 02bcff9a838b7764a8172a322abb69fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7378542474395413606
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_0
+  - first:
+      213: -6705876644374620776
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_1
+  - first:
+      213: -1837902765285480762
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_2
+  - first:
+      213: 660474420170981915
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_3
+  - first:
+      213: -8896519728983084974
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_4
+  - first:
+      213: -8343294877705397193
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_5
+  - first:
+      213: 4354396456536779342
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_6
+  - first:
+      213: 8710232587478604911
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_7
+  - first:
+      213: -2246351786815045176
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_8
+  - first:
+      213: 256179434053690698
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_9
+  - first:
+      213: -1239086791067761363
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_10
+  - first:
+      213: -3611216197462233558
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_11
+  - first:
+      213: 2059985480124484151
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_12
+  - first:
+      213: 1557723115872165097
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_13
+  - first:
+      213: 2922203010903297400
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_14
+  - first:
+      213: 8583328868210877899
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_15
+  - first:
+      213: 2073126994392980295
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_16
+  - first:
+      213: -1565074167327174712
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_17
+  - first:
+      213: -5908755153605668300
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_18
+  - first:
+      213: 8598379517716192582
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_19
+  - first:
+      213: 1099878801986240817
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_20
+  - first:
+      213: -785062888419920781
+    second: yellow_shotgun_splash_shot_animation_sprite_sheet_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 170
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 811
+        width: 255
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93978576b62a9990800000000000000
+      internalID: -7378542474395413606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 811
+        width: 256
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8955670a8b0ffe2a0800000000000000
+      internalID: -6705876644374620776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 811
+        width: 253
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6637f2c257e76e0800000000000000
+      internalID: -1837902765285480762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 803
+        width: 250
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12068d5cf97a2900800000000000000
+      internalID: 660474420170981915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 811
+        width: 226
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c980e6389a63c80800000000000000
+      internalID: -8343294877705397193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 811
+        width: 231
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a2813b18ced6c30800000000000000
+      internalID: 4354396456536779342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 542
+        width: 264
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c91b7b366f0e870800000000000000
+      internalID: 8710232587478604911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 542
+        width: 227
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1435a93fa53d0e0800000000000000
+      internalID: -2246351786815045176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 678
+        width: 42
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45e78586d12e8300800000000000000
+      internalID: 256179434053690698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 540
+        width: 225
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d250784e021edcee0800000000000000
+      internalID: -1239086791067761363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 536
+        width: 233
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dc77ae720cd8820800000000000000
+      internalID: 2922203010903297400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 236
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5a014112c1e1770800000000000000
+      internalID: 8583328868210877899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 222
+        width: 251
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b111b740a35cc10800000000000000
+      internalID: 2073126994392980295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 240
+        width: 239
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfc251465db74ae0800000000000000
+      internalID: -1565074167327174712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 240
+        width: 236
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43253946e72effda0800000000000000
+      internalID: -5908755153605668300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_shotgun_splash_shot_animation_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 240
+        width: 232
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1314f5861fd834f00800000000000000
+      internalID: 1099878801986240817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -33,7 +33,7 @@ public class TutorialManager : MonoBehaviour
         textBoxLeft = leftBox.GetComponentInChildren<Text>();
         textBoxRight = rightBox.GetComponentInChildren<Text>();
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.01f);
         eventManager.SetActive(false);
         middleBox.SetActive(false);
         leftBox.SetActive(false);

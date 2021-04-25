@@ -41,6 +41,7 @@ public class PlayerGunLogic : MonoBehaviour
     private AudioClip weaponSwapSFX;
     private AudioClip abilityBarFullSFX;
     private AudioClip reloadSFX;
+    private AudioClip noAmmoSFX;
 
     void Start()
     {
@@ -62,6 +63,7 @@ public class PlayerGunLogic : MonoBehaviour
         weaponSwapSFX = Resources.Load<AudioClip>("weaponSwap");
         abilityBarFullSFX = Resources.Load<AudioClip>("ultimateReady");
         reloadSFX = Resources.Load<AudioClip>("reloadSFX");
+        noAmmoSFX = Resources.Load<AudioClip>("noAmmoSFX");
 
         animator = GetComponent<Animator>();
 
@@ -95,6 +97,11 @@ public class PlayerGunLogic : MonoBehaviour
         {
             fireShot = true; //then send the signal to the gun to fire
         }
+        else if (Input.GetAxis(fire1Button) != 0 && currentAmmo <= 0)
+        {
+            source.clip = noAmmoSFX;
+            source.Play();
+        }
 
         if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo && !reloading) //if the player pressed the reload button and they aren't topped off already
         {
@@ -106,6 +113,7 @@ public class PlayerGunLogic : MonoBehaviour
         {
             fireAbility = true;
             abilityBar = 0;
+            StartCoroutine(AbilityAnimation());
         }
         else if (abilityBar < 10)
         {
@@ -185,5 +193,14 @@ public class PlayerGunLogic : MonoBehaviour
         animator.SetBool("shouldReload", false); //stop reload animation
         animator.SetBool("isReloading", false); 
         reloading = false;
+    }
+
+    IEnumerator AbilityAnimation()
+    {
+        animator.SetBool("isUsingAbility", true);
+        pMrb.isKinematic = true;
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        animator.SetBool("isUsingAbility", false);
+        pMrb.isKinematic = false;
     }
 }
