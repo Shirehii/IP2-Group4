@@ -40,7 +40,8 @@ public class PlayerGunLogic : MonoBehaviour
     private AudioSource source;
     private AudioClip weaponSwapSFX;
     private AudioClip abilityBarFullSFX;
-    private AudioClip reloadSFX;
+    private AudioClip reloadSFX1;
+    private AudioClip reloadSFX2;
     private AudioClip noAmmoSFX;
 
     private bool noAmmoSFXrunning = false;
@@ -64,7 +65,8 @@ public class PlayerGunLogic : MonoBehaviour
         audioClips[2] = Resources.Load<AudioClip>("shotgunSFX");
         weaponSwapSFX = Resources.Load<AudioClip>("weaponSwap");
         abilityBarFullSFX = Resources.Load<AudioClip>("ultimateReady");
-        reloadSFX = Resources.Load<AudioClip>("reloadSFX");
+        reloadSFX1 = Resources.Load<AudioClip>("reloadSound1");
+        reloadSFX2 = Resources.Load<AudioClip>("reloadSound2");
         noAmmoSFX = Resources.Load<AudioClip>("noAmmoSFX");
 
         animator = GetComponent<Animator>();
@@ -182,12 +184,22 @@ public class PlayerGunLogic : MonoBehaviour
         pMrb.isKinematic = true; //stop the character
         animator.SetBool("shouldReload", true); //reload animation, needs two bools or else it doesn't animate properly
         animator.SetBool("isReloading", false);
-        source.clip = reloadSFX;
         for (int i = currentAmmo; i != maxAmmo; i++) //reload
         {
             yield return new WaitForSeconds(0.1f);
             animator.SetBool("isReloading", true);
             yield return new WaitForSeconds(0.9f);
+
+            int value = Random.Range(0, 2); //randomize which of the 2 reload sounds to play
+            if (value == 0)
+            {
+                source.clip = reloadSFX1;
+            }
+            else if (value == 1)
+            {
+                source.clip = reloadSFX2;
+            }
+
             source.Play();
             currentAmmo += 1;
         }
