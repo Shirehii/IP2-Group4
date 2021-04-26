@@ -43,6 +43,8 @@ public class PlayerGunLogic : MonoBehaviour
     private AudioClip reloadSFX;
     private AudioClip noAmmoSFX;
 
+    private bool noAmmoSFXrunning = false;
+
     void Start()
     {
         if (gameObject.tag == "Player2") //if the player is not player 1, change the input axis
@@ -81,7 +83,7 @@ public class PlayerGunLogic : MonoBehaviour
             selectedGun = "red";
             animator.SetInteger("gunColor", 1);
 
-            gL.fireRate = 2;
+            gL.fireRate = 0.5f;
             maxAmmo = 5;
             currentAmmo = maxAmmo;
             gL.fireSound = audioClips[1];
@@ -97,10 +99,10 @@ public class PlayerGunLogic : MonoBehaviour
         {
             fireShot = true; //then send the signal to the gun to fire
         }
-        else if (Input.GetAxis(fire1Button) != 0 && currentAmmo <= 0)
+        else if (Input.GetAxis(fire1Button) != 0 && currentAmmo <= 0 && noAmmoSFXrunning == false)
         {
-            source.clip = noAmmoSFX;
-            source.Play();
+            noAmmoSFXrunning = true;
+            StartCoroutine(NoAmmo());
         }
 
         if (Input.GetAxis(reloadButton) != 0 && currentAmmo < maxAmmo && !reloading) //if the player pressed the reload button and they aren't topped off already
@@ -138,7 +140,7 @@ public class PlayerGunLogic : MonoBehaviour
                 {
                     selectedGun = "blue";
                     animator.SetInteger("gunColor", 0);
-                    gL.fireRate = 1;
+                    gL.fireRate = 0.5f;
                     maxAmmo = 4;
                     source.Play();
                     gL.fireSound = audioClips[0];
@@ -149,7 +151,7 @@ public class PlayerGunLogic : MonoBehaviour
                 {
                     selectedGun = "red";
                     animator.SetInteger("gunColor", 1);
-                    gL.fireRate = 2;
+                    gL.fireRate = 0.5f;
                     maxAmmo = 5;
                     source.Play();
                     gL.fireSound = audioClips[1];
@@ -160,7 +162,7 @@ public class PlayerGunLogic : MonoBehaviour
                 {
                     selectedGun = "yellow";
                     animator.SetInteger("gunColor", 2);
-                    gL.fireRate = 3;
+                    gL.fireRate = 0.5f;
                     maxAmmo = 3;
                     source.Play();
                     gL.fireSound = audioClips[2];
@@ -202,5 +204,13 @@ public class PlayerGunLogic : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         animator.SetBool("isUsingAbility", false);
         pMrb.isKinematic = false;
+    }
+
+    IEnumerator NoAmmo()
+    {
+        source.clip = noAmmoSFX;
+        source.Play();
+        yield return new WaitForSeconds(1f);
+        noAmmoSFXrunning = false;
     }
 }

@@ -16,7 +16,7 @@ public class GunLogic : MonoBehaviour //this script is used for GENERAL gun logi
     public GameObject pierce;
 
     //time related variables for shooting
-    public float fireRate = 1; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
+    public float fireRate = 0.5f; //the time the gun should be in 'cooldown' after a shot, can be set in inspector
     private float timeBetweenShots; //the time the gun has passed since the last shot
 
     private RaycastHit hitInfo;

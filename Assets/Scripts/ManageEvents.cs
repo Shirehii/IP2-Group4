@@ -19,6 +19,10 @@ public class ManageEvents : MonoBehaviour
 
     private bool eventRunning = false;
 
+    private AudioSource source;
+    private AudioClip rainSound;
+    private AudioClip snowSound;
+
     void Start()
     {
         pM1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerMovement>();
@@ -29,8 +33,9 @@ public class ManageEvents : MonoBehaviour
         box2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<BoxCollider>();
 
         animator = GetComponent<Animator>();
-        
-        PickEvent();
+        source = GetComponent<AudioSource>();
+        rainSound = Resources.Load<AudioClip>("rainSound");
+        snowSound = Resources.Load<AudioClip>("snowSound");
     }
 
     void Update()
@@ -66,17 +71,20 @@ public class ManageEvents : MonoBehaviour
         yield return new WaitForSeconds(10f);
         whichEvent = "rain";
         animator.SetBool("isRaining", true);
-        pM1.horizontalSpeed /= 2;
-        pM1.verticalSpeed /= 2;
-        pM2.horizontalSpeed /= 2;
-        pM2.verticalSpeed /= 2;
+        pM1.horizontalSpeed /= 1.5f;
+        pM1.verticalSpeed /= 1.5f;
+        pM2.horizontalSpeed /= 1.5f;
+        pM2.verticalSpeed /= 1.5f;
+        source.clip = rainSound;
+        source.Play();
         yield return new WaitForSeconds(10f);
         animator.SetBool("isRaining", false);
-        pM1.horizontalSpeed *= 2;
-        pM1.verticalSpeed *= 2;
-        pM2.horizontalSpeed *= 2;
-        pM2.verticalSpeed *= 2;
+        pM1.horizontalSpeed *= 1.5f;
+        pM1.verticalSpeed *= 1.5f;
+        pM2.horizontalSpeed *= 1.5f;
+        pM2.verticalSpeed *= 1.5f;
         whichEvent = "none";
+        source.Stop();
 
         eventRunning = false;
     }
@@ -86,13 +94,16 @@ public class ManageEvents : MonoBehaviour
         yield return new WaitForSeconds(10f);
         whichEvent = "snow";
         animator.SetBool("isSnowing", true);
-        gL1.fireRate *= 1.5f;
-        gL2.fireRate *= 1.5f;
+        gL1.fireRate *= 2f;
+        gL2.fireRate *= 2f;
+        source.clip = snowSound;
+        source.Play();
         yield return new WaitForSeconds(10f);
         animator.SetBool("isSnowing", false);
-        gL1.fireRate /= 1.5f;
-        gL2.fireRate /= 1.5f;
+        gL1.fireRate /= 2f;
+        gL2.fireRate /= 2f;
         whichEvent = "none";
+        source.Stop();
 
         eventRunning = false;
     }

@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     private GenerateEnemies enemyGen;
 
     private AudioSource source;
-    private AudioClip smallAttack;
     private AudioClip bigAttack;
     private AudioClip deathSFX;
 
@@ -36,7 +35,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
-        smallAttack = Resources.Load<AudioClip>("crystalHit");
         bigAttack = Resources.Load<AudioClip>("crystalHit2");
         deathSFX = Resources.Load<AudioClip>("enemyDeath");
 
@@ -174,10 +172,9 @@ public class Enemy : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.95f);
             if (shouldAttack)
             {
-                source.clip = smallAttack;
                 source.Play();
                 crystalHP.currentHP -= 1;
             }
@@ -185,8 +182,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (shouldAttack)
         {
-            source.clip = bigAttack;
-            source.Play();
+            source.PlayOneShot(bigAttack);
             crystalHP.currentHP -= 3;
         }
         yield return new WaitForSeconds(0.1f);
@@ -197,8 +193,7 @@ public class Enemy : MonoBehaviour
     {
         shouldAttack = false;
         animator.SetBool("isDying", true);
-        source.clip = deathSFX;
-        source.Play();
+        source.PlayOneShot(deathSFX);
         yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);
     }
@@ -210,31 +205,37 @@ public class Enemy : MonoBehaviour
         {
             animator.SetInteger("EnemyColor", 0);
             enemyColor = "blue";
+            source.clip = Resources.Load<AudioClip>("enemySmallAttack1");
         }
         else if (enemyGen.enemyColor == "red") //red
         {
             animator.SetInteger("EnemyColor", 1);
             enemyColor = "red";
+            source.clip = Resources.Load<AudioClip>("enemySmallAttack2");
         }
         else if (enemyGen.enemyColor == "yellow") //yellow
         {
             animator.SetInteger("EnemyColor", 2);
             enemyColor = "yellow";
+            source.clip = Resources.Load<AudioClip>("enemySmallAttack3");
         }
         else if (enemyGen.enemyColor == "green") //green
         {
             animator.SetInteger("EnemyColor", 3);
             enemyColor = "green";
+            source.clip = Resources.Load<AudioClip>("enemySmallAttack4");
         }
         else if (enemyGen.enemyColor == "orange") //orange
         {
             animator.SetInteger("EnemyColor", 4);
             enemyColor = "orange";
+            source.clip = Resources.Load<AudioClip>("enemySmallAttack5");
         }
         else if (enemyGen.enemyColor == "purple") //purple
         {
             animator.SetInteger("EnemyColor", 5);
             enemyColor = "purple";
+            source.clip = Resources.Load<AudioClip>("enemySmallAttack6");
         }
         highlight.sprite = Resources.Load<Sprite>(enemyColor + "Target");
         print(enemyColor + " enemy spawned");
