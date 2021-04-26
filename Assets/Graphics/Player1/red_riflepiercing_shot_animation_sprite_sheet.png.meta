@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 83fde38c7f226f741a3f9302605fbace
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5001524989396017539
+    second: red_riflepiercing_shot_animation_sprite_sheet_0
+  - first:
+      213: 4846889721281531083
+    second: red_riflepiercing_shot_animation_sprite_sheet_1
+  - first:
+      213: 7199398542085135223
+    second: red_riflepiercing_shot_animation_sprite_sheet_2
+  - first:
+      213: 5716337574040070718
+    second: red_riflepiercing_shot_animation_sprite_sheet_3
+  - first:
+      213: 2724038600179591371
+    second: red_riflepiercing_shot_animation_sprite_sheet_4
+  - first:
+      213: 74633318753548002
+    second: red_riflepiercing_shot_animation_sprite_sheet_5
+  - first:
+      213: -4927076713613673334
+    second: red_riflepiercing_shot_animation_sprite_sheet_6
+  - first:
+      213: -8988734127518622188
+    second: red_riflepiercing_shot_animation_sprite_sheet_7
+  - first:
+      213: 2779051574671973167
+    second: red_riflepiercing_shot_animation_sprite_sheet_8
+  - first:
+      213: 7247007105491254903
+    second: red_riflepiercing_shot_animation_sprite_sheet_9
+  - first:
+      213: -9065754770105877514
+    second: red_riflepiercing_shot_animation_sprite_sheet_5
+  - first:
+      213: -8329816447719577498
+    second: red_riflepiercing_shot_animation_sprite_sheet_6
+  - first:
+      213: -6610614187963998781
+    second: red_riflepiercing_shot_animation_sprite_sheet_7
+  - first:
+      213: 6224217471708992915
+    second: red_riflepiercing_shot_animation_sprite_sheet_8
+  - first:
+      213: 5758572112071655690
+    second: red_riflepiercing_shot_animation_sprite_sheet_9
+  - first:
+      213: 3464456576020562912
+    second: red_riflepiercing_shot_animation_sprite_sheet_15
+  - first:
+      213: -6959364766446665478
+    second: red_riflepiercing_shot_animation_sprite_sheet_16
+  - first:
+      213: -7503838176542599479
+    second: red_riflepiercing_shot_animation_sprite_sheet_17
+  - first:
+      213: 1544707343242316568
+    second: red_riflepiercing_shot_animation_sprite_sheet_18
+  - first:
+      213: -5318150525890744092
+    second: red_riflepiercing_shot_animation_sprite_sheet_19
+  - first:
+      213: 4327378875008470177
+    second: red_riflepiercing_shot_animation_sprite_sheet_20
+  - first:
+      213: -3024799559493163812
+    second: red_riflepiercing_shot_animation_sprite_sheet_21
+  - first:
+      213: -2572658970975167416
+    second: red_riflepiercing_shot_animation_sprite_sheet_22
+  - first:
+      213: 1120103322931871406
+    second: red_riflepiercing_shot_animation_sprite_sheet_23
+  - first:
+      213: -2598160784122287814
+    second: red_riflepiercing_shot_animation_sprite_sheet_24
+  - first:
+      213: 9043493194721979141
+    second: red_riflepiercing_shot_animation_sprite_sheet_25
+  - first:
+      213: -6856938522717888630
+    second: red_riflepiercing_shot_animation_sprite_sheet_26
+  - first:
+      213: -1474358040747953500
+    second: red_riflepiercing_shot_animation_sprite_sheet_27
+  - first:
+      213: -4640148742906502782
+    second: red_riflepiercing_shot_animation_sprite_sheet_28
+  - first:
+      213: -7390382682163509331
+    second: red_riflepiercing_shot_animation_sprite_sheet_29
+  - first:
+      213: 1623950470097315496
+    second: red_riflepiercing_shot_animation_sprite_sheet_30
+  - first:
+      213: -1929242693288935021
+    second: red_riflepiercing_shot_animation_sprite_sheet_31
+  - first:
+      213: -5754803681618589530
+    second: red_riflepiercing_shot_animation_sprite_sheet_10
+  - first:
+      213: -8728000795790117127
+    second: red_riflepiercing_shot_animation_sprite_sheet_33
+  - first:
+      213: 3732914555419312419
+    second: red_riflepiercing_shot_animation_sprite_sheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 170
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 818
+        width: 286
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e9fc77583079ab0800000000000000
+      internalID: -5001524989396017539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 818
+        width: 282
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc4a76858c934340800000000000000
+      internalID: 4846889721281531083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 818
+        width: 276
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b137974d669e360800000000000000
+      internalID: 7199398542085135223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 818
+        width: 390
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a60e4bcb2845f40800000000000000
+      internalID: 5716337574040070718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 818
+        width: 379
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8282e9caabdc520800000000000000
+      internalID: 2724038600179591371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 540
+        width: 326
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb390ba118ff2280800000000000000
+      internalID: -9065754770105877514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 540
+        width: 300
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668e775f21c866c80800000000000000
+      internalID: -8329816447719577498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 541
+        width: 291
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd9f3bab616244a0800000000000000
+      internalID: -6610614187963998781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 540
+        width: 358
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3959efd20dcd06650800000000000000
+      internalID: 6224217471708992915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 542
+        width: 328
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01808163de8aef40800000000000000
+      internalID: 5758572112071655690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 230
+        width: 323
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a88305ba84d220b0800000000000000
+      internalID: -5754803681618589530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_riflepiercing_shot_animation_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 247
+        width: 286
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32147a4a20afdc330800000000000000
+      internalID: 3732914555419312419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1472902a25a49944c8f485dd36cacf44
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

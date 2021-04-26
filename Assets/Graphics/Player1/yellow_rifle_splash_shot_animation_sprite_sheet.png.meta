@@ -1,0 +1,538 @@
+fileFormatVersion: 2
+guid: 516bdd734355e844e99b922aac21b795
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1105994239741503435
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_0
+  - first:
+      213: 4752277111367302776
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_1
+  - first:
+      213: -817599962890111462
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_2
+  - first:
+      213: -2988058074504372832
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_3
+  - first:
+      213: -7572142369611406245
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_4
+  - first:
+      213: 5051002305751090105
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_5
+  - first:
+      213: 7460801177102264920
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_5
+  - first:
+      213: 1430652433248590414
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_6
+  - first:
+      213: -3326993509910352732
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_8
+  - first:
+      213: -1892708681792388867
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_7
+  - first:
+      213: 1734464093296216113
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_10
+  - first:
+      213: -1455335549515850620
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_8
+  - first:
+      213: 9101040130362124503
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_9
+  - first:
+      213: 7583729536548466977
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_10
+  - first:
+      213: -979060294528601980
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_11
+  - first:
+      213: 5185878728853170751
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_15
+  - first:
+      213: -7141598309198665182
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_16
+  - first:
+      213: -3064400966059011126
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_17
+  - first:
+      213: -5478870099443781809
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_18
+  - first:
+      213: 2551767541388233301
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_19
+  - first:
+      213: 4039017739868913513
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_20
+  - first:
+      213: 8668856672158445230
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_21
+  - first:
+      213: 5260249396123793998
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_22
+  - first:
+      213: 3423831732874275238
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_23
+  - first:
+      213: 1883310817513488191
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_12
+  - first:
+      213: 1194676029286691105
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_13
+  - first:
+      213: 6516894328510515450
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_14
+  - first:
+      213: -1247251471165169691
+    second: yellow_rifle_splash_shot_animation_sprite_sheet_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 170
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 846
+        width: 256
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53854984918b6a0f0800000000000000
+      internalID: -1105994239741503435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 846
+        width: 255
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e7449aada73f140800000000000000
+      internalID: 4752277111367302776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 846
+        width: 249
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16ff836a2d47a4f0800000000000000
+      internalID: -817599962890111462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 846
+        width: 250
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adddec33094886d0800000000000000
+      internalID: -2988058074504372832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 846
+        width: 249
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54a0ae32a85ae690800000000000000
+      internalID: -7572142369611406245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 845
+        width: 256
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a2ffc34271a8760800000000000000
+      internalID: 7460801177102264920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 576
+        width: 272
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a94d0eec2bad310800000000000000
+      internalID: 1430652433248590414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 576
+        width: 248
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0877e5b7fbbb5e0800000000000000
+      internalID: -1892708681792388867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 726
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c1c16470c9dcbe0800000000000000
+      internalID: -1455335549515850620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 575
+        width: 248
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d82fc877c36d4e70800000000000000
+      internalID: 9101040130362124503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 579
+        width: 248
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121fb9a45d1de3960800000000000000
+      internalID: 7583729536548466977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 581
+        width: 244
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480fee279dda962f0800000000000000
+      internalID: -979060294528601980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 284
+        width: 254
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fba87d53dd22a10800000000000000
+      internalID: 1883310817513488191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 285
+        width: 245
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121be4bd487549010800000000000000
+      internalID: 1194676029286691105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 285
+        width: 256
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af880a12dd8a07a50800000000000000
+      internalID: 6516894328510515450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_rifle_splash_shot_animation_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 290
+        width: 250
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efdd9b256fd0bee0800000000000000
+      internalID: -1247251471165169691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9440caaa5649bd84696ac6d1cc3bb676
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

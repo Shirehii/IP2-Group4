@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: 3d95b75395e496645826ee38d239dac3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3736480152307936374
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_0
+  - first:
+      213: 1449037107263595849
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_1
+  - first:
+      213: 5230841531406496158
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_2
+  - first:
+      213: -1844039192775521668
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_3
+  - first:
+      213: 4731652987534117755
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_4
+  - first:
+      213: 1480922818512999965
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_5
+  - first:
+      213: -4936459049341056178
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_5
+  - first:
+      213: -5514336103769341516
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_7
+  - first:
+      213: -8925520991382357819
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_8
+  - first:
+      213: 113148720321471421
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_9
+  - first:
+      213: -7978263903392100237
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_10
+  - first:
+      213: 7331539454188380227
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_11
+  - first:
+      213: 1808755356611644257
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_12
+  - first:
+      213: -1358449241242608545
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_13
+  - first:
+      213: -2952899349363064368
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_6
+  - first:
+      213: 5655960140823030086
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_15
+  - first:
+      213: 4099280388055432019
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_7
+  - first:
+      213: 7615945071916735545
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_17
+  - first:
+      213: -316621117102758038
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_8
+  - first:
+      213: -8470577221262640684
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_9
+  - first:
+      213: 2734641821732888950
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_10
+  - first:
+      213: -4572484593040500774
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_11
+  - first:
+      213: -890346490648222683
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_22
+  - first:
+      213: 579224853488438144
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_23
+  - first:
+      213: 8674810541330479996
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_24
+  - first:
+      213: 6039097458168249311
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_25
+  - first:
+      213: -1628088132087748448
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_26
+  - first:
+      213: 2634074312608553382
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_27
+  - first:
+      213: -1031013372576085293
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_28
+  - first:
+      213: 6652002600356847093
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_29
+  - first:
+      213: 1762835879786897149
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_30
+  - first:
+      213: 7785352783157237400
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_31
+  - first:
+      213: -1390792225972647057
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_32
+  - first:
+      213: 4208314513928366576
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_33
+  - first:
+      213: 6332424053049000804
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_34
+  - first:
+      213: -1694684123129969268
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_35
+  - first:
+      213: -6907154516460728039
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_12
+  - first:
+      213: 1295013456589849545
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_37
+  - first:
+      213: -8305979615435313392
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_38
+  - first:
+      213: -2310639391863571030
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_39
+  - first:
+      213: -183603608701520579
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_40
+  - first:
+      213: 2462569619414944887
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_14
+  - first:
+      213: 2781812468933449873
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_42
+  - first:
+      213: -5140533908754887605
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_43
+  - first:
+      213: 496917491536484071
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_15
+  - first:
+      213: 8427651134408193425
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_45
+  - first:
+      213: 7093442529046103947
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_46
+  - first:
+      213: 2561760794481882381
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_47
+  - first:
+      213: 5434658049964787112
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_48
+  - first:
+      213: -5112672857963081706
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_49
+  - first:
+      213: 5230522478448785924
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_50
+  - first:
+      213: 1894136717514179750
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_51
+  - first:
+      213: -8420661103961891245
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_52
+  - first:
+      213: -7225539046738128613
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_53
+  - first:
+      213: -1759922294937116768
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_54
+  - first:
+      213: -6099602308357718989
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_55
+  - first:
+      213: 6701267360292960440
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_13
+  - first:
+      213: 5999847255978713590
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_57
+  - first:
+      213: -2697916059263781245
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_58
+  - first:
+      213: -7396142955796466753
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_59
+  - first:
+      213: -8601148757415457559
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_60
+  - first:
+      213: -8592603655483809135
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_16
+  - first:
+      213: -2116503792768037769
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_62
+  - first:
+      213: -7170535266246602795
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_63
+  - first:
+      213: 3661155388160097169
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_64
+  - first:
+      213: 7733801598990450256
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_65
+  - first:
+      213: 8314071402950778427
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_66
+  - first:
+      213: 2201256280877855051
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_67
+  - first:
+      213: 6452044315323227614
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_68
+  - first:
+      213: -2007998233361486765
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_69
+  - first:
+      213: -5506111064642062265
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_70
+  - first:
+      213: 5488535505169064574
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_71
+  - first:
+      213: 636252384948687181
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_72
+  - first:
+      213: -6048912534937600692
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_17
+  - first:
+      213: -5441261477486162410
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_19
+  - first:
+      213: 2770304518947941261
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_75
+  - first:
+      213: -4453339088840744776
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_76
+  - first:
+      213: 4826366155233874385
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_77
+  - first:
+      213: 502939971952371187
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_78
+  - first:
+      213: 2599539569132552485
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_79
+  - first:
+      213: -8150963662334923361
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_80
+  - first:
+      213: -7130557940661495920
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_81
+  - first:
+      213: -7365126155310450964
+    second: blue_rifle_grenade_toss_animation_sprite_sheet_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 823
+        width: 271
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a835363291b552cc0800000000000000
+      internalID: -3736480152307936374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 825
+        width: 271
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9456ecc52930c1410800000000000000
+      internalID: 1449037107263595849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 825
+        width: 264
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9138db98aea79840800000000000000
+      internalID: 5230841531406496158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 826
+        width: 256
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a87b2df18a866e0800000000000000
+      internalID: -1844039192775521668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 808
+        width: 259
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b0362a2553aa140800000000000000
+      internalID: 4731652987534117755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 826
+        width: 257
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b83cb26ac2e7bb0800000000000000
+      internalID: -4936459049341056178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 558
+        width: 254
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d18bb7dfa13507d0800000000000000
+      internalID: -2952899349363064368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 556
+        width: 262
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bf4c44bc193e830800000000000000
+      internalID: 4099280388055432019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 555
+        width: 262
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67e3b285c22b9bf0800000000000000
+      internalID: -316621117102758038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 557
+        width: 252
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9ff1475e6727a80800000000000000
+      internalID: -8470577221262640684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 562
+        width: 249
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671e0548f3663f520800000000000000
+      internalID: 2734641821732888950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 559
+        width: 279
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7dfda1d754b80c0800000000000000
+      internalID: -4572484593040500774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 287
+        width: 258
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9119f9d109bd420a0800000000000000
+      internalID: -6907154516460728039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 277
+        width: 269
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c85e7850ecc2220800000000000000
+      internalID: 2462569619414944887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 269
+        width: 265
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6d5b563d765e600800000000000000
+      internalID: 496917491536484071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 383
+        width: 81
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b87e2bc82faffc50800000000000000
+      internalID: 6701267360292960440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 224
+        width: 194
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1922a2b3080f0c880800000000000000
+      internalID: -8592603655483809135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 31
+        width: 267
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4df2a51912fd0ca0800000000000000
+      internalID: -6048912534937600692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 32
+        width: 260
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e8b68e381cc74b0800000000000000
+      internalID: -5441261477486162410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_rifle_grenade_toss_animation_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 159
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce638caa8c0d9c990800000000000000
+      internalID: -7365126155310450964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a6b6e9b62e897d74195a54dbe9ddb7a6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
