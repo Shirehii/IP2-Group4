@@ -11,14 +11,15 @@ public class PlayerItem : MonoBehaviour //for items attached to the players. for
     private PlayerGunLogic pGL;
 
     public int cooldown = 20; //the cooldown of items, can be set in inspector
-    private float timeBetweenUses; //the time that has passed between uses of the item
+    [HideInInspector]
+    public float timeBetweenUses; //the time that has passed between uses of the item
 
     void Start()
     {
         if (gameObject.tag == "Player2") //if the player is not player 1, change the input axis
         {
             useItemButton = "UseItem_P2";
-            itemType = "ScoreMultiplier";
+            //itemType = "ScoreMultiplier";
         }
 
         pM = GetComponent<PlayerMovement>();
