@@ -32,6 +32,8 @@ public class Enemy : MonoBehaviour
 
     public SpriteRenderer highlight;
 
+    private TextMesh dmgNumber;
+
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -66,6 +68,8 @@ public class Enemy : MonoBehaviour
         highlight = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         SetEnemyColor();
         highlight.enabled = false;
+
+        dmgNumber = GetComponentInChildren<TextMesh>();
     }
 
     void FixedUpdate()
@@ -172,20 +176,27 @@ public class Enemy : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            yield return new WaitForSeconds(0.95f);
+            dmgNumber.text = "";
+            yield return new WaitForSeconds(0.7f);
             if (shouldAttack)
             {
+                dmgNumber.text = "-1";
                 source.Play();
                 crystalHP.currentHP -= 1;
+                yield return new WaitForSeconds(0.4f);
             }
         }
+        dmgNumber.text = "";
         yield return new WaitForSeconds(1f);
         if (shouldAttack)
         {
+            dmgNumber.text = "-3";
             source.PlayOneShot(bigAttack);
             crystalHP.currentHP -= 3;
         }
         yield return new WaitForSeconds(0.1f);
+        animator.SetBool("isDying", true);
+        yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);
     }
 
