@@ -9,11 +9,13 @@ public class PlayerUIManager : MonoBehaviour
     private Transform abilityBar;
 
     private PlayerGunLogic pGL;
+    private PlayerItem pI;
     
     private Sprite[] headIconSprites;
     private Sprite[] ammoSprites;
     private GameObject[] ammoObjects;
     private Image[] ammoObjectsImage;
+    private Image itemImage;
 
     void Start()
     {
@@ -24,7 +26,8 @@ public class PlayerUIManager : MonoBehaviour
         if (gameObject.name.Contains("1"))
         {
             pGL = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerGunLogic>();
-
+            pI = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerItem>();
+            
             headIconSprites[0] = Resources.Load<Sprite>("Player1Blue");
             headIconSprites[1] = Resources.Load<Sprite>("Player1Red");
             headIconSprites[2] = Resources.Load<Sprite>("Player1Yellow");
@@ -39,10 +42,13 @@ public class PlayerUIManager : MonoBehaviour
                 ammoObjects[i] = GameObject.Find("Ammo1 (" + i + ")");
                 ammoObjectsImage[i] = ammoObjects[i].GetComponent<Image>();
             }
+
+            itemImage = GameObject.Find("ItemImage1").GetComponent<Image>();
         }
         else if (gameObject.name.Contains("2"))
         {
             pGL = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerGunLogic>();
+            pI = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerItem>();
 
             headIconSprites[0] = Resources.Load<Sprite>("Player2Blue");
             headIconSprites[1] = Resources.Load<Sprite>("Player2Red");
@@ -58,6 +64,8 @@ public class PlayerUIManager : MonoBehaviour
                 ammoObjects[i] = GameObject.Find("Ammo2 (" + i + ")");
                 ammoObjectsImage[i] = ammoObjects[i].GetComponent<Image>();
             }
+
+            itemImage = GameObject.Find("ItemImage2").GetComponent<Image>();
         }
 
         ammoSprites = new Sprite[3];
@@ -68,6 +76,16 @@ public class PlayerUIManager : MonoBehaviour
     
     void Update()
     {
+        //player item UI
+        if (pI.timeBetweenUses <= 0)
+        {
+            itemImage.enabled = true;
+        }
+        else if (pI.timeBetweenUses > 0)
+        {
+            itemImage.enabled = false;
+        }
+
         //change the selected gun UI && ammo UI color if they don't match the selected gun's color
         if (pGL.selectedGun == "blue" && selectedGunColor != headIconSprites[0])
         {
@@ -112,7 +130,7 @@ public class PlayerUIManager : MonoBehaviour
 
         //switch statement for adjusting the quantity of the ammo ui
         
-        //a for statement may be more efficient, willl work on this later
+        //a for statement may be more efficient, will work on this later
         //for (int i = 0; i < pGL.currentAmmo; i++)
         //{
         //    ammoObjects[i].SetActive

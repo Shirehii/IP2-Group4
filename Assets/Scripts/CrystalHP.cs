@@ -15,6 +15,13 @@ public class CrystalHP : MonoBehaviour
     private Sprite[] crystalSprites;
     private SpriteRenderer spriteRen;
 
+    private bool crystalDestroyed = false;
+
+    private AudioSource source;
+    private AudioClip breakSound;
+
+    private GameObject hpBar;
+
     void Start()
     {
         //Initialize stuff
@@ -25,6 +32,11 @@ public class CrystalHP : MonoBehaviour
         crystalSprites = new Sprite[3];
         crystalSprites = Resources.LoadAll<Sprite>("Crystals");
         spriteRen = GetComponent<SpriteRenderer>();
+
+        source = GetComponent<AudioSource>();
+        breakSound = Resources.Load<AudioClip>("crystalBreak");
+
+        hpBar = GameObject.Find("HPBar");
     }
 
     void Update()
@@ -42,10 +54,28 @@ public class CrystalHP : MonoBehaviour
         {
             spriteRen.sprite = crystalSprites[2];
         }
-        else if (currentHP <= 0)
+        else if (currentHP <= 0 && !crystalDestroyed)
         {
-            gameOverModal.SetActive(true);
-            Time.timeScale = 0;
+            crystalDestroyed = true;
+            StartCoroutine(GameOver());
         }
+
+        UpdateHPBar();
+    }
+
+    IEnumerator GameOver()
+    {
+        source.PlayOneShot(breakSound);
+        gameOverModal.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        Time.timeScale = 0;
+    }
+
+    void UpdateHPBar()
+    {
+        Vector3 temp = transform.localScale;
+        temp.x = currentHP / maxHP;
+        temp.y = 1;
+        hpBar.transform.localScale = temp;
     }
 }
