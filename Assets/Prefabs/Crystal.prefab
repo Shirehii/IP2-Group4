@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f8ffc28021dc94f8813b4251ac402b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 120
+  maxHP: 90
   currentHP: 0
 --- !u!65 &2778221084470636294
 BoxCollider:
